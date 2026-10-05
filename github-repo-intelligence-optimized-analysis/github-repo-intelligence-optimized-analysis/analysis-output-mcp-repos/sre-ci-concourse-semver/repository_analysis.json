@@ -1,0 +1,726 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/sre-ci-concourse-semver.git",
+    "source_type": "GitHub",
+    "repository_name": "sre-ci-concourse-semver",
+    "repository_type": "Application / Service / Library Repository",
+    "what_repository_does": "",
+    "repository_summary": "",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [],
+    "frameworks": [],
+    "runtime": [],
+    "databases": [],
+    "cloud_platforms": [],
+    "containers": [],
+    "kubernetes_helm_terraform": [],
+    "ci_cd": [
+      "GitHub Actions"
+    ],
+    "testing_tools": [],
+    "monitoring_observability": [],
+    "important_core_libraries": []
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 1091,
+    "important_files": [
+      ".github/workflows/pr-validation.yaml",
+      ".github/workflows/sync-semver-to-s3.yaml",
+      "README.md"
+    ],
+    "artifacts": {
+      "configuration": [],
+      "docker": [],
+      "kubernetes_helm": [],
+      "terraform": [],
+      "ci_cd": [
+        ".github/workflows/pr-validation.yaml",
+        ".github/workflows/sync-semver-to-s3.yaml"
+      ],
+      "api_specs": [],
+      "documentation": [
+        "README.md"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "sdh",
+          "file_count": 102
+        },
+        {
+          "name": "ds-customerjourney",
+          "file_count": 53
+        },
+        {
+          "name": "sre-concourse-tooling",
+          "file_count": 48
+        },
+        {
+          "name": "dasc-src-cj",
+          "file_count": 42
+        },
+        {
+          "name": "customerjourney-src",
+          "file_count": 32
+        },
+        {
+          "name": "pip",
+          "file_count": 29
+        },
+        {
+          "name": "pea-infra-tf",
+          "file_count": 26
+        },
+        {
+          "name": "struct(...)",
+          "file_count": 25
+        },
+        {
+          "name": "dq-src",
+          "file_count": 23
+        },
+        {
+          "name": "ds-data-quality",
+          "file_count": 21
+        },
+        {
+          "name": "sdh-pea",
+          "file_count": 19
+        },
+        {
+          "name": "nbcu-dmdv",
+          "file_count": 16
+        },
+        {
+          "name": "cleanroom",
+          "file_count": 16
+        },
+        {
+          "name": "sdh-showmax",
+          "file_count": 11
+        },
+        {
+          "name": "sdh-showtime",
+          "file_count": 11
+        },
+        {
+          "name": "shmx-dmdv",
+          "file_count": 9
+        },
+        {
+          "name": "vod-media-validator",
+          "file_count": 9
+        },
+        {
+          "name": "ds-recs",
+          "file_count": 8
+        },
+        {
+          "name": "pip-src",
+          "file_count": 8
+        },
+        {
+          "name": "cvsdk-ci-tools",
+          "file_count": 8
+        },
+        {
+          "name": "sumr-dmdv",
+          "file_count": 7
+        },
+        {
+          "name": "ds-applied-research",
+          "file_count": 7
+        },
+        {
+          "name": "ar-src",
+          "file_count": 7
+        },
+        {
+          "name": "sre-ci-ocellus-tests",
+          "file_count": 6
+        },
+        {
+          "name": "gdl-nowtv",
+          "file_count": 6
+        },
+        {
+          "name": "mle-research-src",
+          "file_count": 6
+        },
+        {
+          "name": "src-access-mgmt",
+          "file_count": 6
+        },
+        {
+          "name": "ds-deploy-keda",
+          "file_count": 6
+        },
+        {
+          "name": "applied-research-src",
+          "file_count": 6
+        },
+        {
+          "name": "showtime-infra-tf",
+          "file_count": 4
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".md",
+          "file_count": 2
+        },
+        {
+          "extension": ".yaml",
+          "file_count": 2
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "sdh",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "102 analyzed core files under sdh/"
+        ]
+      },
+      {
+        "name": "ds-customerjourney",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "53 analyzed core files under ds-customerjourney/"
+        ]
+      },
+      {
+        "name": "sre-concourse-tooling",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "48 analyzed core files under sre-concourse-tooling/"
+        ]
+      },
+      {
+        "name": "dasc-src-cj",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "42 analyzed core files under dasc-src-cj/"
+        ]
+      },
+      {
+        "name": "customerjourney-src",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "32 analyzed core files under customerjourney-src/"
+        ]
+      },
+      {
+        "name": "pip",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under pip/"
+        ]
+      },
+      {
+        "name": "pea-infra-tf",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "26 analyzed core files under pea-infra-tf/"
+        ]
+      },
+      {
+        "name": "struct(...)",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "25 analyzed core files under struct(...)/"
+        ]
+      },
+      {
+        "name": "dq-src",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "23 analyzed core files under dq-src/"
+        ]
+      },
+      {
+        "name": "ds-data-quality",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "21 analyzed core files under ds-data-quality/"
+        ]
+      },
+      {
+        "name": "sdh-pea",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "19 analyzed core files under sdh-pea/"
+        ]
+      },
+      {
+        "name": "nbcu-dmdv",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under nbcu-dmdv/"
+        ]
+      },
+      {
+        "name": "cleanroom",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under cleanroom/"
+        ]
+      },
+      {
+        "name": "sdh-showmax",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showmax/"
+        ]
+      },
+      {
+        "name": "sdh-showtime",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showtime/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "sdh",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "102 analyzed core files under sdh/"
+        ]
+      },
+      {
+        "name": "ds-customerjourney",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "53 analyzed core files under ds-customerjourney/"
+        ]
+      },
+      {
+        "name": "sre-concourse-tooling",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "48 analyzed core files under sre-concourse-tooling/"
+        ]
+      },
+      {
+        "name": "dasc-src-cj",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "42 analyzed core files under dasc-src-cj/"
+        ]
+      },
+      {
+        "name": "customerjourney-src",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "32 analyzed core files under customerjourney-src/"
+        ]
+      },
+      {
+        "name": "pip",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under pip/"
+        ]
+      },
+      {
+        "name": "pea-infra-tf",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "26 analyzed core files under pea-infra-tf/"
+        ]
+      },
+      {
+        "name": "struct(...)",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "25 analyzed core files under struct(...)/"
+        ]
+      },
+      {
+        "name": "dq-src",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "23 analyzed core files under dq-src/"
+        ]
+      },
+      {
+        "name": "ds-data-quality",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "21 analyzed core files under ds-data-quality/"
+        ]
+      },
+      {
+        "name": "sdh-pea",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "19 analyzed core files under sdh-pea/"
+        ]
+      },
+      {
+        "name": "nbcu-dmdv",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under nbcu-dmdv/"
+        ]
+      },
+      {
+        "name": "cleanroom",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under cleanroom/"
+        ]
+      },
+      {
+        "name": "sdh-showmax",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showmax/"
+        ]
+      },
+      {
+        "name": "sdh-showtime",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showtime/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "relationships": [],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {},
+        "functions": [],
+        "package_relationships": [],
+        "call_edges": [],
+        "entry_points": [],
+        "module_path": ""
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular repository architecture",
+    "architecture_explanation": "The repository follows a modular repository architecture. Static analysis identified 15 major structural component areas, 0 executable/package entry points, and 0 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "sdh",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "102 analyzed core files under sdh/"
+        ]
+      },
+      {
+        "name": "ds-customerjourney",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "53 analyzed core files under ds-customerjourney/"
+        ]
+      },
+      {
+        "name": "sre-concourse-tooling",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "48 analyzed core files under sre-concourse-tooling/"
+        ]
+      },
+      {
+        "name": "dasc-src-cj",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "42 analyzed core files under dasc-src-cj/"
+        ]
+      },
+      {
+        "name": "customerjourney-src",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "32 analyzed core files under customerjourney-src/"
+        ]
+      },
+      {
+        "name": "pip",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under pip/"
+        ]
+      },
+      {
+        "name": "pea-infra-tf",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "26 analyzed core files under pea-infra-tf/"
+        ]
+      },
+      {
+        "name": "struct(...)",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "25 analyzed core files under struct(...)/"
+        ]
+      },
+      {
+        "name": "dq-src",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "23 analyzed core files under dq-src/"
+        ]
+      },
+      {
+        "name": "ds-data-quality",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "21 analyzed core files under ds-data-quality/"
+        ]
+      },
+      {
+        "name": "sdh-pea",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "19 analyzed core files under sdh-pea/"
+        ]
+      },
+      {
+        "name": "nbcu-dmdv",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under nbcu-dmdv/"
+        ]
+      },
+      {
+        "name": "cleanroom",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under cleanroom/"
+        ]
+      },
+      {
+        "name": "sdh-showmax",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showmax/"
+        ]
+      },
+      {
+        "name": "sdh-showtime",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showtime/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "major_components": [
+      {
+        "name": "sdh",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "102 analyzed core files under sdh/"
+        ]
+      },
+      {
+        "name": "ds-customerjourney",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "53 analyzed core files under ds-customerjourney/"
+        ]
+      },
+      {
+        "name": "sre-concourse-tooling",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "48 analyzed core files under sre-concourse-tooling/"
+        ]
+      },
+      {
+        "name": "dasc-src-cj",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "42 analyzed core files under dasc-src-cj/"
+        ]
+      },
+      {
+        "name": "customerjourney-src",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "32 analyzed core files under customerjourney-src/"
+        ]
+      },
+      {
+        "name": "pip",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under pip/"
+        ]
+      },
+      {
+        "name": "pea-infra-tf",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "26 analyzed core files under pea-infra-tf/"
+        ]
+      },
+      {
+        "name": "struct(...)",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "25 analyzed core files under struct(...)/"
+        ]
+      },
+      {
+        "name": "dq-src",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "23 analyzed core files under dq-src/"
+        ]
+      },
+      {
+        "name": "ds-data-quality",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "21 analyzed core files under ds-data-quality/"
+        ]
+      },
+      {
+        "name": "sdh-pea",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "19 analyzed core files under sdh-pea/"
+        ]
+      },
+      {
+        "name": "nbcu-dmdv",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under nbcu-dmdv/"
+        ]
+      },
+      {
+        "name": "cleanroom",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under cleanroom/"
+        ]
+      },
+      {
+        "name": "sdh-showmax",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showmax/"
+        ]
+      },
+      {
+        "name": "sdh-showtime",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "11 analyzed core files under sdh-showtime/"
+        ]
+      }
+    ],
+    "component_relationships": [],
+    "configuration_model": "Configuration is primarily code/package-metadata driven; no dedicated configuration files were conclusively detected.",
+    "extension_points": [
+      "cleanroom/dags-plugin",
+      "fah/build-plugin",
+      "fah/cppunit-plugin",
+      "fah/nexus-plugin",
+      "nbcu-dmdv/provider"
+    ],
+    "deployment_model": "No repository-owned deployment model was conclusively detected.",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 0",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 0"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": []
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {}
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [],
+    "test_categories": [
+      "Automated tests detected"
+    ],
+    "test_file_count": 1,
+    "test_files": [
+      "mgds-nbcu-dmdv-refactor/test_dag_deploy_engine"
+    ],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": []
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": []
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}

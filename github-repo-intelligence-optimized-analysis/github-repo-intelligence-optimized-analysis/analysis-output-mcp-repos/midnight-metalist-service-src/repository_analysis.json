@@ -1,0 +1,3858 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/midnight-metalist-service-src.git",
+    "source_type": "GitHub",
+    "repository_name": "midnight-metalist-service-src",
+    "repository_type": "Application / Service Repository",
+    "what_repository_does": "Metalist is a service to store a set of configurations for a player to pull during playback. This is one of the services powering the overall system of live actions. Creates a timeline event in the database. Each request is additive and should contain a single moment. Update/overwrite previously published events. Gets the timeline events from the database for a specific pvid. Deletes a timeline event from the database. Gets health-check status. Returns 200 if all status checks are OK. Gets application metrics data. To be used for reporting prometheus metrics. Personalized Ad Service API uses Swag for documentation generation. To update API docs: 1. Add comments to your API handler in the Declarative Comments Format. 3. Run the following command in the project's root directory to generate the latest documentation: Remember to push the latest documentation generated under swagger directory to GitHub. 4. Once the app is started, Swagger UI is available at http://localhost:8081/swagger/index.html -   checkgofmt.sh a script run by pipeline-test.yaml that will fail if go source files aren't gofmt formatted",
+    "repository_summary": "Metalist is a service to store a set of configurations for a player to pull during playback. This is one of the services powering the overall system of live actions. Creates a timeline event in the database. Each request is additive and should contain a single moment. Update/overwrite previously published events. Gets the timeline events from the database for a specific pvid. Deletes a timeline event from the database. Gets health-check status. Returns 200 if all status checks are OK. Gets application metrics data. To be used for reporting prometheus metrics. Personalized Ad Service API uses Swag for documentation generation. To update API docs: 1. Add comments to your API handler in the Declarative Comments Format. 3. Run the following command in the project's root directory to generate the latest documentation: Remember to push the latest documentation generated under swagger directory to GitHub. 4. Once the app is started, Swagger UI is available at http://localhost:8081/swagger/index.html -   checkgofmt.sh a script run by pipeline-test.yaml that will fail if go source files aren't gofmt formatted",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [
+      "Go",
+      "Shell"
+    ],
+    "frameworks": [
+      "Gin"
+    ],
+    "runtime": [
+      "Go 1.23.0"
+    ],
+    "databases": [
+      "MongoDB"
+    ],
+    "cloud_platforms": [],
+    "containers": [
+      "Docker"
+    ],
+    "kubernetes_helm_terraform": [
+      "Helm"
+    ],
+    "ci_cd": [],
+    "testing_tools": [
+      "Testify"
+    ],
+    "monitoring_observability": [
+      "Prometheus"
+    ],
+    "important_core_libraries": [
+      "github.com/beorn7/perks",
+      "github.com/bytedance/sonic",
+      "github.com/bytedance/sonic/loader",
+      "github.com/cespare/xxhash/v2",
+      "github.com/cloudwego/base64x",
+      "github.com/davecgh/go-spew",
+      "github.com/fsnotify/fsnotify",
+      "github.com/gabriel-vasile/mimetype",
+      "github.com/gin-contrib/graceful",
+      "github.com/gin-contrib/pprof",
+      "github.com/gin-contrib/sse",
+      "github.com/gin-gonic/gin",
+      "github.com/go-openapi/jsonpointer",
+      "github.com/go-openapi/jsonreference",
+      "github.com/go-openapi/spec",
+      "github.com/go-openapi/swag",
+      "github.com/go-playground/locales",
+      "github.com/go-playground/universal-translator",
+      "github.com/go-playground/validator/v10",
+      "github.com/go-viper/mapstructure/v2",
+      "github.com/goccy/go-json",
+      "github.com/golang/mock",
+      "github.com/golang/snappy",
+      "github.com/josharian/intern",
+      "github.com/json-iterator/go",
+      "github.com/klauspost/compress",
+      "github.com/klauspost/cpuid/v2",
+      "github.com/kylebanks/depth",
+      "github.com/leodido/go-urn",
+      "github.com/mailru/easyjson",
+      "github.com/mattn/go-isatty",
+      "github.com/modern-go/concurrent",
+      "github.com/modern-go/reflect2",
+      "github.com/montanaflynn/stats",
+      "github.com/munnerz/goautoneg",
+      "github.com/nbcudtc/midnight-go-tooling",
+      "github.com/pelletier/go-toml/v2",
+      "github.com/pmezard/go-difflib",
+      "github.com/prometheus/client-golang",
+      "github.com/prometheus/client-model",
+      "github.com/prometheus/common",
+      "github.com/prometheus/procfs",
+      "github.com/sagikazarmark/locafero",
+      "github.com/sourcegraph/conc",
+      "github.com/spf13/afero",
+      "github.com/spf13/cast",
+      "github.com/spf13/pflag",
+      "github.com/spf13/viper",
+      "github.com/stretchr/testify",
+      "github.com/subosito/gotenv",
+      "github.com/swaggo/files",
+      "github.com/swaggo/gin-swagger",
+      "github.com/swaggo/swag",
+      "github.com/twitchyliquid64/golang-asm",
+      "github.com/ugorji/go/codec",
+      "github.com/xdg-go/pbkdf2",
+      "github.com/xdg-go/scram",
+      "github.com/xdg-go/stringprep",
+      "github.com/youmark/pkcs8",
+      "go.mongodb.org/mongo-driver",
+      "go.uber.org/multierr",
+      "go.uber.org/zap",
+      "golang.org/x/arch",
+      "golang.org/x/crypto",
+      "golang.org/x/net",
+      "golang.org/x/sync",
+      "golang.org/x/sys",
+      "golang.org/x/text",
+      "golang.org/x/tools",
+      "google.golang.org/protobuf",
+      "gopkg.in/yaml.v3"
+    ]
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 155,
+    "important_files": [
+      "Dockerfile",
+      "README.md",
+      "go.mod"
+    ],
+    "artifacts": {
+      "configuration": [
+        "cmd/app/config/config.yaml",
+        "tilt/deployments/mongo/config.yaml"
+      ],
+      "docker": [
+        "Dockerfile"
+      ],
+      "kubernetes_helm": [
+        "chart/Chart.yaml"
+      ],
+      "terraform": [],
+      "ci_cd": [],
+      "api_specs": [
+        "swagger/swagger.json"
+      ],
+      "documentation": [
+        "README.md",
+        "chart/README.md"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "internal",
+          "file_count": 113
+        },
+        {
+          "name": "chart",
+          "file_count": 16
+        },
+        {
+          "name": "tilt",
+          "file_count": 7
+        },
+        {
+          "name": "cmd",
+          "file_count": 5
+        },
+        {
+          "name": "ci",
+          "file_count": 4
+        },
+        {
+          "name": "swagger",
+          "file_count": 2
+        },
+        {
+          "name": ".github",
+          "file_count": 1
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".go",
+          "file_count": 118
+        },
+        {
+          "extension": ".yaml",
+          "file_count": 20
+        },
+        {
+          "extension": ".md",
+          "file_count": 3
+        },
+        {
+          "extension": ".sh",
+          "file_count": 3
+        },
+        {
+          "extension": ".mod",
+          "file_count": 1
+        },
+        {
+          "extension": ".sum",
+          "file_count": 1
+        },
+        {
+          "extension": ".json",
+          "file_count": 1
+        },
+        {
+          "extension": ".tpl",
+          "file_count": 1
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "internal",
+        "responsibility": "Internal implementation packages",
+        "evidence": [
+          "111 analyzed core files under internal/"
+        ]
+      },
+      {
+        "name": "chart",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "tilt",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under tilt/"
+        ]
+      },
+      {
+        "name": "cmd",
+        "responsibility": "Executable command entry points",
+        "evidence": [
+          "5 analyzed core files under cmd/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      },
+      {
+        "name": "swagger",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under swagger/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .github/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "internal",
+        "description": "Internal implementation packages",
+        "evidence": [
+          "111 analyzed core files under internal/"
+        ]
+      },
+      {
+        "name": "chart",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "tilt",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under tilt/"
+        ]
+      },
+      {
+        "name": "cmd",
+        "description": "Executable command entry points",
+        "evidence": [
+          "5 analyzed core files under cmd/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      },
+      {
+        "name": "swagger",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under swagger/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .github/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "cmd:main",
+        "source_file": "cmd/main.go"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "cmd",
+        "to": "cmd/app",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/docs",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router/pipeline",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/view",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/constant",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/etag",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router/response",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/utils",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/entity",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/server",
+        "to": "internal/handler",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/server",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/entity",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/view",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/lib/constant",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/domain",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/metrics",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/router",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/etag",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/dal",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/handler",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/repository",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/server",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/service",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/usecase",
+        "relationship": "imports/depends on"
+      }
+    ],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {
+          "cmd": [
+            "cmd/main.go"
+          ],
+          "swagger": [
+            "swagger/docs.go"
+          ],
+          "internal/handler": [
+            "internal/handler/handler.go",
+            "internal/handler/interfaces.go",
+            "internal/handler/docs.go",
+            "internal/handler/events.go",
+            "internal/handler/stats.go",
+            "internal/handler/rawLinearEvent.go",
+            "internal/handler/metalist.go"
+          ],
+          "internal/repository": [
+            "internal/repository/interfaces.go",
+            "internal/repository/timelineEvent.go",
+            "internal/repository/globalConfigs.go",
+            "internal/repository/rawLinearEvent.go",
+            "internal/repository/timelineEventArchive.go"
+          ],
+          "internal/entity": [
+            "internal/entity/timelineEvent.go",
+            "internal/entity/globalConfigs.go",
+            "internal/entity/rawLinearEvent.go",
+            "internal/entity/timelineEventArchive.go"
+          ],
+          "internal/server": [
+            "internal/server/server.go",
+            "internal/server/interfaces.go"
+          ],
+          "internal/view": [
+            "internal/view/config.go",
+            "internal/view/events.go",
+            "internal/view/stats.go"
+          ],
+          "internal/service": [
+            "internal/service/service.go",
+            "internal/service/interfaces.go"
+          ],
+          "internal/dal": [
+            "internal/dal/interfaces.go",
+            "internal/dal/timelineEvent.go",
+            "internal/dal/globalConfigs.go",
+            "internal/dal/filter.go",
+            "internal/dal/rawLinearEvent.go",
+            "internal/dal/timelineEventArchive.go",
+            "internal/dal/connection.go",
+            "internal/dal/mapping.go"
+          ],
+          "internal/usecase": [
+            "internal/usecase/interfaces.go",
+            "internal/usecase/events.go",
+            "internal/usecase/stats.go",
+            "internal/usecase/rawLinearEvent.go",
+            "internal/usecase/metalist.go"
+          ],
+          "internal/domain": [
+            "internal/domain/config.go",
+            "internal/domain/metrics.go",
+            "internal/domain/timelineEvent.go",
+            "internal/domain/globalConfigs.go",
+            "internal/domain/timelineEventArchive.go",
+            "internal/domain/linearEvent.go"
+          ],
+          "internal/client": [
+            "internal/client/interfaces.go"
+          ],
+          "internal/lib/metrics": [
+            "internal/lib/metrics/handler.go",
+            "internal/lib/metrics/tracker.go",
+            "internal/lib/metrics/context.go"
+          ],
+          "internal/lib/utils": [
+            "internal/lib/utils/utils.go"
+          ],
+          "internal/lib/search": [
+            "internal/lib/search/search.go"
+          ],
+          "internal/lib/constant": [
+            "internal/lib/constant/constant.go"
+          ],
+          "internal/lib/etag": [
+            "internal/lib/etag/etag.go"
+          ],
+          "internal/lib/router": [
+            "internal/lib/router/interfaces.go"
+          ],
+          "internal/lib/router/pipeline": [
+            "internal/lib/router/pipeline/routing_pipeline.go",
+            "internal/lib/router/pipeline/request_logger_mw.go",
+            "internal/lib/router/pipeline/doc_mw.go",
+            "internal/lib/router/pipeline/request_coalescer_mw.go",
+            "internal/lib/router/pipeline/recovery_mw.go",
+            "internal/lib/router/pipeline/metrics_mw.go",
+            "internal/lib/router/pipeline/request_region_mw.go",
+            "internal/lib/router/pipeline/metrics_tracker_mw.go",
+            "internal/lib/router/pipeline/mock_gin.go",
+            "internal/lib/router/pipeline/responsor_mw.go",
+            "internal/lib/router/pipeline/etag_mw.go",
+            "internal/lib/router/pipeline/request_info.go"
+          ],
+          "internal/lib/router/response": [
+            "internal/lib/router/response/web.go",
+            "internal/lib/router/response/response.go"
+          ],
+          "internal/lib/testing/matcher": [
+            "internal/lib/testing/matcher/matcher.go"
+          ],
+          "cmd/app": [
+            "cmd/app/config.go",
+            "cmd/app/app.go"
+          ]
+        },
+        "functions": [
+          {
+            "symbol": "cmd:main",
+            "name": "main",
+            "package": "cmd",
+            "source_file": "cmd/main.go"
+          },
+          {
+            "symbol": "swagger:init",
+            "name": "init",
+            "package": "swagger",
+            "source_file": "swagger/docs.go"
+          },
+          {
+            "symbol": "internal/handler:RegisterHandlersAndMiddleware",
+            "name": "RegisterHandlersAndMiddleware",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerTimelineEventsAPIsWithCoalescer",
+            "name": "registerTimelineEventsAPIsWithCoalescer",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerTimelineEventsAPIs",
+            "name": "registerTimelineEventsAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerGlobalConfigsAPIs",
+            "name": "registerGlobalConfigsAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerStatsAPIs",
+            "name": "registerStatsAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerPrivateAPIs",
+            "name": "registerPrivateAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerDocAPIs",
+            "name": "registerDocAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerRawLinearEventsAPIs",
+            "name": "registerRawLinearEventsAPIs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerPprof",
+            "name": "registerPprof",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:registerMiddleware",
+            "name": "registerMiddleware",
+            "package": "internal/handler",
+            "source_file": "internal/handler/handler.go"
+          },
+          {
+            "symbol": "internal/handler:NewDocHandler",
+            "name": "NewDocHandler",
+            "package": "internal/handler",
+            "source_file": "internal/handler/docs.go"
+          },
+          {
+            "symbol": "internal/handler:ReturnEmpty",
+            "name": "ReturnEmpty",
+            "package": "internal/handler",
+            "source_file": "internal/handler/docs.go"
+          },
+          {
+            "symbol": "internal/handler:NewStatsHandler",
+            "name": "NewStatsHandler",
+            "package": "internal/handler",
+            "source_file": "internal/handler/stats.go"
+          },
+          {
+            "symbol": "internal/handler:GetHealth",
+            "name": "GetHealth",
+            "package": "internal/handler",
+            "source_file": "internal/handler/stats.go"
+          },
+          {
+            "symbol": "internal/handler:GetMetaMetrics",
+            "name": "GetMetaMetrics",
+            "package": "internal/handler",
+            "source_file": "internal/handler/stats.go"
+          },
+          {
+            "symbol": "internal/handler:GetMetrics",
+            "name": "GetMetrics",
+            "package": "internal/handler",
+            "source_file": "internal/handler/stats.go"
+          },
+          {
+            "symbol": "internal/handler:GetConfiguration",
+            "name": "GetConfiguration",
+            "package": "internal/handler",
+            "source_file": "internal/handler/stats.go"
+          },
+          {
+            "symbol": "internal/handler:NewRawLinearEventHandler",
+            "name": "NewRawLinearEventHandler",
+            "package": "internal/handler",
+            "source_file": "internal/handler/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/handler:GetRawLinearEvents",
+            "name": "GetRawLinearEvents",
+            "package": "internal/handler",
+            "source_file": "internal/handler/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/handler:ReturnEmpty",
+            "name": "ReturnEmpty",
+            "package": "internal/handler",
+            "source_file": "internal/handler/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/handler:parseGetRawLinearEvents",
+            "name": "parseGetRawLinearEvents",
+            "package": "internal/handler",
+            "source_file": "internal/handler/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/handler:validateGetRawLinearEvent",
+            "name": "validateGetRawLinearEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/handler:NewMetalistHandler",
+            "name": "NewMetalistHandler",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:CreateTimelineEvent",
+            "name": "CreateTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:GetPredefinedTimelineEvents",
+            "name": "GetPredefinedTimelineEvents",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:GetTimelineEvents",
+            "name": "GetTimelineEvents",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:UpdateTimelineEvent",
+            "name": "UpdateTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:DeleteTimelineEvent",
+            "name": "DeleteTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:ReturnEmpty",
+            "name": "ReturnEmpty",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:GetGlobalConfigs",
+            "name": "GetGlobalConfigs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:UpdateGlobalConfigs",
+            "name": "UpdateGlobalConfigs",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:ArchiveTimelineEvents",
+            "name": "ArchiveTimelineEvents",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:ArchiveTimelineEventsByType",
+            "name": "ArchiveTimelineEventsByType",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:validateCreateTimelineEvent",
+            "name": "validateCreateTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:validateUpdateTimelineEvent",
+            "name": "validateUpdateTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:validateDuplicateField",
+            "name": "validateDuplicateField",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:parseGetTimelineEvent",
+            "name": "parseGetTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/handler:validateGetTimelineEvent",
+            "name": "validateGetTimelineEvent",
+            "package": "internal/handler",
+            "source_file": "internal/handler/metalist.go"
+          },
+          {
+            "symbol": "internal/repository:NewTimelineEventRepo",
+            "name": "NewTimelineEventRepo",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:CreateTimelineEvent",
+            "name": "CreateTimelineEvent",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:GetTimelineEvents",
+            "name": "GetTimelineEvents",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:UpdateTimelineEvent",
+            "name": "UpdateTimelineEvent",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:DeleteTimelineEvent",
+            "name": "DeleteTimelineEvent",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:GetDocumentCountByParams",
+            "name": "GetDocumentCountByParams",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:CheckDatabaseConnection",
+            "name": "CheckDatabaseConnection",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:DeleteTimelineEvents",
+            "name": "DeleteTimelineEvents",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:parseTimelineEventToDomain",
+            "name": "parseTimelineEventToDomain",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:parseTimelineEventToEntity",
+            "name": "parseTimelineEventToEntity",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/repository:NewGlobalConfigsRepo",
+            "name": "NewGlobalConfigsRepo",
+            "package": "internal/repository",
+            "source_file": "internal/repository/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/repository:GetGlobalConfigs",
+            "name": "GetGlobalConfigs",
+            "package": "internal/repository",
+            "source_file": "internal/repository/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/repository:UpdateGlobalConfigs",
+            "name": "UpdateGlobalConfigs",
+            "package": "internal/repository",
+            "source_file": "internal/repository/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/repository:NewRawLinearEventRepo",
+            "name": "NewRawLinearEventRepo",
+            "package": "internal/repository",
+            "source_file": "internal/repository/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/repository:GetRawLinearEventsByLSKAndWindow",
+            "name": "GetRawLinearEventsByLSKAndWindow",
+            "package": "internal/repository",
+            "source_file": "internal/repository/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/repository:parseRawLinearEventToLinearEventDomain",
+            "name": "parseRawLinearEventToLinearEventDomain",
+            "package": "internal/repository",
+            "source_file": "internal/repository/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/repository:NewTimelineEventArchiveRepo",
+            "name": "NewTimelineEventArchiveRepo",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEventArchive.go"
+          },
+          {
+            "symbol": "internal/repository:CreateTimelineEventArchives",
+            "name": "CreateTimelineEventArchives",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEventArchive.go"
+          },
+          {
+            "symbol": "internal/repository:parseTimelineEventArchiveToEntity",
+            "name": "parseTimelineEventArchiveToEntity",
+            "package": "internal/repository",
+            "source_file": "internal/repository/timelineEventArchive.go"
+          },
+          {
+            "symbol": "internal/server:NewHTTPServer",
+            "name": "NewHTTPServer",
+            "package": "internal/server",
+            "source_file": "internal/server/server.go"
+          },
+          {
+            "symbol": "internal/service:NewService",
+            "name": "NewService",
+            "package": "internal/service",
+            "source_file": "internal/service/service.go"
+          },
+          {
+            "symbol": "internal/service:Run",
+            "name": "Run",
+            "package": "internal/service",
+            "source_file": "internal/service/service.go"
+          },
+          {
+            "symbol": "internal/service:Shutdown",
+            "name": "Shutdown",
+            "package": "internal/service",
+            "source_file": "internal/service/service.go"
+          },
+          {
+            "symbol": "internal/dal:NewTimelineEventDAL",
+            "name": "NewTimelineEventDAL",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:FindAllByParams",
+            "name": "FindAllByParams",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:InsertOne",
+            "name": "InsertOne",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:UpdateOneByParams",
+            "name": "UpdateOneByParams",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:DeleteOneByParams",
+            "name": "DeleteOneByParams",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:GetDocumentCountByParams",
+            "name": "GetDocumentCountByParams",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:BulkDelete",
+            "name": "BulkDelete",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEvent.go"
+          },
+          {
+            "symbol": "internal/dal:NewGlobalConfigsDAL",
+            "name": "NewGlobalConfigsDAL",
+            "package": "internal/dal",
+            "source_file": "internal/dal/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/dal:FindOne",
+            "name": "FindOne",
+            "package": "internal/dal",
+            "source_file": "internal/dal/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/dal:UpdateOne",
+            "name": "UpdateOne",
+            "package": "internal/dal",
+            "source_file": "internal/dal/globalConfigs.go"
+          },
+          {
+            "symbol": "internal/dal:BuildQueryFilter",
+            "name": "BuildQueryFilter",
+            "package": "internal/dal",
+            "source_file": "internal/dal/filter.go"
+          },
+          {
+            "symbol": "internal/dal:NewRawLinearEventDAL",
+            "name": "NewRawLinearEventDAL",
+            "package": "internal/dal",
+            "source_file": "internal/dal/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/dal:FindByParams",
+            "name": "FindByParams",
+            "package": "internal/dal",
+            "source_file": "internal/dal/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/dal:NewTimelineEventArchiveDAL",
+            "name": "NewTimelineEventArchiveDAL",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEventArchive.go"
+          },
+          {
+            "symbol": "internal/dal:BulkInsert",
+            "name": "BulkInsert",
+            "package": "internal/dal",
+            "source_file": "internal/dal/timelineEventArchive.go"
+          },
+          {
+            "symbol": "internal/dal:ConnectDB",
+            "name": "ConnectDB",
+            "package": "internal/dal",
+            "source_file": "internal/dal/connection.go"
+          },
+          {
+            "symbol": "internal/usecase:NewStatsService",
+            "name": "NewStatsService",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:GetHealth",
+            "name": "GetHealth",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:GetMetaMetrics",
+            "name": "GetMetaMetrics",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:GetConfiguration",
+            "name": "GetConfiguration",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:convertEventTypeWindows",
+            "name": "convertEventTypeWindows",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:convertWindow",
+            "name": "convertWindow",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/stats.go"
+          },
+          {
+            "symbol": "internal/usecase:NewRawLinearEventService",
+            "name": "NewRawLinearEventService",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/usecase:GetRawLinearEvents",
+            "name": "GetRawLinearEvents",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/rawLinearEvent.go"
+          },
+          {
+            "symbol": "internal/usecase:NewMetalistService",
+            "name": "NewMetalistService",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:GetPredefinedTimelineEvents",
+            "name": "GetPredefinedTimelineEvents",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:GetTimelineEvents",
+            "name": "GetTimelineEvents",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:CreateTimelineEvent",
+            "name": "CreateTimelineEvent",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:UpdateTimelineEvent",
+            "name": "UpdateTimelineEvent",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:DeleteTimelineEvent",
+            "name": "DeleteTimelineEvent",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:validateEventTimes",
+            "name": "validateEventTimes",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:GetGlobalConfigs",
+            "name": "GetGlobalConfigs",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:UpdateGlobalConfigs",
+            "name": "UpdateGlobalConfigs",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:ArchiveTimelineEvents",
+            "name": "ArchiveTimelineEvents",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:ArchiveTimelineEventsByType",
+            "name": "ArchiveTimelineEventsByType",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:performArchiveTimelineEvents",
+            "name": "performArchiveTimelineEvents",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:parseEventDataByTypeToDomain",
+            "name": "parseEventDataByTypeToDomain",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:parseEventDataByTypeToView",
+            "name": "parseEventDataByTypeToView",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/usecase:parseUpdateEventData",
+            "name": "parseUpdateEventData",
+            "package": "internal/usecase",
+            "source_file": "internal/usecase/metalist.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:NewHandler",
+            "name": "NewHandler",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/handler.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:NewTracker",
+            "name": "NewTracker",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:GetMetaMetrics",
+            "name": "GetMetaMetrics",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetTimelineEventsRequestCount",
+            "name": "IncGetTimelineEventsRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordGetTimelineEventsLatency",
+            "name": "RecordGetTimelineEventsLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetTimelineEventsError",
+            "name": "IncGetTimelineEventsError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventRequestCount",
+            "name": "IncCreateTimelineEventRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordCreateTimelineEventLatency",
+            "name": "RecordCreateTimelineEventLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventError",
+            "name": "IncCreateTimelineEventError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateTimelineEventRequestCount",
+            "name": "IncUpdateTimelineEventRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordUpdateTimelineEventLatency",
+            "name": "RecordUpdateTimelineEventLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateTimelineEventError",
+            "name": "IncUpdateTimelineEventError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventRequestCount",
+            "name": "IncDeleteTimelineEventRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordDeleteTimelineEventLatency",
+            "name": "RecordDeleteTimelineEventLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventError",
+            "name": "IncDeleteTimelineEventError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordGetGlobalConfigsDatabaseLatency",
+            "name": "RecordGetGlobalConfigsDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetGlobalConfigsDatabaseError",
+            "name": "IncGetGlobalConfigsDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetGlobalConfigsDatabaseTimeoutError",
+            "name": "IncGetGlobalConfigsDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordGetTimelineEventsDatabaseLatency",
+            "name": "RecordGetTimelineEventsDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetTimelineEventsDatabaseError",
+            "name": "IncGetTimelineEventsDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetTimelineEventsDatabaseTimeoutError",
+            "name": "IncGetTimelineEventsDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordCreateTimelineEventDatabaseLatency",
+            "name": "RecordCreateTimelineEventDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventDatabaseError",
+            "name": "IncCreateTimelineEventDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventDatabaseTimeoutError",
+            "name": "IncCreateTimelineEventDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordUpdateTimelineEventDatabaseLatency",
+            "name": "RecordUpdateTimelineEventDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateTimelineEventDatabaseError",
+            "name": "IncUpdateTimelineEventDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateTimelineEventDatabaseTimeoutError",
+            "name": "IncUpdateTimelineEventDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordDeleteTimelineEventDatabaseLatency",
+            "name": "RecordDeleteTimelineEventDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventDatabaseError",
+            "name": "IncDeleteTimelineEventDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventDatabaseTimeoutError",
+            "name": "IncDeleteTimelineEventDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetGlobalConfigsRequestCount",
+            "name": "IncGetGlobalConfigsRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetGlobalConfigsError",
+            "name": "IncGetGlobalConfigsError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateGlobalConfigsRequestCount",
+            "name": "IncUpdateGlobalConfigsRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateGlobalConfigsError",
+            "name": "IncUpdateGlobalConfigsError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateGlobalConfigsDatabaseError",
+            "name": "IncUpdateGlobalConfigsDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncUpdateGlobalConfigsDatabaseTimeoutError",
+            "name": "IncUpdateGlobalConfigsDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventsByEventTypeCount",
+            "name": "IncCreateTimelineEventsByEventTypeCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventsByPVIDCount",
+            "name": "IncCreateTimelineEventsByPVIDCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventArchivesDatabaseError",
+            "name": "IncCreateTimelineEventArchivesDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCreateTimelineEventArchivesDatabaseTimeoutError",
+            "name": "IncCreateTimelineEventArchivesDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordCreateTimelineEventArchivesDatabaseLatency",
+            "name": "RecordCreateTimelineEventArchivesDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventsDatabaseError",
+            "name": "IncDeleteTimelineEventsDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncDeleteTimelineEventsDatabaseTimeoutError",
+            "name": "IncDeleteTimelineEventsDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordDeleteTimelineEventsDatabaseLatency",
+            "name": "RecordDeleteTimelineEventsDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordArchiveTimelineEventsLatency",
+            "name": "RecordArchiveTimelineEventsLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncArchiveTimelineEventsRequestCount",
+            "name": "IncArchiveTimelineEventsRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncArchiveTimelineEventsError",
+            "name": "IncArchiveTimelineEventsError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncHTTPResponseCode",
+            "name": "IncHTTPResponseCode",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:ObserveHTTPRequestLatency",
+            "name": "ObserveHTTPRequestLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordGetRawLinearEventsLatency",
+            "name": "RecordGetRawLinearEventsLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetRawLinearEventsRequestCount",
+            "name": "IncGetRawLinearEventsRequestCount",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetRawLinearEventsError",
+            "name": "IncGetRawLinearEventsError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RecordGetRawLinearEventsByLSKAndWindowDatabaseLatency",
+            "name": "RecordGetRawLinearEventsByLSKAndWindowDatabaseLatency",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetRawLinearEventsByLSKAndWindowDatabaseError",
+            "name": "IncGetRawLinearEventsByLSKAndWindowDatabaseError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncGetRawLinearEventsByLSKAndWindowDatabaseTimeoutError",
+            "name": "IncGetRawLinearEventsByLSKAndWindowDatabaseTimeoutError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:IncCoalescerError",
+            "name": "IncCoalescerError",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:RegisterMetrics",
+            "name": "RegisterMetrics",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/tracker.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:NewContext",
+            "name": "NewContext",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/context.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:GetRequest",
+            "name": "GetRequest",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/context.go"
+          },
+          {
+            "symbol": "internal/lib/metrics:GetWriter",
+            "name": "GetWriter",
+            "package": "internal/lib/metrics",
+            "source_file": "internal/lib/metrics/context.go"
+          },
+          {
+            "symbol": "internal/lib/utils:ParseStringToBool",
+            "name": "ParseStringToBool",
+            "package": "internal/lib/utils",
+            "source_file": "internal/lib/utils/utils.go"
+          },
+          {
+            "symbol": "internal/lib/search:NewLogicalCondition",
+            "name": "NewLogicalCondition",
+            "package": "internal/lib/search",
+            "source_file": "internal/lib/search/search.go"
+          },
+          {
+            "symbol": "internal/lib/search:NewCondition",
+            "name": "NewCondition",
+            "package": "internal/lib/search",
+            "source_file": "internal/lib/search/search.go"
+          },
+          {
+            "symbol": "internal/lib/search:NewMultiValueCondition",
+            "name": "NewMultiValueCondition",
+            "package": "internal/lib/search",
+            "source_file": "internal/lib/search/search.go"
+          },
+          {
+            "symbol": "internal/lib/search:AddSubCondition",
+            "name": "AddSubCondition",
+            "package": "internal/lib/search",
+            "source_file": "internal/lib/search/search.go"
+          },
+          {
+            "symbol": "internal/lib/search:NewFilterValue",
+            "name": "NewFilterValue",
+            "package": "internal/lib/search",
+            "source_file": "internal/lib/search/search.go"
+          },
+          {
+            "symbol": "internal/lib/etag:NewContext",
+            "name": "NewContext",
+            "package": "internal/lib/etag",
+            "source_file": "internal/lib/etag/etag.go"
+          },
+          {
+            "symbol": "internal/lib/etag:GetETag",
+            "name": "GetETag",
+            "package": "internal/lib/etag",
+            "source_file": "internal/lib/etag/etag.go"
+          },
+          {
+            "symbol": "internal/lib/etag:SetETag",
+            "name": "SetETag",
+            "package": "internal/lib/etag",
+            "source_file": "internal/lib/etag/etag.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:NewRoutingPipeline",
+            "name": "NewRoutingPipeline",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:ResetMiddleware",
+            "name": "ResetMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:WithMiddleware",
+            "name": "WithMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Get",
+            "name": "Get",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Put",
+            "name": "Put",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Post",
+            "name": "Post",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Delete",
+            "name": "Delete",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Patch",
+            "name": "Patch",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Options",
+            "name": "Options",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:process",
+            "name": "process",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/routing_pipeline.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:RequestLogger",
+            "name": "RequestLogger",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_logger_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:maskHeaders",
+            "name": "maskHeaders",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_logger_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:DocGenerator",
+            "name": "DocGenerator",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/doc_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:RequestCoalescerMiddleware",
+            "name": "RequestCoalescerMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_coalescer_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:RecoveryWithLogger",
+            "name": "RecoveryWithLogger",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/recovery_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:MetricsMiddleware",
+            "name": "MetricsMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/metrics_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:NewRegionResolver",
+            "name": "NewRegionResolver",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_region_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Middleware",
+            "name": "Middleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_region_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:resolveRegion",
+            "name": "resolveRegion",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_region_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:RequestMetricsTrackerMiddleware",
+            "name": "RequestMetricsTrackerMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/metrics_tracker_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:NewMockGin",
+            "name": "NewMockGin",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:StubWithReq",
+            "name": "StubWithReq",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:StubWithReqHeaders",
+            "name": "StubWithReqHeaders",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:StubWithReqParams",
+            "name": "StubWithReqParams",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:RenderBody",
+            "name": "RenderBody",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetHTTPStatus",
+            "name": "GetHTTPStatus",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetHeader",
+            "name": "GetHeader",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/mock_gin.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Responsor",
+            "name": "Responsor",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/responsor_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:toHTTPCode",
+            "name": "toHTTPCode",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/responsor_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:toHTTPResp",
+            "name": "toHTTPResp",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/responsor_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:extractErrorsData",
+            "name": "extractErrorsData",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/responsor_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:generateETag",
+            "name": "generateETag",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/responsor_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:ETagMiddleware",
+            "name": "ETagMiddleware",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/etag_mw.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:NewRequestInfo",
+            "name": "NewRequestInfo",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:Bind",
+            "name": "Bind",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetParam",
+            "name": "GetParam",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetQuery",
+            "name": "GetQuery",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetAttribute",
+            "name": "GetAttribute",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:SetAttribute",
+            "name": "SetAttribute",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetHeader",
+            "name": "GetHeader",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetRequestBody",
+            "name": "GetRequestBody",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:GetURI",
+            "name": "GetURI",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:getDecoder",
+            "name": "getDecoder",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/pipeline:getParamMap",
+            "name": "getParamMap",
+            "package": "internal/lib/router/pipeline",
+            "source_file": "internal/lib/router/pipeline/request_info.go"
+          },
+          {
+            "symbol": "internal/lib/router/response:StatusCode",
+            "name": "StatusCode",
+            "package": "internal/lib/router/response",
+            "source_file": "internal/lib/router/response/web.go"
+          },
+          {
+            "symbol": "internal/lib/router/response:StatusCode",
+            "name": "StatusCode",
+            "package": "internal/lib/router/response",
+            "source_file": "internal/lib/router/response/web.go"
+          },
+          {
+            "symbol": "internal/lib/router/response:NewError",
+            "name": "NewError",
+            "package": "internal/lib/router/response",
+            "source_file": "internal/lib/router/response/response.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:Matches",
+            "name": "Matches",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:String",
+            "name": "String",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:ApproximateTime",
+            "name": "ApproximateTime",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:Matches",
+            "name": "Matches",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:String",
+            "name": "String",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "internal/lib/testing/matcher:SliceMatcher",
+            "name": "SliceMatcher",
+            "package": "internal/lib/testing/matcher",
+            "source_file": "internal/lib/testing/matcher/matcher.go"
+          },
+          {
+            "symbol": "cmd/app:loadConfig",
+            "name": "loadConfig",
+            "package": "cmd/app",
+            "source_file": "cmd/app/config.go"
+          },
+          {
+            "symbol": "cmd/app:parseConfigFlag",
+            "name": "parseConfigFlag",
+            "package": "cmd/app",
+            "source_file": "cmd/app/config.go"
+          },
+          {
+            "symbol": "cmd/app:validateConfig",
+            "name": "validateConfig",
+            "package": "cmd/app",
+            "source_file": "cmd/app/config.go"
+          },
+          {
+            "symbol": "cmd/app:Run",
+            "name": "Run",
+            "package": "cmd/app",
+            "source_file": "cmd/app/app.go"
+          }
+        ],
+        "package_relationships": [
+          {
+            "from": "cmd",
+            "to": "cmd/app"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/docs"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/router"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/router/pipeline"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/view"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/metrics"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/constant"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/etag"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/router/response"
+          },
+          {
+            "from": "internal/handler",
+            "to": "internal/lib/utils"
+          },
+          {
+            "from": "internal/repository",
+            "to": "internal/entity"
+          },
+          {
+            "from": "internal/repository",
+            "to": "internal/lib/search"
+          },
+          {
+            "from": "internal/repository",
+            "to": "internal/domain"
+          },
+          {
+            "from": "internal/server",
+            "to": "internal/handler"
+          },
+          {
+            "from": "internal/server",
+            "to": "internal/lib/metrics"
+          },
+          {
+            "from": "internal/dal",
+            "to": "internal/domain"
+          },
+          {
+            "from": "internal/dal",
+            "to": "internal/entity"
+          },
+          {
+            "from": "internal/dal",
+            "to": "internal/lib/search"
+          },
+          {
+            "from": "internal/usecase",
+            "to": "internal/domain"
+          },
+          {
+            "from": "internal/usecase",
+            "to": "internal/lib/search"
+          },
+          {
+            "from": "internal/usecase",
+            "to": "internal/view"
+          },
+          {
+            "from": "internal/usecase",
+            "to": "internal/lib/constant"
+          },
+          {
+            "from": "internal/domain",
+            "to": "internal/lib/search"
+          },
+          {
+            "from": "internal/lib/metrics",
+            "to": "internal/domain"
+          },
+          {
+            "from": "internal/lib/router/pipeline",
+            "to": "internal/lib/router"
+          },
+          {
+            "from": "internal/lib/router/pipeline",
+            "to": "internal/lib/metrics"
+          },
+          {
+            "from": "internal/lib/router/pipeline",
+            "to": "internal/lib/etag"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/domain"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/dal"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/handler"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/lib/metrics"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/repository"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/server"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/service"
+          },
+          {
+            "from": "cmd/app",
+            "to": "internal/usecase"
+          }
+        ],
+        "call_edges": [],
+        "entry_points": [
+          {
+            "type": "Go executable entry point",
+            "symbol": "cmd:main",
+            "source_file": "cmd/main.go"
+          }
+        ],
+        "module_path": "midnight-metalist-service-src"
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular service / CLI architecture with executable entry points and reusable packages",
+    "architecture_explanation": "The repository follows a modular service / cli architecture with executable entry points and reusable packages. Static analysis identified 7 major structural component areas, 1 executable/package entry points, and 35 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "internal",
+        "description": "Internal implementation packages",
+        "evidence": [
+          "111 analyzed core files under internal/"
+        ]
+      },
+      {
+        "name": "chart",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "tilt",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under tilt/"
+        ]
+      },
+      {
+        "name": "cmd",
+        "description": "Executable command entry points",
+        "evidence": [
+          "5 analyzed core files under cmd/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      },
+      {
+        "name": "swagger",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under swagger/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .github/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "cmd:main",
+        "source_file": "cmd/main.go"
+      }
+    ],
+    "major_components": [
+      {
+        "name": "internal",
+        "responsibility": "Internal implementation packages",
+        "evidence": [
+          "111 analyzed core files under internal/"
+        ]
+      },
+      {
+        "name": "chart",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "16 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "tilt",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under tilt/"
+        ]
+      },
+      {
+        "name": "cmd",
+        "responsibility": "Executable command entry points",
+        "evidence": [
+          "5 analyzed core files under cmd/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      },
+      {
+        "name": "swagger",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under swagger/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .github/"
+        ]
+      }
+    ],
+    "component_relationships": [
+      {
+        "from": "cmd",
+        "to": "cmd/app",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/docs",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router/pipeline",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/view",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/constant",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/etag",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/router/response",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/handler",
+        "to": "internal/lib/utils",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/entity",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/repository",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/server",
+        "to": "internal/handler",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/server",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/entity",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/dal",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/view",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/usecase",
+        "to": "internal/lib/constant",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/domain",
+        "to": "internal/lib/search",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/metrics",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/router",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "internal/lib/router/pipeline",
+        "to": "internal/lib/etag",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/domain",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/dal",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/handler",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/lib/metrics",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/repository",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/server",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/service",
+        "relationship": "imports/depends on"
+      },
+      {
+        "from": "cmd/app",
+        "to": "internal/usecase",
+        "relationship": "imports/depends on"
+      }
+    ],
+    "configuration_model": "Repository contains explicit configuration artifacts: cmd/app/config/config.yaml, tilt/deployments/mongo/config.yaml.",
+    "extension_points": [],
+    "deployment_model": "Docker, Kubernetes/Helm",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 22",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 35"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      },
+      {
+        "step": 1,
+        "group": "Application Startup Flow",
+        "title": "Start the application",
+        "explanation": "Execution starts in cmd/main.go at main. The startup function then delegates into the application bootstrap code shown below.",
+        "code": [
+          "cmd/main.go:main",
+          "app.Run"
+        ],
+        "result": "Control moves into application initialization.",
+        "evidence": [
+          "cmd/main.go"
+        ]
+      },
+      {
+        "step": 2,
+        "group": "Application Startup Flow",
+        "title": "Load runtime configuration",
+        "explanation": "The application uses the detected configuration files during startup. Configuration values control later runtime initialization; values not proven from source are not guessed.",
+        "code": [
+          "cmd/app/config/config.yaml",
+          "tilt/deployments/mongo/config.yaml"
+        ],
+        "result": "Validated runtime settings are available to the bootstrap code.",
+        "evidence": [
+          "cmd/app/config/config.yaml",
+          "tilt/deployments/mongo/config.yaml"
+        ]
+      },
+      {
+        "step": 3,
+        "group": "Application Startup Flow",
+        "title": "Build application dependencies and start the server",
+        "explanation": "The main bootstrap creates the runtime dependencies in code order. The detected calls include logging/metrics setup, database/client connection, repository/use-case/handler construction, HTTP server creation and service start where present.",
+        "code": [
+          "cmd/app/app.go:Run",
+          "fmt.Printf",
+          "os.Exit",
+          "err.Error",
+          "logger.NewLogger",
+          "metrics.RegisterMetrics",
+          "metrics.NewTracker",
+          "dal.ConnectDB",
+          "repository.NewGlobalConfigsRepo",
+          "dal.NewGlobalConfigsDAL",
+          "dbClient.Database",
+          "repository.NewTimelineEventRepo",
+          "dal.NewTimelineEventDAL",
+          "repository.NewTimelineEventArchiveRepo",
+          "dal.NewTimelineEventArchiveDAL",
+          "repository.NewRawLinearEventRepo",
+          "dal.NewRawLinearEventDAL",
+          "usecase.NewMetalistService",
+          "usecase.NewStatsService",
+          "usecase.NewRawLinearEventService",
+          "handler.NewMetalistHandler",
+          "handler.NewStatsHandler",
+          "metrics.NewHandler"
+        ],
+        "result": "The service is initialized and ready to receive runtime work.",
+        "evidence": [
+          "cmd/app/app.go"
+        ]
+      },
+      {
+        "step": 4,
+        "group": "GetTimelineEvents Flow",
+        "title": "Process GET /metalist/api/v1/:pvid",
+        "explanation": "A GET request to `/metalist/api/v1/:pvid` is routed to `GetTimelineEvents`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `client.FindOne`, `result.Decode`, `options.Find`, `client.Find`, `cursor.Decode`.",
+        "code": [
+          "GET /metalist/api/v1/:pvid",
+          "internal/handler/metalist.go:MetalistHandler.GetTimelineEvents",
+          "internal/usecase/metalist.go:MetalistService.GetTimelineEvents",
+          "internal/usecase/metalist.go:MetalistService.parseEventDataByTypeToView",
+          "internal/repository/globalConfigs.go:GlobalConfigsRepo.GetGlobalConfigs",
+          "internal/dal/globalConfigs.go:GlobalConfigsDAL.FindOne",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.FindAllByParams"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/globalConfigs.go",
+          "internal/dal/globalConfigs.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 5,
+        "group": "GetPredefinedTimelineEvents Flow",
+        "title": "Process GET /metalist/api/v1/temporary/:pvid",
+        "explanation": "A GET request to `/metalist/api/v1/temporary/:pvid` is routed to `GetPredefinedTimelineEvents`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing.",
+        "code": [
+          "GET /metalist/api/v1/temporary/:pvid",
+          "internal/handler/metalist.go:MetalistHandler.GetPredefinedTimelineEvents",
+          "internal/usecase/metalist.go:MetalistService.GetPredefinedTimelineEvents"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go"
+        ]
+      },
+      {
+        "step": 6,
+        "group": "CreateTimelineEvent Flow",
+        "title": "Process POST /metalist/api/v1/:pvid",
+        "explanation": "A POST request to `/metalist/api/v1/:pvid` is routed to `CreateTimelineEvent`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `client.CountDocuments`, `client.InsertOne`.",
+        "code": [
+          "POST /metalist/api/v1/:pvid",
+          "internal/handler/metalist.go:MetalistHandler.CreateTimelineEvent",
+          "internal/usecase/metalist.go:MetalistService.CreateTimelineEvent",
+          "internal/usecase/metalist.go:MetalistService.parseEventDataByTypeToDomain",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetDocumentCountByParams",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.GetDocumentCountByParams",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.CreateTimelineEvent",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.InsertOne"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 7,
+        "group": "UpdateTimelineEvent Flow",
+        "title": "Process PATCH /metalist/api/v1/:pvid/:eventid",
+        "explanation": "A PATCH request to `/metalist/api/v1/:pvid/:eventid` is routed to `UpdateTimelineEvent`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `options.Find`, `client.Find`, `cursor.Decode`, `client.UpdateOne`.",
+        "code": [
+          "PATCH /metalist/api/v1/:pvid/:eventid",
+          "internal/handler/metalist.go:MetalistHandler.UpdateTimelineEvent",
+          "internal/usecase/metalist.go:MetalistService.UpdateTimelineEvent",
+          "internal/usecase/metalist.go:MetalistService.validateEventTimes",
+          "internal/usecase/metalist.go:MetalistService.parseUpdateEventData",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.FindAllByParams",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.UpdateTimelineEvent",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.UpdateOneByParams"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 8,
+        "group": "DeleteTimelineEvent Flow",
+        "title": "Process DELETE /metalist/api/v1/:pvid/:eventid",
+        "explanation": "A DELETE request to `/metalist/api/v1/:pvid/:eventid` is routed to `DeleteTimelineEvent`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `options.Find`, `client.Find`, `cursor.Decode`, `client.DeleteOne`.",
+        "code": [
+          "DELETE /metalist/api/v1/:pvid/:eventid",
+          "internal/handler/metalist.go:MetalistHandler.DeleteTimelineEvent",
+          "internal/usecase/metalist.go:MetalistService.DeleteTimelineEvent",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.FindAllByParams",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.DeleteTimelineEvent",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.DeleteOneByParams"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 9,
+        "group": "ArchiveTimelineEventsByType Flow",
+        "title": "Process POST /metalist/api/v1/archive/:type",
+        "explanation": "A POST request to `/metalist/api/v1/archive/:type` is routed to `ArchiveTimelineEventsByType`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `options.Find`, `client.Find`, `cursor.Decode`, `options.BulkWrite`, `client.BulkWrite`.",
+        "code": [
+          "POST /metalist/api/v1/archive/:type",
+          "internal/handler/metalist.go:MetalistHandler.ArchiveTimelineEventsByType",
+          "internal/usecase/metalist.go:MetalistService.ArchiveTimelineEventsByType",
+          "internal/usecase/metalist.go:MetalistService.performArchiveTimelineEvents",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.FindAllByParams",
+          "internal/repository/timelineEventArchive.go:TimelineEventArchiveRepo.CreateTimelineEventArchives",
+          "internal/dal/timelineEventArchive.go:TimelineEventArchiveDAL.BulkInsert",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.DeleteTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.BulkDelete"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go",
+          "internal/repository/timelineEventArchive.go",
+          "internal/dal/timelineEventArchive.go",
+          "internal/repository/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 10,
+        "group": "Archives Timeline Events Flow",
+        "title": "Process POST /metalist/api/v1/archive",
+        "explanation": "A POST request to `/metalist/api/v1/archive` is routed to `ArchiveTimelineEvents`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `options.Find`, `client.Find`, `cursor.Decode`, `options.BulkWrite`, `client.BulkWrite`.",
+        "code": [
+          "POST /metalist/api/v1/archive",
+          "internal/handler/metalist.go:MetalistHandler.ArchiveTimelineEvents",
+          "internal/usecase/metalist.go:MetalistService.ArchiveTimelineEvents",
+          "internal/usecase/metalist.go:MetalistService.performArchiveTimelineEvents",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.GetTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.FindAllByParams",
+          "internal/repository/timelineEventArchive.go:TimelineEventArchiveRepo.CreateTimelineEventArchives",
+          "internal/dal/timelineEventArchive.go:TimelineEventArchiveDAL.BulkInsert",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.DeleteTimelineEvents",
+          "internal/dal/timelineEvent.go:TimelineEventDAL.BulkDelete"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/timelineEvent.go",
+          "internal/dal/timelineEvent.go",
+          "internal/repository/timelineEventArchive.go",
+          "internal/dal/timelineEventArchive.go",
+          "internal/repository/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 11,
+        "group": "Gets Global Configs Flow",
+        "title": "Process GET /metalist/api/v1/configs",
+        "explanation": "A GET request to `/metalist/api/v1/configs` is routed to `GetGlobalConfigs`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `client.FindOne`, `result.Decode`.",
+        "code": [
+          "GET /metalist/api/v1/configs",
+          "internal/handler/metalist.go:MetalistHandler.GetGlobalConfigs",
+          "internal/usecase/metalist.go:MetalistService.GetGlobalConfigs",
+          "internal/repository/globalConfigs.go:GlobalConfigsRepo.GetGlobalConfigs",
+          "internal/dal/globalConfigs.go:GlobalConfigsDAL.FindOne"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/globalConfigs.go",
+          "internal/dal/globalConfigs.go"
+        ]
+      },
+      {
+        "step": 12,
+        "group": "Updates Global Configs Flow",
+        "title": "Process PUT /metalist/api/v1/configs",
+        "explanation": "A PUT request to `/metalist/api/v1/configs` is routed to `UpdateGlobalConfigs`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `client.UpdateOne`.",
+        "code": [
+          "PUT /metalist/api/v1/configs",
+          "internal/handler/metalist.go:MetalistHandler.UpdateGlobalConfigs",
+          "internal/usecase/metalist.go:MetalistService.UpdateGlobalConfigs",
+          "internal/repository/globalConfigs.go:GlobalConfigsRepo.UpdateGlobalConfigs",
+          "internal/dal/globalConfigs.go:GlobalConfigsDAL.UpdateOne"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/metalist.go",
+          "internal/usecase/metalist.go",
+          "internal/repository/globalConfigs.go",
+          "internal/dal/globalConfigs.go"
+        ]
+      },
+      {
+        "step": 13,
+        "group": "Get System Health Flow",
+        "title": "Process GET /api/health",
+        "explanation": "A GET request to `/api/health` is routed to `GetHealth`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing.",
+        "code": [
+          "GET /api/health",
+          "internal/handler/stats.go:StatsHandler.GetHealth",
+          "internal/usecase/stats.go:StatsService.GetHealth",
+          "internal/repository/timelineEvent.go:TimelineEventRepo.CheckDatabaseConnection"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/stats.go",
+          "internal/usecase/stats.go",
+          "internal/repository/timelineEvent.go"
+        ]
+      },
+      {
+        "step": 14,
+        "group": "Get Metadata Flow",
+        "title": "Process GET /api/meta",
+        "explanation": "A GET request to `/api/meta` is routed to `GetMetaMetrics`. Production control then follows the proven handler/service/repository/data-access chain in the code list below.",
+        "code": [
+          "GET /api/meta",
+          "internal/handler/stats.go:StatsHandler.GetMetaMetrics",
+          "internal/usecase/stats.go:StatsService.GetMetaMetrics"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/stats.go",
+          "internal/usecase/stats.go"
+        ]
+      },
+      {
+        "step": 15,
+        "group": "Get System Metrics Flow",
+        "title": "Process GET /api/metrics",
+        "explanation": "A GET request to `/api/metrics` is routed to `GetMetrics`. Production control then follows the proven handler/service/repository/data-access chain in the code list below.",
+        "code": [
+          "GET /api/metrics",
+          "internal/handler/stats.go:StatsHandler.GetMetrics"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/stats.go"
+        ]
+      },
+      {
+        "step": 16,
+        "group": "Get Configuration Flow",
+        "title": "Process GET /private/config",
+        "explanation": "A GET request to `/private/config` is routed to `GetConfiguration`. Production control then follows the proven handler/service/repository/data-access chain in the code list below.",
+        "code": [
+          "GET /private/config",
+          "internal/handler/stats.go:StatsHandler.GetConfiguration",
+          "internal/usecase/stats.go:StatsService.GetConfiguration"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/stats.go",
+          "internal/usecase/stats.go"
+        ]
+      },
+      {
+        "step": 17,
+        "group": "ReturnEmpty Flow",
+        "title": "Process GET /swagger/*any",
+        "explanation": "A GET request to `/swagger/*any` is routed to `ReturnEmpty`. Production control then follows the proven handler/service/repository/data-access chain in the code list below.",
+        "code": [
+          "GET /swagger/*any",
+          "internal/handler/docs.go:DocHandler.ReturnEmpty"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/docs.go"
+        ]
+      },
+      {
+        "step": 18,
+        "group": "GetRawLinearEvents Flow",
+        "title": "Process GET /api/v1/raw-linear-events/:region/:serviceKey",
+        "explanation": "A GET request to `/api/v1/raw-linear-events/:region/:serviceKey` is routed to `GetRawLinearEvents`. Production control then follows the proven handler/service/repository/data-access chain in the code list below. The handler or business layer validates request/business conditions before continuing. The flow reaches the detected database operations: `client.CountDocuments`, `options.Find`, `client.Find`, `cursor.Decode`.",
+        "code": [
+          "GET /api/v1/raw-linear-events/:region/:serviceKey",
+          "internal/handler/rawLinearEvent.go:RawLinearEventHandler.GetRawLinearEvents",
+          "internal/usecase/rawLinearEvent.go:RawLinearEventService.GetRawLinearEvents",
+          "internal/repository/rawLinearEvent.go:RawLinearEventRepo.GetRawLinearEventsByLSKAndWindow",
+          "internal/dal/rawLinearEvent.go:RawLinearEventDAL.FindByParams"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "internal/handler/handler.go",
+          "internal/handler/rawLinearEvent.go",
+          "internal/usecase/rawLinearEvent.go",
+          "internal/repository/rawLinearEvent.go",
+          "internal/dal/rawLinearEvent.go"
+        ]
+      },
+      {
+        "step": 19,
+        "group": "Gets Raw Linear Events Flow",
+        "title": "Process GET /api/v1/raw-linear-events/{region}/{serviceKey}",
+        "explanation": "A GET request to `/api/v1/raw-linear-events/{region}/{serviceKey}` is routed to `the documented operation`.",
+        "code": [
+          "GET /api/v1/raw-linear-events/{region}/{serviceKey}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 20,
+        "group": "Archives Timeline Events Flow",
+        "title": "Process POST /metalist/api/v1/archive/{type}",
+        "explanation": "A POST request to `/metalist/api/v1/archive/{type}` is routed to `the documented operation`.",
+        "code": [
+          "POST /metalist/api/v1/archive/{type}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 21,
+        "group": "Gets Timeline Events Flow",
+        "title": "Process GET /metalist/api/v1/{pvid}",
+        "explanation": "A GET request to `/metalist/api/v1/{pvid}` is routed to `the documented operation`.",
+        "code": [
+          "GET /metalist/api/v1/{pvid}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 22,
+        "group": "Creates a Timeline Event Flow",
+        "title": "Process POST /metalist/api/v1/{pvid}",
+        "explanation": "A POST request to `/metalist/api/v1/{pvid}` is routed to `the documented operation`.",
+        "code": [
+          "POST /metalist/api/v1/{pvid}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 23,
+        "group": "Deletes Timeline Event Flow",
+        "title": "Process DELETE /metalist/api/v1/{pvid}/{eventid}",
+        "explanation": "A DELETE request to `/metalist/api/v1/{pvid}/{eventid}` is routed to `the documented operation`.",
+        "code": [
+          "DELETE /metalist/api/v1/{pvid}/{eventid}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 24,
+        "group": "Updates a Timeline Event Flow",
+        "title": "Process PATCH /metalist/api/v1/{pvid}/{eventid}",
+        "explanation": "A PATCH request to `/metalist/api/v1/{pvid}/{eventid}` is routed to `the documented operation`.",
+        "code": [
+          "PATCH /metalist/api/v1/{pvid}/{eventid}"
+        ],
+        "result": "The processed result returns through the application layers to the HTTP response path.",
+        "evidence": [
+          "swagger/swagger.json"
+        ]
+      },
+      {
+        "step": 25,
+        "group": "Application Shutdown Flow",
+        "title": "Gracefully stop the service",
+        "explanation": "The application waits for the detected operating-system termination signals and invokes the graceful shutdown path so active work can finish before process exit.",
+        "code": [
+          "internal/service/service.go:Service.Shutdown",
+          "httpServer.Shutdown"
+        ],
+        "result": "The HTTP service shuts down and the application exits.",
+        "evidence": [
+          "internal/service/service.go"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "Execution begins at the detected repository entry point(s): cmd/main.go.",
+      "Entry modules/packages delegate work through repository-local imports and package dependencies.",
+      "Static call/import analysis identified concrete execution paths shown in Detailed Code Flows below.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "Execution begins at the detected repository entry point(s): cmd/main.go.",
+      "Entry modules/packages delegate work through repository-local imports and package dependencies.",
+      "Static call/import analysis identified concrete execution paths shown in Detailed Code Flows below.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": [
+      {
+        "name": "Go execution/package flow from cmd",
+        "entry_point": "cmd/main.go",
+        "steps": [
+          "cmd",
+          "cmd/app",
+          "internal/domain",
+          "internal/dal",
+          "internal/handler",
+          "internal/lib/metrics",
+          "internal/lib/search",
+          "internal/entity",
+          "internal/lib/docs",
+          "internal/lib/router",
+          "internal/lib/router/pipeline",
+          "internal/view"
+        ],
+        "evidence": [
+          "Static Go package import graph"
+        ]
+      }
+    ]
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {
+      "core": [
+        {
+          "name": "github.com/beorn7/perks",
+          "current_version": "v1.0.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/beorn7/perks"
+        },
+        {
+          "name": "github.com/bytedance/sonic",
+          "current_version": "v1.13.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.15.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/bytedance/sonic"
+        },
+        {
+          "name": "github.com/bytedance/sonic/loader",
+          "current_version": "v0.2.4",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.5.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/bytedance/sonic/loader"
+        },
+        {
+          "name": "github.com/cespare/xxhash/v2",
+          "current_version": "v2.3.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v2.3.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/cespare/xxhash/v2"
+        },
+        {
+          "name": "github.com/cloudwego/base64x",
+          "current_version": "v0.1.5",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.1.7",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/cloudwego/base64x"
+        },
+        {
+          "name": "github.com/davecgh/go-spew",
+          "current_version": "v1.1.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.1.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/davecgh/go-spew"
+        },
+        {
+          "name": "github.com/fsnotify/fsnotify",
+          "current_version": "v1.8.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.10.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/fsnotify/fsnotify"
+        },
+        {
+          "name": "github.com/gabriel-vasile/mimetype",
+          "current_version": "v1.4.8",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.4.15",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gabriel-vasile/mimetype"
+        },
+        {
+          "name": "github.com/gin-contrib/graceful",
+          "current_version": "v1.1.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.2.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gin-contrib/graceful"
+        },
+        {
+          "name": "github.com/gin-contrib/pprof",
+          "current_version": "v1.5.2",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.5.5",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gin-contrib/pprof"
+        },
+        {
+          "name": "github.com/gin-contrib/sse",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.1.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gin-contrib/sse"
+        },
+        {
+          "name": "github.com/gin-gonic/gin",
+          "current_version": "v1.10.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.12.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gin-gonic/gin"
+        },
+        {
+          "name": "github.com/go-openapi/jsonpointer",
+          "current_version": "v0.21.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonpointer"
+        },
+        {
+          "name": "github.com/go-openapi/jsonreference",
+          "current_version": "v0.21.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonreference"
+        },
+        {
+          "name": "github.com/go-openapi/spec",
+          "current_version": "v0.21.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/spec"
+        },
+        {
+          "name": "github.com/go-openapi/swag",
+          "current_version": "v0.23.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag"
+        },
+        {
+          "name": "github.com/go-playground/locales",
+          "current_version": "v0.14.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.14.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/go-playground/locales"
+        },
+        {
+          "name": "github.com/go-playground/universal-translator",
+          "current_version": "v0.18.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.18.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/go-playground/universal-translator"
+        },
+        {
+          "name": "github.com/go-playground/validator/v10",
+          "current_version": "v10.25.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v10.30.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-playground/validator/v10"
+        },
+        {
+          "name": "github.com/go-viper/mapstructure/v2",
+          "current_version": "v2.2.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v2.5.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-viper/mapstructure/v2"
+        },
+        {
+          "name": "github.com/goccy/go-json",
+          "current_version": "v0.10.5",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.10.6",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/goccy/go-json"
+        },
+        {
+          "name": "github.com/golang/mock",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/mock"
+        },
+        {
+          "name": "github.com/golang/snappy",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/snappy"
+        },
+        {
+          "name": "github.com/josharian/intern",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/josharian/intern"
+        },
+        {
+          "name": "github.com/json-iterator/go",
+          "current_version": "v1.1.12",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.1.12",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/json-iterator/go"
+        },
+        {
+          "name": "github.com/klauspost/compress",
+          "current_version": "v1.18.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.20.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/klauspost/compress"
+        },
+        {
+          "name": "github.com/klauspost/cpuid/v2",
+          "current_version": "v2.2.10",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v2.4.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/klauspost/cpuid/v2"
+        },
+        {
+          "name": "github.com/KyleBanks/depth",
+          "current_version": "v1.2.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.2.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/KyleBanks/depth"
+        },
+        {
+          "name": "github.com/leodido/go-urn",
+          "current_version": "v1.4.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.5.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/leodido/go-urn"
+        },
+        {
+          "name": "github.com/mailru/easyjson",
+          "current_version": "v0.9.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.9.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/mailru/easyjson"
+        },
+        {
+          "name": "github.com/mattn/go-isatty",
+          "current_version": "v0.0.20",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.0.24",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/mattn/go-isatty"
+        },
+        {
+          "name": "github.com/modern-go/concurrent",
+          "current_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/concurrent"
+        },
+        {
+          "name": "github.com/modern-go/reflect2",
+          "current_version": "v1.0.2",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/reflect2"
+        },
+        {
+          "name": "github.com/montanaflynn/stats",
+          "current_version": "v0.7.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.12.6",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/montanaflynn/stats"
+        },
+        {
+          "name": "github.com/munnerz/goautoneg",
+          "current_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/munnerz/goautoneg"
+        },
+        {
+          "name": "github.com/NBCUDTC/midnight-go-tooling",
+          "current_version": "v1.1.32",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: go.mod"
+        },
+        {
+          "name": "github.com/pelletier/go-toml/v2",
+          "current_version": "v2.2.3",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v2.4.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/pelletier/go-toml/v2"
+        },
+        {
+          "name": "github.com/pmezard/go-difflib",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pmezard/go-difflib"
+        },
+        {
+          "name": "github.com/prometheus/client_golang",
+          "current_version": "v1.21.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.24.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/client_golang"
+        },
+        {
+          "name": "github.com/prometheus/client_model",
+          "current_version": "v0.6.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.6.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/client_model"
+        },
+        {
+          "name": "github.com/prometheus/common",
+          "current_version": "v0.63.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.71.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/common"
+        },
+        {
+          "name": "github.com/prometheus/procfs",
+          "current_version": "v0.16.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.22.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/procfs"
+        },
+        {
+          "name": "github.com/sagikazarmark/locafero",
+          "current_version": "v0.8.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.12.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/sagikazarmark/locafero"
+        },
+        {
+          "name": "github.com/sourcegraph/conc",
+          "current_version": "v0.3.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.3.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/sourcegraph/conc"
+        },
+        {
+          "name": "github.com/spf13/afero",
+          "current_version": "v1.14.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.15.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/afero"
+        },
+        {
+          "name": "github.com/spf13/cast",
+          "current_version": "v1.7.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.10.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/cast"
+        },
+        {
+          "name": "github.com/spf13/pflag",
+          "current_version": "v1.0.6",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.10",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/pflag"
+        },
+        {
+          "name": "github.com/spf13/viper",
+          "current_version": "v1.20.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.21.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/viper"
+        },
+        {
+          "name": "github.com/stretchr/testify",
+          "current_version": "v1.10.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.12.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/stretchr/testify"
+        },
+        {
+          "name": "github.com/subosito/gotenv",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/subosito/gotenv"
+        },
+        {
+          "name": "github.com/swaggo/files",
+          "current_version": "v1.0.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/swaggo/files"
+        },
+        {
+          "name": "github.com/swaggo/gin-swagger",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.6.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/swaggo/gin-swagger"
+        },
+        {
+          "name": "github.com/swaggo/swag",
+          "current_version": "v1.16.4",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.16.6",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/swaggo/swag"
+        },
+        {
+          "name": "github.com/twitchyliquid64/golang-asm",
+          "current_version": "v0.15.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.15.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/twitchyliquid64/golang-asm"
+        },
+        {
+          "name": "github.com/ugorji/go/codec",
+          "current_version": "v1.2.12",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.3.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/ugorji/go/codec"
+        },
+        {
+          "name": "github.com/xdg-go/pbkdf2",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/xdg-go/pbkdf2"
+        },
+        {
+          "name": "github.com/xdg-go/scram",
+          "current_version": "v1.1.2",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/xdg-go/scram"
+        },
+        {
+          "name": "github.com/xdg-go/stringprep",
+          "current_version": "v1.0.4",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.0.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/xdg-go/stringprep"
+        },
+        {
+          "name": "github.com/youmark/pkcs8",
+          "current_version": "v0.0.0-20240726163527-a2c0da244d78",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.0.0-20240726163527-a2c0da244d78",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/youmark/pkcs8"
+        },
+        {
+          "name": "go.mongodb.org/mongo-driver",
+          "current_version": "v1.17.3",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.17.10",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.mongodb.org/mongo-driver"
+        },
+        {
+          "name": "go.uber.org/multierr",
+          "current_version": "v1.11.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.11.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/go.uber.org/multierr"
+        },
+        {
+          "name": "go.uber.org/zap",
+          "current_version": "v1.27.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.28.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.uber.org/zap"
+        },
+        {
+          "name": "golang.org/x/arch",
+          "current_version": "v0.15.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.31.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/arch"
+        },
+        {
+          "name": "golang.org/x/crypto",
+          "current_version": "v0.36.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.57.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/crypto"
+        },
+        {
+          "name": "golang.org/x/net",
+          "current_version": "v0.37.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.59.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/net"
+        },
+        {
+          "name": "golang.org/x/sync",
+          "current_version": "v0.12.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.23.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sync"
+        },
+        {
+          "name": "golang.org/x/sys",
+          "current_version": "v0.31.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.48.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sys"
+        },
+        {
+          "name": "golang.org/x/text",
+          "current_version": "v0.23.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.42.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/text"
+        },
+        {
+          "name": "golang.org/x/tools",
+          "current_version": "v0.31.0",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v0.50.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/tools"
+        },
+        {
+          "name": "google.golang.org/protobuf",
+          "current_version": "v1.36.5",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v1.36.12",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/google.golang.org/protobuf"
+        },
+        {
+          "name": "gopkg.in/yaml.v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v3"
+        }
+      ]
+    }
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [
+      "Testify"
+    ],
+    "test_categories": [
+      "Automated tests detected"
+    ],
+    "test_file_count": 35,
+    "test_files": [
+      "cmd/app/config_test.go",
+      "internal/dal/filter_test.go",
+      "internal/dal/globalConfigs_test.go",
+      "internal/dal/rawLinearEvent_test.go",
+      "internal/dal/timelineEventArchive_test.go",
+      "internal/dal/timelineEvent_test.go",
+      "internal/handler/docs_test.go",
+      "internal/handler/handler_test.go",
+      "internal/handler/metalist_test.go",
+      "internal/handler/rawLinearEvent_test.go",
+      "internal/handler/stats_test.go",
+      "internal/lib/docs/docs_test.go",
+      "internal/lib/etag/etag_test.go",
+      "internal/lib/metrics/context_test.go",
+      "internal/lib/router/pipeline/doc_mw_test.go",
+      "internal/lib/router/pipeline/etag_mw_test.go",
+      "internal/lib/router/pipeline/metrics_mw_test.go",
+      "internal/lib/router/pipeline/metrics_tracker_mw_test.go",
+      "internal/lib/router/pipeline/recovery_mw_test.go",
+      "internal/lib/router/pipeline/request_coalescer_mw_test.go",
+      "internal/lib/router/pipeline/request_info_test.go",
+      "internal/lib/router/pipeline/request_logger_mw_test.go",
+      "internal/lib/router/pipeline/request_region_mw_test.go",
+      "internal/lib/router/pipeline/responsor_mw_test.go",
+      "internal/lib/router/pipeline/routing_pipeline_test.go",
+      "internal/lib/testing/matcher/matcher_test.go",
+      "internal/lib/utils/utils_test.go",
+      "internal/repository/globalConfigs_test.go",
+      "internal/repository/rawLinearEvent_test.go",
+      "internal/repository/timelineEventArchive_test.go",
+      "internal/repository/timelineEvent_test.go",
+      "internal/service/service_test.go",
+      "internal/usecase/metalist_test.go",
+      "internal/usecase/rawLinearEvent_test.go",
+      "internal/usecase/stats_test.go"
+    ],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": [
+      {
+        "method": "GET",
+        "endpoint": "/metalist/api/v1/:pvid",
+        "handler": "GetTimelineEvents",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/metalist/api/v1/temporary/:pvid",
+        "handler": "GetPredefinedTimelineEvents",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/metalist/api/v1/:pvid",
+        "handler": "CreateTimelineEvent",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/metalist/api/v1/:pvid/:eventid",
+        "handler": "UpdateTimelineEvent",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/metalist/api/v1/:pvid/:eventid",
+        "handler": "DeleteTimelineEvent",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/metalist/api/v1/archive/:type",
+        "handler": "ArchiveTimelineEventsByType",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/metalist/api/v1/archive",
+        "handler": "ArchiveTimelineEvents",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/metalist/api/v1/configs",
+        "handler": "GetGlobalConfigs",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "PUT",
+        "endpoint": "/metalist/api/v1/configs",
+        "handler": "UpdateGlobalConfigs",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/health",
+        "handler": "GetHealth",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/meta",
+        "handler": "GetMetaMetrics",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/metrics",
+        "handler": "GetMetrics",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/private/config",
+        "handler": "GetConfiguration",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/swagger/*any",
+        "handler": "ReturnEmpty",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/v1/raw-linear-events/:region/:serviceKey",
+        "handler": "GetRawLinearEvents",
+        "component": "HTTP route",
+        "source_file": "internal/handler/handler.go"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/api/v1/raw-linear-events/{region}/{serviceKey}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/metalist/api/v1/archive/{type}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/metalist/api/v1/{pvid}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/metalist/api/v1/{pvid}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/metalist/api/v1/{pvid}/{eventid}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/metalist/api/v1/{pvid}/{eventid}",
+        "handler": "",
+        "component": "HTTP route",
+        "source_file": "swagger/swagger.json"
+      }
+    ]
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": []
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}

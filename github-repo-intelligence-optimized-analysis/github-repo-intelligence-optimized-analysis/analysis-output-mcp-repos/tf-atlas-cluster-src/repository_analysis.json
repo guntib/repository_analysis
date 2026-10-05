@@ -1,0 +1,300 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/tf-atlas-cluster-src.git",
+    "source_type": "GitHub",
+    "repository_name": "tf-atlas-cluster-src",
+    "repository_type": "Application / Service / Library Repository",
+    "what_repository_does": "Terraform module for a MongoDB Atlas project and its cluster. Published to S3 as atlas-cluster-<version.zip and consumed by pinning that object. One call creates a project and exactly one replica set in it, plus the pieces a tenant needs to reach and operate the cluster: | Project | the project, its team assignments, IP access list, maintenance window and auditing | | Cluster | one mongodbatlasadvancedcluster replica set, backup on, autoscaling between instancesizemin and instancesizemax | | Users | admin and monitor, plus anything in additionalusers, each with a generated password | | Optional | the Atlas Prometheus integration and its Kubernetes ScrapeConfig, off unless prometheusintegration = true | Outputs are connectionstrings, projectid, the user names, their passwords (sensitive) and prometheususername. | Scrape Atlas metrics into Prometheus | prometheusintegration = true | | Put the ScrapeConfig in another namespace | prometheusnamespace | | Name the cluster differently from the project | clustername |",
+    "repository_summary": "Terraform module for a MongoDB Atlas project and its cluster. Published to S3 as atlas-cluster-<version.zip and consumed by pinning that object. One call creates a project and exactly one replica set in it, plus the pieces a tenant needs to reach and operate the cluster: | Project | the project, its team assignments, IP access list, maintenance window and auditing | | Cluster | one mongodbatlasadvancedcluster replica set, backup on, autoscaling between instancesizemin and instancesizemax | | Users | admin and monitor, plus anything in additionalusers, each with a generated password | | Optional | the Atlas Prometheus integration and its Kubernetes ScrapeConfig, off unless prometheusintegration = true | Outputs are connectionstrings, projectid, the user names, their passwords (sensitive) and prometheususername. | Scrape Atlas metrics into Prometheus | prometheusintegration = true | | Put the ScrapeConfig in another namespace | prometheusnamespace | | Name the cluster differently from the project | clustername |",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [
+      "Terraform"
+    ],
+    "frameworks": [],
+    "runtime": [],
+    "databases": [],
+    "cloud_platforms": [],
+    "containers": [],
+    "kubernetes_helm_terraform": [
+      "Terraform"
+    ],
+    "ci_cd": [
+      "GitHub Actions"
+    ],
+    "testing_tools": [],
+    "monitoring_observability": [],
+    "important_core_libraries": []
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 18,
+    "important_files": [
+      ".github/workflows/auto-upgrade-tf-module.yaml",
+      ".github/workflows/linting.yaml",
+      ".github/workflows/pr-title-validation.yaml",
+      ".github/workflows/publish-tf-module-atlas-cluster.yaml",
+      ".github/workflows/set-self.yaml",
+      ".github/workflows/setup-repository.yaml",
+      "README.md"
+    ],
+    "artifacts": {
+      "configuration": [],
+      "docker": [],
+      "kubernetes_helm": [],
+      "terraform": [
+        "src/cluster.tf",
+        "src/outputs.tf",
+        "src/project.tf",
+        "src/prometheus.tf",
+        "src/user.tf",
+        "src/variables.tf",
+        "src/versions.tf"
+      ],
+      "ci_cd": [
+        ".github/workflows/auto-upgrade-tf-module.yaml",
+        ".github/workflows/linting.yaml",
+        ".github/workflows/pr-title-validation.yaml",
+        ".github/workflows/publish-tf-module-atlas-cluster.yaml",
+        ".github/workflows/set-self.yaml",
+        ".github/workflows/setup-repository.yaml"
+      ],
+      "api_specs": [],
+      "documentation": [
+        "README.md"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "src",
+          "file_count": 8
+        },
+        {
+          "name": ".github",
+          "file_count": 7
+        },
+        {
+          "name": "ci",
+          "file_count": 1
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".yaml",
+          "file_count": 7
+        },
+        {
+          "extension": ".tf",
+          "file_count": 7
+        },
+        {
+          "extension": ".md",
+          "file_count": 2
+        },
+        {
+          "extension": ".json",
+          "file_count": 1
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "src",
+        "responsibility": "Primary source implementation",
+        "evidence": [
+          "8 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "src",
+        "description": "Primary source implementation",
+        "evidence": [
+          "8 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "relationships": [],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {},
+        "functions": [],
+        "package_relationships": [],
+        "call_edges": [],
+        "entry_points": [],
+        "module_path": ""
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular repository architecture",
+    "architecture_explanation": "The repository follows a modular repository architecture. Static analysis identified 3 major structural component areas, 0 executable/package entry points, and 0 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "src",
+        "description": "Primary source implementation",
+        "evidence": [
+          "8 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "major_components": [
+      {
+        "name": "src",
+        "responsibility": "Primary source implementation",
+        "evidence": [
+          "8 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "component_relationships": [],
+    "configuration_model": "Configuration is primarily code/package-metadata driven; no dedicated configuration files were conclusively detected.",
+    "extension_points": [],
+    "deployment_model": "Terraform-managed infrastructure",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 0",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 0"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": []
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {}
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [],
+    "test_categories": [],
+    "test_file_count": 0,
+    "test_files": [],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": []
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": []
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}

@@ -1,0 +1,3371 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/cloud-resource-scanner-src.git",
+    "source_type": "GitHub",
+    "repository_name": "cloud-resource-scanner-src",
+    "repository_type": "Application / Service / Library Repository",
+    "what_repository_does": "Main wiki with business description and objectives. The Cloud Resource Scanner consolidates information from multiple AWS accounts and GCP projects into Prometheus metrics for alerting and dashboarding. From AWS accounts, it scans IAM keys, NAT Gateway IP addresses, and certificate expiration dates. From GCP projects, it scans IAM keys and certificate expiration dates. The Cloud Resource Scanner is responsible for the data behind these 3 dashboards: 1. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/certificate-inventory 2. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/ip-inventory 3. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/user-key-inventory 4. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/compliance-summary The Cloud Resource Scanner runs using the arn:aws:iam::608746997981:role/cloud-resource-scanner IAM Role. Each AWS account needs to create a role that can be assumed by the Cloud Resource Scanner role. AWS IAM Roles for the CRS can be found here. Terraform to create that role is:",
+    "repository_summary": "Main wiki with business description and objectives. The Cloud Resource Scanner consolidates information from multiple AWS accounts and GCP projects into Prometheus metrics for alerting and dashboarding. From AWS accounts, it scans IAM keys, NAT Gateway IP addresses, and certificate expiration dates. From GCP projects, it scans IAM keys and certificate expiration dates. The Cloud Resource Scanner is responsible for the data behind these 3 dashboards: 1. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/certificate-inventory 2. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/ip-inventory 3. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/user-key-inventory 4. https://prod-grafana-us-east-2.helios-prod.nbcuni.com/d/compliance-summary The Cloud Resource Scanner runs using the arn:aws:iam::608746997981:role/cloud-resource-scanner IAM Role. Each AWS account needs to create a role that can be assumed by the Cloud Resource Scanner role. AWS IAM Roles for the CRS can be found here. Terraform to create that role is:",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [
+      "Go",
+      "Terraform"
+    ],
+    "frameworks": [],
+    "runtime": [
+      "Go 1.26.4"
+    ],
+    "databases": [],
+    "cloud_platforms": [],
+    "containers": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "kubernetes_helm_terraform": [
+      "Helm",
+      "Terraform"
+    ],
+    "ci_cd": [
+      "GitHub Actions"
+    ],
+    "testing_tools": [
+      "Testify"
+    ],
+    "monitoring_observability": [
+      "Prometheus"
+    ],
+    "important_core_libraries": [
+      "cel.dev/expr",
+      "cloud.google.com/go",
+      "cloud.google.com/go/auth",
+      "cloud.google.com/go/auth/oauth2adapt",
+      "cloud.google.com/go/compute",
+      "cloud.google.com/go/compute/metadata",
+      "cloud.google.com/go/iam",
+      "cloud.google.com/go/monitoring",
+      "cloud.google.com/go/storage",
+      "github.com/99designs/go-keychain",
+      "github.com/99designs/keyring",
+      "github.com/akamai/akamaiopen-edgegrid-golang/v4",
+      "github.com/andybalholm/brotli",
+      "github.com/apache/arrow-go/v18",
+      "github.com/apache/thrift",
+      "github.com/apex/log",
+      "github.com/aws/aws-sdk-go",
+      "github.com/aws/aws-sdk-go-v2",
+      "github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream",
+      "github.com/aws/aws-sdk-go-v2/config",
+      "github.com/aws/aws-sdk-go-v2/credentials",
+      "github.com/aws/aws-sdk-go-v2/feature/ec2/imds",
+      "github.com/aws/aws-sdk-go-v2/feature/s3/manager",
+      "github.com/aws/aws-sdk-go-v2/internal/configsources",
+      "github.com/aws/aws-sdk-go-v2/internal/endpoints/v2",
+      "github.com/aws/aws-sdk-go-v2/internal/ini",
+      "github.com/aws/aws-sdk-go-v2/internal/v4a",
+      "github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding",
+      "github.com/aws/aws-sdk-go-v2/service/internal/checksum",
+      "github.com/aws/aws-sdk-go-v2/service/internal/presigned-url",
+      "github.com/aws/aws-sdk-go-v2/service/internal/s3shared",
+      "github.com/aws/aws-sdk-go-v2/service/s3",
+      "github.com/aws/aws-sdk-go-v2/service/sso",
+      "github.com/aws/aws-sdk-go-v2/service/ssooidc",
+      "github.com/aws/aws-sdk-go-v2/service/sts",
+      "github.com/aws/smithy-go",
+      "github.com/azure/azure-sdk-for-go/sdk/azcore",
+      "github.com/azure/azure-sdk-for-go/sdk/internal",
+      "github.com/azure/azure-sdk-for-go/sdk/storage/azblob",
+      "github.com/beorn7/perks",
+      "github.com/burntsushi/toml",
+      "github.com/cespare/xxhash/v2",
+      "github.com/cncf/xds/go",
+      "github.com/danieljoos/wincred",
+      "github.com/davecgh/go-spew",
+      "github.com/dvsekhvalnov/jose2go",
+      "github.com/emicklei/go-restful/v3",
+      "github.com/envoyproxy/go-control-plane/envoy",
+      "github.com/envoyproxy/protoc-gen-validate",
+      "github.com/fastly/go-fastly/v6",
+      "github.com/felixge/httpsnoop",
+      "github.com/fxamacker/cbor/v2",
+      "github.com/gabriel-vasile/mimetype",
+      "github.com/go-co-op/gocron",
+      "github.com/go-jose/go-jose/v4",
+      "github.com/go-logr/logr",
+      "github.com/go-logr/stdr",
+      "github.com/go-openapi/jsonpointer",
+      "github.com/go-openapi/jsonreference",
+      "github.com/go-openapi/swag",
+      "github.com/go-openapi/swag/cmdutils",
+      "github.com/go-openapi/swag/conv",
+      "github.com/go-openapi/swag/fileutils",
+      "github.com/go-openapi/swag/jsonname",
+      "github.com/go-openapi/swag/jsonutils",
+      "github.com/go-openapi/swag/loading",
+      "github.com/go-openapi/swag/mangling",
+      "github.com/go-openapi/swag/netutils",
+      "github.com/go-openapi/swag/stringutils",
+      "github.com/go-openapi/swag/typeutils",
+      "github.com/go-openapi/swag/yamlutils",
+      "github.com/goccy/go-json",
+      "github.com/godbus/dbus",
+      "github.com/gogo/protobuf",
+      "github.com/golang-jwt/jwt/v5",
+      "github.com/golang/protobuf",
+      "github.com/golang/snappy",
+      "github.com/google/flatbuffers",
+      "github.com/google/gnostic-models",
+      "github.com/google/go-cmp"
+    ]
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 160,
+    "important_files": [
+      ".github/workflows/build.yaml",
+      ".github/workflows/locstat-preserve-stats-on-merge.yml",
+      ".github/workflows/locstat-verify-notes.yml",
+      ".github/workflows/pr-reviews.yaml",
+      ".github/workflows/pr-title-validation.yaml",
+      ".github/workflows/set-self.yaml",
+      ".github/workflows/setup-repository.yaml",
+      "README.md"
+    ],
+    "artifacts": {
+      "configuration": [
+        ".env.example",
+        "src/.env.example",
+        "src/config.yaml",
+        "src/utils/config/main.go",
+        "src/utils/config/main_test.go"
+      ],
+      "docker": [
+        "docker-compose.yaml",
+        "src/Dockerfile"
+      ],
+      "kubernetes_helm": [
+        "chart/Chart.yaml"
+      ],
+      "terraform": [
+        "terraform/modules/cloud-resource-scanner/iam.tf",
+        "terraform/modules/cloud-resource-scanner/main.tf",
+        "terraform/modules/cloud-resource-scanner/sg.tf",
+        "terraform/modules/cloud-resource-scanner/variables.tf",
+        "terraform/phases/dev/main.tf",
+        "terraform/phases/dev/secrets.tf",
+        "terraform/phases/dev/variables.tf",
+        "terraform/phases/int-nft/main.tf",
+        "terraform/phases/int-nft/secrets.tf",
+        "terraform/phases/int-nft/variables.tf",
+        "terraform/phases/int/main.tf",
+        "terraform/phases/int/secrets.tf",
+        "terraform/phases/int/variables.tf",
+        "terraform/phases/prod-new/main.tf",
+        "terraform/phases/prod-new/secrets.tf",
+        "terraform/phases/prod-new/variables.tf",
+        "terraform/phases/prod/main.tf",
+        "terraform/phases/prod/secrets.tf",
+        "terraform/phases/prod/variables.tf",
+        "terraform/phases/stage/main.tf",
+        "terraform/phases/stage/secrets.tf",
+        "terraform/phases/stage/variables.tf"
+      ],
+      "ci_cd": [
+        ".github/workflows/build.yaml",
+        ".github/workflows/locstat-preserve-stats-on-merge.yml",
+        ".github/workflows/locstat-verify-notes.yml",
+        ".github/workflows/pr-reviews.yaml",
+        ".github/workflows/pr-title-validation.yaml",
+        ".github/workflows/set-self.yaml",
+        ".github/workflows/setup-repository.yaml"
+      ],
+      "api_specs": [],
+      "documentation": [
+        "README.md",
+        "docs/designs/template.md",
+        "docs/snowflake-saml-certs-setup.sql"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "src",
+          "file_count": 66
+        },
+        {
+          "name": "chart",
+          "file_count": 43
+        },
+        {
+          "name": "terraform",
+          "file_count": 29
+        },
+        {
+          "name": ".github",
+          "file_count": 10
+        },
+        {
+          "name": "ci",
+          "file_count": 4
+        },
+        {
+          "name": "docs",
+          "file_count": 2
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".go",
+          "file_count": 60
+        },
+        {
+          "extension": ".yaml",
+          "file_count": 36
+        },
+        {
+          "extension": ".json",
+          "file_count": 23
+        },
+        {
+          "extension": ".tf",
+          "file_count": 22
+        },
+        {
+          "extension": ".yml",
+          "file_count": 4
+        },
+        {
+          "extension": ".md",
+          "file_count": 3
+        },
+        {
+          "extension": ".example",
+          "file_count": 2
+        },
+        {
+          "extension": ".properties",
+          "file_count": 1
+        },
+        {
+          "extension": ".sql",
+          "file_count": 1
+        },
+        {
+          "extension": ".mod",
+          "file_count": 1
+        },
+        {
+          "extension": ".sum",
+          "file_count": 1
+        },
+        {
+          "extension": ".tpl",
+          "file_count": 1
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "src",
+        "responsibility": "Primary source implementation",
+        "evidence": [
+          "66 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": "chart",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "43 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "src",
+        "description": "Primary source implementation",
+        "evidence": [
+          "66 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": "chart",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "43 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "src:main",
+        "source_file": "src/main.go"
+      }
+    ],
+    "relationships": [],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {
+          "src": [
+            "src/main.go"
+          ],
+          "src/cloud/edgio": [
+            "src/cloud/edgio/main.go"
+          ],
+          "src/cloud/fastly": [
+            "src/cloud/fastly/main.go"
+          ],
+          "src/cloud/snowflake": [
+            "src/cloud/snowflake/cert.go"
+          ],
+          "src/cloud/gcp": [
+            "src/cloud/gcp/iam.go",
+            "src/cloud/gcp/instance.go",
+            "src/cloud/gcp/volumes.go",
+            "src/cloud/gcp/buckets.go",
+            "src/cloud/gcp/cert.go",
+            "src/cloud/gcp/main.go"
+          ],
+          "src/cloud/akamai": [
+            "src/cloud/akamai/main.go"
+          ],
+          "src/cloud/static": [
+            "src/cloud/static/cert.go"
+          ],
+          "src/cloud/lumen": [
+            "src/cloud/lumen/main.go"
+          ],
+          "src/cloud/comcast": [
+            "src/cloud/comcast/main.go"
+          ],
+          "src/cloud/aws": [
+            "src/cloud/aws/eks.go",
+            "src/cloud/aws/supportPlan.go",
+            "src/cloud/aws/dynamodb.go",
+            "src/cloud/aws/alias.go",
+            "src/cloud/aws/rds.go",
+            "src/cloud/aws/elasticache.go",
+            "src/cloud/aws/ipAddress.go",
+            "src/cloud/aws/iamUser.go",
+            "src/cloud/aws/instance.go",
+            "src/cloud/aws/access.go",
+            "src/cloud/aws/ami.go",
+            "src/cloud/aws/region.go",
+            "src/cloud/aws/workloads.go",
+            "src/cloud/aws/volume.go",
+            "src/cloud/aws/buckets.go",
+            "src/cloud/aws/cert.go"
+          ],
+          "src/utils/prom": [
+            "src/utils/prom/main.go"
+          ],
+          "src/utils/config": [
+            "src/utils/config/main.go"
+          ],
+          "src/utils/sslCert": [
+            "src/utils/sslCert/main.go"
+          ],
+          "src/utils/jira": [
+            "src/utils/jira/main.go"
+          ],
+          "src/utils/report": [
+            "src/utils/report/supportPlan.go",
+            "src/utils/report/dynamodb.go",
+            "src/utils/report/rds.go",
+            "src/utils/report/elasticache.go",
+            "src/utils/report/user.go",
+            "src/utils/report/ipAddress.go",
+            "src/utils/report/instance.go",
+            "src/utils/report/workload.go",
+            "src/utils/report/access.go",
+            "src/utils/report/ami.go",
+            "src/utils/report/kubernetes.go",
+            "src/utils/report/cbCluster.go",
+            "src/utils/report/volume.go",
+            "src/utils/report/buckets.go",
+            "src/utils/report/cert.go",
+            "src/utils/report/report.go"
+          ],
+          "src/utils/logging": [
+            "src/utils/logging/main.go"
+          ],
+          "src/web/metrics": [
+            "src/web/metrics/main.go"
+          ],
+          "src/web/public": [
+            "src/web/public/main.go"
+          ],
+          "src/web/private": [
+            "src/web/private/main.go"
+          ]
+        },
+        "functions": [
+          {
+            "symbol": "src:main",
+            "name": "main",
+            "package": "src",
+            "source_file": "src/main.go"
+          },
+          {
+            "symbol": "src:executeProgram",
+            "name": "executeProgram",
+            "package": "src",
+            "source_file": "src/main.go"
+          },
+          {
+            "symbol": "src:loopAccounts",
+            "name": "loopAccounts",
+            "package": "src",
+            "source_file": "src/main.go"
+          },
+          {
+            "symbol": "src:collectGaugeValues",
+            "name": "collectGaugeValues",
+            "package": "src",
+            "source_file": "src/main.go"
+          },
+          {
+            "symbol": "src/cloud/edgio:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/edgio",
+            "source_file": "src/cloud/edgio/main.go"
+          },
+          {
+            "symbol": "src/cloud/edgio:getToken",
+            "name": "getToken",
+            "package": "src/cloud/edgio",
+            "source_file": "src/cloud/edgio/main.go"
+          },
+          {
+            "symbol": "src/cloud/edgio:getResponse",
+            "name": "getResponse",
+            "package": "src/cloud/edgio",
+            "source_file": "src/cloud/edgio/main.go"
+          },
+          {
+            "symbol": "src/cloud/fastly:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/fastly",
+            "source_file": "src/cloud/fastly/main.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:snowflakeQueryContext",
+            "name": "snowflakeQueryContext",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:collectAccountCerts",
+            "name": "collectAccountCerts",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:groupOwner",
+            "name": "groupOwner",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:identityFromAccountURL",
+            "name": "identityFromAccountURL",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:accountDomain",
+            "name": "accountDomain",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:buildFailedSnowflakeCert",
+            "name": "buildFailedSnowflakeCert",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:addFailedSnowflakeCert",
+            "name": "addFailedSnowflakeCert",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:openSnowflakeDB",
+            "name": "openSnowflakeDB",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:accountFromURL",
+            "name": "accountFromURL",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:quoteIdent",
+            "name": "quoteIdent",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:resolveSnowflakeAccountIdentity",
+            "name": "resolveSnowflakeAccountIdentity",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:currentAccountName",
+            "name": "currentAccountName",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:formatAccountName",
+            "name": "formatAccountName",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:currentAccountLocator",
+            "name": "currentAccountLocator",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:listSAMLIntegrations",
+            "name": "listSAMLIntegrations",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:fetchSAMLIntegration",
+            "name": "fetchSAMLIntegration",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:snowflakeFQDNs",
+            "name": "snowflakeFQDNs",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:primarySAMLDomains",
+            "name": "primarySAMLDomains",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:hostFromURL",
+            "name": "hostFromURL",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:appendFQDN",
+            "name": "appendFQDN",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:parseSAMLCert",
+            "name": "parseSAMLCert",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:colIndex",
+            "name": "colIndex",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:scanRow",
+            "name": "scanRow",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/snowflake:asString",
+            "name": "asString",
+            "package": "src/cloud/snowflake",
+            "source_file": "src/cloud/snowflake/cert.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:GetIAMUsers",
+            "name": "GetIAMUsers",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/iam.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:GetInstances",
+            "name": "GetInstances",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/instance.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:GetVolumes",
+            "name": "GetVolumes",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/volumes.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:GetBuckets",
+            "name": "GetBuckets",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:livenessString",
+            "name": "livenessString",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:hasExpiration",
+            "name": "hasExpiration",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/cert.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:Init",
+            "name": "Init",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/main.go"
+          },
+          {
+            "symbol": "src/cloud/gcp:Close",
+            "name": "Close",
+            "package": "src/cloud/gcp",
+            "source_file": "src/cloud/gcp/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:buildEdgegridConfig",
+            "name": "buildEdgegridConfig",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:getAkamaiEnrollments",
+            "name": "getAkamaiEnrollments",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:getAkamaiDeployments",
+            "name": "getAkamaiDeployments",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:GetCertsFromAkamaiDNS",
+            "name": "GetCertsFromAkamaiDNS",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/akamai:getAkamaiDNSRecords",
+            "name": "getAkamaiDNSRecords",
+            "package": "src/cloud/akamai",
+            "source_file": "src/cloud/akamai/main.go"
+          },
+          {
+            "symbol": "src/cloud/static:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/static",
+            "source_file": "src/cloud/static/cert.go"
+          },
+          {
+            "symbol": "src/cloud/lumen:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/lumen",
+            "source_file": "src/cloud/lumen/main.go"
+          },
+          {
+            "symbol": "src/cloud/lumen:getLumenSubscriberIDs",
+            "name": "getLumenSubscriberIDs",
+            "package": "src/cloud/lumen",
+            "source_file": "src/cloud/lumen/main.go"
+          },
+          {
+            "symbol": "src/cloud/comcast:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/comcast",
+            "source_file": "src/cloud/comcast/main.go"
+          },
+          {
+            "symbol": "src/cloud/comcast:getDeliveryServices",
+            "name": "getDeliveryServices",
+            "package": "src/cloud/comcast",
+            "source_file": "src/cloud/comcast/main.go"
+          },
+          {
+            "symbol": "src/cloud/comcast:getComcastCreds",
+            "name": "getComcastCreds",
+            "package": "src/cloud/comcast",
+            "source_file": "src/cloud/comcast/main.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetEKSClusters",
+            "name": "GetEKSClusters",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/eks.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetSupportPlan",
+            "name": "GetSupportPlan",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/supportPlan.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetDynamoDbTables",
+            "name": "GetDynamoDbTables",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/dynamodb.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetAlias",
+            "name": "GetAlias",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/alias.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetRDSInstances",
+            "name": "GetRDSInstances",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/rds.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetElastiCacheClusters",
+            "name": "GetElastiCacheClusters",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/elasticache.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetIPAddresses",
+            "name": "GetIPAddresses",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/ipAddress.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetIamUsers",
+            "name": "GetIamUsers",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/iamUser.go"
+          },
+          {
+            "symbol": "src/cloud/aws:getAccessKeysWithTags",
+            "name": "getAccessKeysWithTags",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/iamUser.go"
+          },
+          {
+            "symbol": "src/cloud/aws:checkLoginProfileForUser",
+            "name": "checkLoginProfileForUser",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/iamUser.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetInstances",
+            "name": "GetInstances",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/instance.go"
+          },
+          {
+            "symbol": "src/cloud/aws:CheckAccess",
+            "name": "CheckAccess",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/access.go"
+          },
+          {
+            "symbol": "src/cloud/aws:recordAWSAccess",
+            "name": "recordAWSAccess",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/access.go"
+          },
+          {
+            "symbol": "src/cloud/aws:getImageName",
+            "name": "getImageName",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/ami.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetRegions",
+            "name": "GetRegions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/region.go"
+          },
+          {
+            "symbol": "src/cloud/aws:parseImageDetails",
+            "name": "parseImageDetails",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetEKSWorkloadVersions",
+            "name": "GetEKSWorkloadVersions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:buildEKSClient",
+            "name": "buildEKSClient",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:getEKSBearerToken",
+            "name": "getEKSBearerToken",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:collectDeploymentVersions",
+            "name": "collectDeploymentVersions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:collectStatefulSetVersions",
+            "name": "collectStatefulSetVersions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:collectDaemonSetVersions",
+            "name": "collectDaemonSetVersions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:recordWorkloadVersion",
+            "name": "recordWorkloadVersion",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:extractImageVersion",
+            "name": "extractImageVersion",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:extractHelmChart",
+            "name": "extractHelmChart",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:metav1ListOptions",
+            "name": "metav1ListOptions",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/workloads.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetVolumes",
+            "name": "GetVolumes",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/volume.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetBuckets",
+            "name": "GetBuckets",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/aws:getBucketRegion",
+            "name": "getBucketRegion",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/aws:getLifecycleConfig",
+            "name": "getLifecycleConfig",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/buckets.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetCerts",
+            "name": "GetCerts",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/cert.go"
+          },
+          {
+            "symbol": "src/cloud/aws:GetCertsFromRoute53",
+            "name": "GetCertsFromRoute53",
+            "package": "src/cloud/aws",
+            "source_file": "src/cloud/aws/cert.go"
+          },
+          {
+            "symbol": "src/utils/prom:MeasureAsyncTime",
+            "name": "MeasureAsyncTime",
+            "package": "src/utils/prom",
+            "source_file": "src/utils/prom/main.go"
+          },
+          {
+            "symbol": "src/utils/prom:MeasureTime",
+            "name": "MeasureTime",
+            "package": "src/utils/prom",
+            "source_file": "src/utils/prom/main.go"
+          },
+          {
+            "symbol": "src/utils/config:checkVendorCache",
+            "name": "checkVendorCache",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:storeVendorCache",
+            "name": "storeVendorCache",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:GetVendorFromDomain",
+            "name": "GetVendorFromDomain",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:checkEnvironmentCache",
+            "name": "checkEnvironmentCache",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:storeEnvironmentCache",
+            "name": "storeEnvironmentCache",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:GetEnvironmentsOrDefault",
+            "name": "GetEnvironmentsOrDefault",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:GetEnvironmentFromName",
+            "name": "GetEnvironmentFromName",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/config:Init",
+            "name": "Init",
+            "package": "src/utils/config",
+            "source_file": "src/utils/config/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:FormatSerial",
+            "name": "FormatSerial",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetTLSDetails",
+            "name": "GetTLSDetails",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:WalkCertificateString",
+            "name": "WalkCertificateString",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:WalkCertificates",
+            "name": "WalkCertificates",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetTLSDetailsWithPort",
+            "name": "GetTLSDetailsWithPort",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetTLSVersionName",
+            "name": "GetTLSVersionName",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetCipherSuiteName",
+            "name": "GetCipherSuiteName",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:ParseFQDN",
+            "name": "ParseFQDN",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetSupportedProtocols",
+            "name": "GetSupportedProtocols",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:GetKeyInfo",
+            "name": "GetKeyInfo",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:ValidateHostname",
+            "name": "ValidateHostname",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:matchHostname",
+            "name": "matchHostname",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/sslCert:ValidateCertChain",
+            "name": "ValidateCertChain",
+            "package": "src/utils/sslCert",
+            "source_file": "src/utils/sslCert/main.go"
+          },
+          {
+            "symbol": "src/utils/jira:CreateTicket",
+            "name": "CreateTicket",
+            "package": "src/utils/jira",
+            "source_file": "src/utils/jira/main.go"
+          },
+          {
+            "symbol": "src/utils/jira:determineProjectKey",
+            "name": "determineProjectKey",
+            "package": "src/utils/jira",
+            "source_file": "src/utils/jira/main.go"
+          },
+          {
+            "symbol": "src/utils/jira:jiraTicketExists",
+            "name": "jiraTicketExists",
+            "package": "src/utils/jira",
+            "source_file": "src/utils/jira/main.go"
+          },
+          {
+            "symbol": "src/utils/report:Add",
+            "name": "Add",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/supportPlan.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/supportPlan.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/dynamodb.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/dynamodb.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/rds.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/rds.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/elasticache.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/elasticache.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/user.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/user.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/ipAddress.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/ipAddress.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/instance.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/instance.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/workload.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/workload.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/access.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/access.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/kubernetes.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/kubernetes.go"
+          },
+          {
+            "symbol": "src/utils/report:Add",
+            "name": "Add",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cbCluster.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cbCluster.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/volume.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/volume.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/buckets.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/buckets.go"
+          },
+          {
+            "symbol": "src/utils/report:AddAll",
+            "name": "AddAll",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cert.go"
+          },
+          {
+            "symbol": "src/utils/report:Get",
+            "name": "Get",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cert.go"
+          },
+          {
+            "symbol": "src/utils/report:AddCert",
+            "name": "AddCert",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cert.go"
+          },
+          {
+            "symbol": "src/utils/report:AddCertWithDeduplication",
+            "name": "AddCertWithDeduplication",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cert.go"
+          },
+          {
+            "symbol": "src/utils/report:AddCertWithDeduplicationKeyed",
+            "name": "AddCertWithDeduplicationKeyed",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/cert.go"
+          },
+          {
+            "symbol": "src/utils/report:NewCollector",
+            "name": "NewCollector",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/report.go"
+          },
+          {
+            "symbol": "src/utils/report:GetData",
+            "name": "GetData",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/report.go"
+          },
+          {
+            "symbol": "src/utils/report:collectOwners",
+            "name": "collectOwners",
+            "package": "src/utils/report",
+            "source_file": "src/utils/report/report.go"
+          },
+          {
+            "symbol": "src/utils/logging:Init",
+            "name": "Init",
+            "package": "src/utils/logging",
+            "source_file": "src/utils/logging/main.go"
+          },
+          {
+            "symbol": "src/web/metrics:StartServer",
+            "name": "StartServer",
+            "package": "src/web/metrics",
+            "source_file": "src/web/metrics/main.go"
+          },
+          {
+            "symbol": "src/web/public:StartServer",
+            "name": "StartServer",
+            "package": "src/web/public",
+            "source_file": "src/web/public/main.go"
+          },
+          {
+            "symbol": "src/web/public:writeResidents",
+            "name": "writeResidents",
+            "package": "src/web/public",
+            "source_file": "src/web/public/main.go"
+          },
+          {
+            "symbol": "src/web/private:StartServer",
+            "name": "StartServer",
+            "package": "src/web/private",
+            "source_file": "src/web/private/main.go"
+          },
+          {
+            "symbol": "src/web/private:writeJSON",
+            "name": "writeJSON",
+            "package": "src/web/private",
+            "source_file": "src/web/private/main.go"
+          }
+        ],
+        "package_relationships": [],
+        "call_edges": [],
+        "entry_points": [
+          {
+            "type": "Go executable entry point",
+            "symbol": "src:main",
+            "source_file": "src/main.go"
+          }
+        ],
+        "module_path": ""
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular repository architecture",
+    "architecture_explanation": "The repository follows a modular repository architecture. Static analysis identified 5 major structural component areas, 1 executable/package entry points, and 0 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "src",
+        "description": "Primary source implementation",
+        "evidence": [
+          "66 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": "chart",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "43 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "src:main",
+        "source_file": "src/main.go"
+      }
+    ],
+    "major_components": [
+      {
+        "name": "src",
+        "responsibility": "Primary source implementation",
+        "evidence": [
+          "66 analyzed core files under src/"
+        ]
+      },
+      {
+        "name": "chart",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "43 analyzed core files under chart/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "29 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "ci",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "4 analyzed core files under ci/"
+        ]
+      }
+    ],
+    "component_relationships": [],
+    "configuration_model": "Repository contains explicit configuration artifacts: .env.example, src/.env.example, src/config.yaml, src/utils/config/main.go, src/utils/config/main_test.go.",
+    "extension_points": [],
+    "deployment_model": "Docker, Kubernetes/Helm, Terraform-managed infrastructure",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 19",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 0"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      },
+      {
+        "step": 1,
+        "group": "Application Startup Flow",
+        "title": "Start the application",
+        "explanation": "Execution starts in src/main.go at main. The startup function then delegates into the application bootstrap code shown below.",
+        "code": [
+          "src/main.go:main",
+          "logging.Init",
+          "config.Init",
+          "metrics.StartServer",
+          "public.StartServer",
+          "private.StartServer",
+          "executeProgram"
+        ],
+        "result": "Control moves into application initialization.",
+        "evidence": [
+          "src/main.go"
+        ]
+      },
+      {
+        "step": 2,
+        "group": "Application Startup Flow",
+        "title": "Load runtime configuration",
+        "explanation": "The application uses the detected configuration files during startup. Configuration values control later runtime initialization; values not proven from source are not guessed.",
+        "code": [
+          ".env.example",
+          "src/.env.example",
+          "src/config.yaml",
+          "src/utils/config/main.go",
+          "src/utils/config/main_test.go"
+        ],
+        "result": "Validated runtime settings are available to the bootstrap code.",
+        "evidence": [
+          ".env.example",
+          "src/.env.example",
+          "src/config.yaml",
+          "src/utils/config/main.go",
+          "src/utils/config/main_test.go"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "Execution begins at the detected repository entry point(s): src/main.go.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "Execution begins at the detected repository entry point(s): src/main.go.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": []
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {
+      "core": [
+        {
+          "name": "cel.dev/expr",
+          "current_version": "v0.25.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.25.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cel.dev/expr"
+        },
+        {
+          "name": "cloud.google.com/go",
+          "current_version": "v0.123.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.123.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/cloud.google.com/go"
+        },
+        {
+          "name": "cloud.google.com/go/auth",
+          "current_version": "v0.20.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.23.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/auth"
+        },
+        {
+          "name": "cloud.google.com/go/auth/oauth2adapt",
+          "current_version": "v0.2.8",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.2.8",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/cloud.google.com/go/auth/oauth2adapt"
+        },
+        {
+          "name": "cloud.google.com/go/compute",
+          "current_version": "v1.64.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.69.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/compute"
+        },
+        {
+          "name": "cloud.google.com/go/compute/metadata",
+          "current_version": "v0.9.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.9.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/compute/metadata"
+        },
+        {
+          "name": "cloud.google.com/go/iam",
+          "current_version": "v1.11.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.13.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/iam"
+        },
+        {
+          "name": "cloud.google.com/go/monitoring",
+          "current_version": "v1.29.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.30.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/monitoring"
+        },
+        {
+          "name": "cloud.google.com/go/storage",
+          "current_version": "v1.56.3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.68.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/cloud.google.com/go/storage"
+        },
+        {
+          "name": "github.com/99designs/go-keychain",
+          "current_version": "v0.0.0-20191008050251-8e49817e8af4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20160105221929-9cf53c87839c",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/99designs/go-keychain"
+        },
+        {
+          "name": "github.com/99designs/keyring",
+          "current_version": "v1.2.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/99designs/keyring"
+        },
+        {
+          "name": "github.com/akamai/AkamaiOPEN-edgegrid-golang/v4",
+          "current_version": "v4.1.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.1.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/akamai/AkamaiOPEN-edgegrid-golang/v4"
+        },
+        {
+          "name": "github.com/andybalholm/brotli",
+          "current_version": "v1.2.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/andybalholm/brotli"
+        },
+        {
+          "name": "github.com/apache/arrow-go/v18",
+          "current_version": "v18.4.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v18.8.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/apache/arrow-go/v18"
+        },
+        {
+          "name": "github.com/apache/thrift",
+          "current_version": "v0.22.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.24.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/apache/thrift"
+        },
+        {
+          "name": "github.com/apex/log",
+          "current_version": "v1.9.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.9.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/apex/log"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go",
+          "current_version": "v1.55.8",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.55.8",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2",
+          "current_version": "v1.38.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.47.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream",
+          "current_version": "v1.6.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.7.20",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/config",
+          "current_version": "v1.27.11",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.33.5",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/config"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/credentials",
+          "current_version": "v1.17.11",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.20.5",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/credentials"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/feature/ec2/imds",
+          "current_version": "v1.16.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.20.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/feature/ec2/imds"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/feature/s3/manager",
+          "current_version": "v1.16.15",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.23.7",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/feature/s3/manager"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/internal/configsources",
+          "current_version": "v1.3.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.5.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/configsources"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/internal/endpoints/v2",
+          "current_version": "v2.6.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.8.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/endpoints/v2"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/internal/ini",
+          "current_version": "v1.8.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.8.6",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/ini"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/internal/v4a",
+          "current_version": "v1.3.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.5.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/v4a"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding",
+          "current_version": "v1.11.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.13.19",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/internal/checksum",
+          "current_version": "v1.3.7",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.11.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/checksum"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/internal/presigned-url",
+          "current_version": "v1.11.7",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.14.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/presigned-url"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/internal/s3shared",
+          "current_version": "v1.17.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.20.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/s3shared"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/s3",
+          "current_version": "v1.53.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.113.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/s3"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/sso",
+          "current_version": "v1.20.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.38.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sso"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/ssooidc",
+          "current_version": "v1.23.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.43.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/ssooidc"
+        },
+        {
+          "name": "github.com/aws/aws-sdk-go-v2/service/sts",
+          "current_version": "v1.28.6",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.51.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sts"
+        },
+        {
+          "name": "github.com/aws/smithy-go",
+          "current_version": "v1.22.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.28.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/smithy-go"
+        },
+        {
+          "name": "github.com/Azure/azure-sdk-for-go/sdk/azcore",
+          "current_version": "v1.4.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.23.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azcore"
+        },
+        {
+          "name": "github.com/Azure/azure-sdk-for-go/sdk/internal",
+          "current_version": "v1.1.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.12.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/internal"
+        },
+        {
+          "name": "github.com/Azure/azure-sdk-for-go/sdk/storage/azblob",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.8.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/storage/azblob"
+        },
+        {
+          "name": "github.com/beorn7/perks",
+          "current_version": "v1.0.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/beorn7/perks"
+        },
+        {
+          "name": "github.com/BurntSushi/toml",
+          "current_version": "v1.4.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/BurntSushi/toml"
+        },
+        {
+          "name": "github.com/cespare/xxhash/v2",
+          "current_version": "v2.3.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.3.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/cespare/xxhash/v2"
+        },
+        {
+          "name": "github.com/cncf/xds/go",
+          "current_version": "v0.0.0-20260202195803-dba9d589def2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260202195803-dba9d589def2",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/cncf/xds/go"
+        },
+        {
+          "name": "github.com/danieljoos/wincred",
+          "current_version": "v1.2.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/danieljoos/wincred"
+        },
+        {
+          "name": "github.com/davecgh/go-spew",
+          "current_version": "v1.1.2-0.20180830191138-d8f796af33cc",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.1.1",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/davecgh/go-spew"
+        },
+        {
+          "name": "github.com/dvsekhvalnov/jose2go",
+          "current_version": "v1.7.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.11.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/dvsekhvalnov/jose2go"
+        },
+        {
+          "name": "github.com/emicklei/go-restful/v3",
+          "current_version": "v3.13.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v3.13.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/emicklei/go-restful/v3"
+        },
+        {
+          "name": "github.com/envoyproxy/go-control-plane/envoy",
+          "current_version": "v1.37.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.39.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/envoyproxy/go-control-plane/envoy"
+        },
+        {
+          "name": "github.com/envoyproxy/protoc-gen-validate",
+          "current_version": "v1.3.3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.3.3",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/envoyproxy/protoc-gen-validate"
+        },
+        {
+          "name": "github.com/fastly/go-fastly/v6",
+          "current_version": "v6.8.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v6.8.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/fastly/go-fastly/v6"
+        },
+        {
+          "name": "github.com/felixge/httpsnoop",
+          "current_version": "v1.0.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.1.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/felixge/httpsnoop"
+        },
+        {
+          "name": "github.com/fxamacker/cbor/v2",
+          "current_version": "v2.7.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.9.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/fxamacker/cbor/v2"
+        },
+        {
+          "name": "github.com/gabriel-vasile/mimetype",
+          "current_version": "v1.4.7",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.4.15",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gabriel-vasile/mimetype"
+        },
+        {
+          "name": "github.com/go-co-op/gocron",
+          "current_version": "v1.37.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.37.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/go-co-op/gocron"
+        },
+        {
+          "name": "github.com/go-jose/go-jose/v4",
+          "current_version": "v4.1.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.1.5",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-jose/go-jose/v4"
+        },
+        {
+          "name": "github.com/go-logr/logr",
+          "current_version": "v1.4.3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.4.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-logr/logr"
+        },
+        {
+          "name": "github.com/go-logr/stdr",
+          "current_version": "v1.2.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/go-logr/stdr"
+        },
+        {
+          "name": "github.com/go-openapi/jsonpointer",
+          "current_version": "v0.23.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonpointer"
+        },
+        {
+          "name": "github.com/go-openapi/jsonreference",
+          "current_version": "v0.21.6",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonreference"
+        },
+        {
+          "name": "github.com/go-openapi/swag",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag"
+        },
+        {
+          "name": "github.com/go-openapi/swag/cmdutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/cmdutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/conv",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/conv"
+        },
+        {
+          "name": "github.com/go-openapi/swag/fileutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/fileutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/jsonname",
+          "current_version": "v0.26.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/jsonname"
+        },
+        {
+          "name": "github.com/go-openapi/swag/jsonutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/jsonutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/loading",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/loading"
+        },
+        {
+          "name": "github.com/go-openapi/swag/mangling",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/mangling"
+        },
+        {
+          "name": "github.com/go-openapi/swag/netutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/netutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/stringutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/stringutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/typeutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/typeutils"
+        },
+        {
+          "name": "github.com/go-openapi/swag/yamlutils",
+          "current_version": "v0.25.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag/yamlutils"
+        },
+        {
+          "name": "github.com/goccy/go-json",
+          "current_version": "v0.10.5",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.10.6",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/goccy/go-json"
+        },
+        {
+          "name": "github.com/godbus/dbus",
+          "current_version": "v0.0.0-20190726142602-4481cbc300e2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.1.0+incompatible",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/godbus/dbus"
+        },
+        {
+          "name": "github.com/gogo/protobuf",
+          "current_version": "v1.3.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.3.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/gogo/protobuf"
+        },
+        {
+          "name": "github.com/golang-jwt/jwt/v5",
+          "current_version": "v5.2.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v5.3.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/golang-jwt/jwt/v5"
+        },
+        {
+          "name": "github.com/golang/protobuf",
+          "current_version": "v1.5.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.5.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/protobuf"
+        },
+        {
+          "name": "github.com/golang/snappy",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/snappy"
+        },
+        {
+          "name": "github.com/google/flatbuffers",
+          "current_version": "v25.2.10+incompatible",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v25.12.19+incompatible",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/flatbuffers"
+        },
+        {
+          "name": "github.com/google/gnostic-models",
+          "current_version": "v0.6.9",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.7.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/gnostic-models"
+        },
+        {
+          "name": "github.com/google/go-cmp",
+          "current_version": "v0.7.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.7.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/go-cmp"
+        },
+        {
+          "name": "github.com/google/go-querystring",
+          "current_version": "v1.1.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/go-querystring"
+        },
+        {
+          "name": "github.com/google/gofuzz",
+          "current_version": "v1.2.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/gofuzz"
+        },
+        {
+          "name": "github.com/google/jsonapi",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/jsonapi"
+        },
+        {
+          "name": "github.com/google/s2a-go",
+          "current_version": "v0.1.9",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.1.10",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/s2a-go"
+        },
+        {
+          "name": "github.com/google/uuid",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/uuid"
+        },
+        {
+          "name": "github.com/googleapis/enterprise-certificate-proxy",
+          "current_version": "v0.3.16",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.3.22",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/googleapis/enterprise-certificate-proxy"
+        },
+        {
+          "name": "github.com/googleapis/gax-go/v2",
+          "current_version": "v2.22.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.24.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/googleapis/gax-go/v2"
+        },
+        {
+          "name": "github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp",
+          "current_version": "v1.31.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.38.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp"
+        },
+        {
+          "name": "github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/metric",
+          "current_version": "v0.53.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.62.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/metric"
+        },
+        {
+          "name": "github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping",
+          "current_version": "v0.53.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.62.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping"
+        },
+        {
+          "name": "github.com/gsterjov/go-libsecret",
+          "current_version": "v0.0.0-20161001094733-a6f4afe4910c",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20161001094733-a6f4afe4910c",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/gsterjov/go-libsecret"
+        },
+        {
+          "name": "github.com/hashicorp/go-cleanhttp",
+          "current_version": "v0.5.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.5.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/hashicorp/go-cleanhttp"
+        },
+        {
+          "name": "github.com/jmespath/go-jmespath",
+          "current_version": "v0.4.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.4.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/jmespath/go-jmespath"
+        },
+        {
+          "name": "github.com/json-iterator/go",
+          "current_version": "v1.1.12",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.1.12",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/json-iterator/go"
+        },
+        {
+          "name": "github.com/klauspost/asmfmt",
+          "current_version": "v1.3.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.3.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/klauspost/asmfmt"
+        },
+        {
+          "name": "github.com/klauspost/compress",
+          "current_version": "v1.18.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.20.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/klauspost/compress"
+        },
+        {
+          "name": "github.com/klauspost/cpuid/v2",
+          "current_version": "v2.2.11",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.4.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/klauspost/cpuid/v2"
+        },
+        {
+          "name": "github.com/mattn/go-colorable",
+          "current_version": "v0.1.15",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.1.15",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mattn/go-colorable"
+        },
+        {
+          "name": "github.com/mattn/go-isatty",
+          "current_version": "v0.0.22",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.24",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/mattn/go-isatty"
+        },
+        {
+          "name": "github.com/minio/asm2plan9s",
+          "current_version": "v0.0.0-20200509001527-cdd76441f9d8",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20200509001527-cdd76441f9d8",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/minio/asm2plan9s"
+        },
+        {
+          "name": "github.com/minio/c2goasm",
+          "current_version": "v0.0.0-20190812172519-36a3d3bbc4f3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20190812172519-36a3d3bbc4f3",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/minio/c2goasm"
+        },
+        {
+          "name": "github.com/mitchellh/go-homedir",
+          "current_version": "v1.1.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.1.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mitchellh/go-homedir"
+        },
+        {
+          "name": "github.com/mitchellh/mapstructure",
+          "current_version": "v1.5.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.5.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mitchellh/mapstructure"
+        },
+        {
+          "name": "github.com/modern-go/concurrent",
+          "current_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/concurrent"
+        },
+        {
+          "name": "github.com/modern-go/reflect2",
+          "current_version": "v1.0.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/reflect2"
+        },
+        {
+          "name": "github.com/mtibben/percent",
+          "current_version": "v0.2.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.2.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mtibben/percent"
+        },
+        {
+          "name": "github.com/munnerz/goautoneg",
+          "current_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/munnerz/goautoneg"
+        },
+        {
+          "name": "github.com/peterhellberg/link",
+          "current_version": "v1.2.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/peterhellberg/link"
+        },
+        {
+          "name": "github.com/pierrec/lz4/v4",
+          "current_version": "v4.1.22",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.1.30",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/pierrec/lz4/v4"
+        },
+        {
+          "name": "github.com/pkg/browser",
+          "current_version": "v0.0.0-20210911075715-681adbf594b8",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20240102092130-5ac0b6a4141c",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pkg/browser"
+        },
+        {
+          "name": "github.com/pkg/errors",
+          "current_version": "v0.9.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.9.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pkg/errors"
+        },
+        {
+          "name": "github.com/planetscale/vtprotobuf",
+          "current_version": "v0.6.1-0.20240319094008-0393e58bdf10",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.6.0",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/planetscale/vtprotobuf"
+        },
+        {
+          "name": "github.com/pmezard/go-difflib",
+          "current_version": "v1.0.1-0.20181226105442-5d4384ee4fb2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pmezard/go-difflib"
+        },
+        {
+          "name": "github.com/prometheus/client_golang",
+          "current_version": "v1.22.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.24.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/client_golang"
+        },
+        {
+          "name": "github.com/prometheus/client_model",
+          "current_version": "v0.6.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.6.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/client_model"
+        },
+        {
+          "name": "github.com/prometheus/common",
+          "current_version": "v0.63.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.71.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/common"
+        },
+        {
+          "name": "github.com/prometheus/procfs",
+          "current_version": "v0.16.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.22.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/procfs"
+        },
+        {
+          "name": "github.com/robfig/cron/v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/robfig/cron/v3"
+        },
+        {
+          "name": "github.com/rs/zerolog",
+          "current_version": "v1.34.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.35.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/rs/zerolog"
+        },
+        {
+          "name": "github.com/sirupsen/logrus",
+          "current_version": "v1.9.3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.10.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/sirupsen/logrus"
+        },
+        {
+          "name": "github.com/snowflakedb/gosnowflake",
+          "current_version": "v1.19.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.19.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/snowflakedb/gosnowflake"
+        },
+        {
+          "name": "github.com/spiffe/go-spiffe/v2",
+          "current_version": "v2.6.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.8.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spiffe/go-spiffe/v2"
+        },
+        {
+          "name": "github.com/stretchr/testify",
+          "current_version": "v1.11.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.12.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/stretchr/testify"
+        },
+        {
+          "name": "github.com/x448/float16",
+          "current_version": "v0.8.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.8.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/x448/float16"
+        },
+        {
+          "name": "github.com/zeebo/xxh3",
+          "current_version": "v1.0.2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.1.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/zeebo/xxh3"
+        },
+        {
+          "name": "go.opentelemetry.io/auto/sdk",
+          "current_version": "v1.2.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.2.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/go.opentelemetry.io/auto/sdk"
+        },
+        {
+          "name": "go.opentelemetry.io/contrib/detectors/gcp",
+          "current_version": "v1.42.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/contrib/detectors/gcp"
+        },
+        {
+          "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
+          "current_version": "v0.67.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.71.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+        },
+        {
+          "name": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+          "current_version": "v0.67.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.71.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+        },
+        {
+          "name": "go.opentelemetry.io/otel",
+          "current_version": "v1.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/otel"
+        },
+        {
+          "name": "go.opentelemetry.io/otel/metric",
+          "current_version": "v1.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/otel/metric"
+        },
+        {
+          "name": "go.opentelemetry.io/otel/sdk",
+          "current_version": "v1.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/otel/sdk"
+        },
+        {
+          "name": "go.opentelemetry.io/otel/sdk/metric",
+          "current_version": "v1.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/otel/sdk/metric"
+        },
+        {
+          "name": "go.opentelemetry.io/otel/trace",
+          "current_version": "v1.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.opentelemetry.io/otel/trace"
+        },
+        {
+          "name": "go.uber.org/atomic",
+          "current_version": "v1.9.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.12.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.uber.org/atomic"
+        },
+        {
+          "name": "go.yaml.in/yaml/v2",
+          "current_version": "v2.4.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.4.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/go.yaml.in/yaml/v2"
+        },
+        {
+          "name": "go.yaml.in/yaml/v3",
+          "current_version": "v3.0.4",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v3.0.5",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/go.yaml.in/yaml/v3"
+        },
+        {
+          "name": "golang.org/x/crypto",
+          "current_version": "v0.51.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.57.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/crypto"
+        },
+        {
+          "name": "golang.org/x/exp",
+          "current_version": "v0.0.0-20250408133849-7e4ce0ab07d0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260908205506-85c1c2202aba",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/golang.org/x/exp"
+        },
+        {
+          "name": "golang.org/x/mod",
+          "current_version": "v0.35.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.41.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/mod"
+        },
+        {
+          "name": "golang.org/x/net",
+          "current_version": "v0.55.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.59.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/net"
+        },
+        {
+          "name": "golang.org/x/oauth2",
+          "current_version": "v0.36.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/oauth2"
+        },
+        {
+          "name": "golang.org/x/sync",
+          "current_version": "v0.20.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.23.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sync"
+        },
+        {
+          "name": "golang.org/x/sys",
+          "current_version": "v0.45.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.48.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sys"
+        },
+        {
+          "name": "golang.org/x/telemetry",
+          "current_version": "v0.0.0-20260409153401-be6f6cb8b1fa",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260910141331-15ceca2b0a1f",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/golang.org/x/telemetry"
+        },
+        {
+          "name": "golang.org/x/term",
+          "current_version": "v0.43.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/term"
+        },
+        {
+          "name": "golang.org/x/text",
+          "current_version": "v0.37.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.42.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/text"
+        },
+        {
+          "name": "golang.org/x/time",
+          "current_version": "v0.15.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.16.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/time"
+        },
+        {
+          "name": "golang.org/x/tools",
+          "current_version": "v0.44.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.50.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/tools"
+        },
+        {
+          "name": "golang.org/x/xerrors",
+          "current_version": "v0.0.0-20240903120638-7835f813f4da",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20240903120638-7835f813f4da",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/golang.org/x/xerrors"
+        },
+        {
+          "name": "google.golang.org/api",
+          "current_version": "v0.279.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.298.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/google.golang.org/api"
+        },
+        {
+          "name": "google.golang.org/genproto",
+          "current_version": "v0.0.0-20260610212136-7ab31c22f7ad",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260918162117-cecb64721679",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/google.golang.org/genproto"
+        },
+        {
+          "name": "google.golang.org/genproto/googleapis/api",
+          "current_version": "v0.0.0-20260610212136-7ab31c22f7ad",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260918162117-cecb64721679",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/google.golang.org/genproto/googleapis/api"
+        },
+        {
+          "name": "google.golang.org/genproto/googleapis/rpc",
+          "current_version": "v0.0.0-20260610212136-7ab31c22f7ad",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260918162117-cecb64721679",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc"
+        },
+        {
+          "name": "google.golang.org/grpc",
+          "current_version": "v1.81.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.84.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/google.golang.org/grpc"
+        },
+        {
+          "name": "google.golang.org/protobuf",
+          "current_version": "v1.36.11",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.36.12",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/google.golang.org/protobuf"
+        },
+        {
+          "name": "gopkg.in/evanphx/json-patch.v4",
+          "current_version": "v4.12.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.13.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/gopkg.in/evanphx/json-patch.v4"
+        },
+        {
+          "name": "gopkg.in/inf.v0",
+          "current_version": "v0.9.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.9.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/inf.v0"
+        },
+        {
+          "name": "gopkg.in/ini.v1",
+          "current_version": "v1.67.3",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.67.3",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/ini.v1"
+        },
+        {
+          "name": "gopkg.in/yaml.v2",
+          "current_version": "v2.4.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.4.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v2"
+        },
+        {
+          "name": "gopkg.in/yaml.v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v3"
+        },
+        {
+          "name": "k8s.io/api",
+          "current_version": "v0.32.13",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/api"
+        },
+        {
+          "name": "k8s.io/apimachinery",
+          "current_version": "v0.32.13",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/apimachinery"
+        },
+        {
+          "name": "k8s.io/client-go",
+          "current_version": "v0.32.13",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/client-go"
+        },
+        {
+          "name": "k8s.io/klog/v2",
+          "current_version": "v2.140.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v2.140.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/k8s.io/klog/v2"
+        },
+        {
+          "name": "k8s.io/kube-openapi",
+          "current_version": "v0.0.0-20250318190949-c8a335a9a2ff",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260911184034-7970a1e230da",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/k8s.io/kube-openapi"
+        },
+        {
+          "name": "k8s.io/utils",
+          "current_version": "v0.0.0-20260507154919-ff6756f316d2",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260707023825-cf1189d6abe3",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/k8s.io/utils"
+        },
+        {
+          "name": "sigs.k8s.io/json",
+          "current_version": "v0.0.0-20250730193827-2d320260d730",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v0.0.0-20260909141634-11ed52e25bc5",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/sigs.k8s.io/json"
+        },
+        {
+          "name": "sigs.k8s.io/randfill",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/sigs.k8s.io/randfill"
+        },
+        {
+          "name": "sigs.k8s.io/structured-merge-diff/v4",
+          "current_version": "v4.6.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v4.7.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/sigs.k8s.io/structured-merge-diff/v4"
+        },
+        {
+          "name": "sigs.k8s.io/yaml",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "src/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/sigs.k8s.io/yaml"
+        }
+      ]
+    }
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [
+      "Testify"
+    ],
+    "test_categories": [
+      "Automated tests detected"
+    ],
+    "test_file_count": 6,
+    "test_files": [
+      "src/cloud/akamai/main_test.go",
+      "src/cloud/snowflake/cert_test.go",
+      "src/utils/config/main_test.go",
+      "src/utils/logging/main_test.go",
+      "src/utils/report/cert_test.go",
+      "src/utils/sslCert/main_test.go"
+    ],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": [
+      {
+        "method": "ROUTE",
+        "endpoint": "/residents",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/public/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/ips",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/public/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/ips/{category}",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/public/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/accesses",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/buckets",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/bucket-rules",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/cb-clusters",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/certs",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/cert-owners",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/cert-summaries",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/dynamo-dbs",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/elasticaches",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/instances",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/instance-summaries",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/ip-addresses",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/k8s-clusters",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/owners",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/rds-instances",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/support-plans",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/users",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/user-keys",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/user-owners",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/user-teams",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/iam-summaries",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/k8s-summaries",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/volumes",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/workloads",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      },
+      {
+        "method": "ROUTE",
+        "endpoint": "/healthz",
+        "handler": "",
+        "component": "main",
+        "source_file": "src/web/private/main.go"
+      }
+    ]
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": [
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "url",
+        "method": "GET",
+        "source_file": "src/cloud/lumen/main.go",
+        "evidence": "http.NewRequest call"
+      },
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "url",
+        "method": "GET",
+        "source_file": "src/cloud/comcast/main.go",
+        "evidence": "http.NewRequest call"
+      },
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "jiraURL",
+        "method": "POST",
+        "source_file": "src/utils/jira/main.go",
+        "evidence": "http.NewRequest call"
+      },
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "jiraSearchURL+\"?jql=\"+jql",
+        "method": "GET",
+        "source_file": "src/utils/jira/main.go",
+        "evidence": "http.NewRequest call"
+      }
+    ]
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}

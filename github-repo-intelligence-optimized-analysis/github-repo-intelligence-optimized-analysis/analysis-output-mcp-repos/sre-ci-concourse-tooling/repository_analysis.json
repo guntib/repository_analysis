@@ -1,0 +1,3619 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/sre-ci-concourse-tooling.git",
+    "source_type": "GitHub",
+    "repository_name": "sre-ci-concourse-tooling",
+    "repository_type": "Application / Service / Library Repository",
+    "what_repository_does": "Some directories have a tests folder. If it exists, go to that folder and run docker-compose up --build to build and run the docker image. The tests do not test all functionality of the docker images. They only serve as a small check that the docker image is built-able and can perform the most basic of tasks. You can run the /linting/do-linting.sh script (taking the base directory to lint as its only parameter) to check your code for issues that will potentially block pull request checks. The script will automatically use the .yamllint and .tflint.hcl config files used in PR checks, which are found in the /linting directory. Note that jsonlint may install as jsonlint depending on the method used, but the expected executable is jsonlint-php. If you have jsonlint on your system, symlink it to jsonlint-php to run this script. Note that you cannot symlink the do-linting.sh script because the check for config files will fail. However, it may be useful to add an executable script on your path that runs that script from its native directory.",
+    "repository_summary": "Some directories have a tests folder. If it exists, go to that folder and run docker-compose up --build to build and run the docker image. The tests do not test all functionality of the docker images. They only serve as a small check that the docker image is built-able and can perform the most basic of tasks. You can run the /linting/do-linting.sh script (taking the base directory to lint as its only parameter) to check your code for issues that will potentially block pull request checks. The script will automatically use the .yamllint and .tflint.hcl config files used in PR checks, which are found in the /linting directory. Note that jsonlint may install as jsonlint depending on the method used, but the expected executable is jsonlint-php. If you have jsonlint on your system, symlink it to jsonlint-php to run this script. Note that you cannot symlink the do-linting.sh script because the check for config files will fail. However, it may be useful to add an executable script on your path that runs that script from its native directory.",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [
+      "Shell",
+      "Terraform",
+      "Go",
+      "JavaScript",
+      "Python"
+    ],
+    "frameworks": [],
+    "runtime": [
+      "Go 1.19",
+      "Go 1.20",
+      "Go 1.23",
+      "Go 1.25.0",
+      "Go 1.25.11"
+    ],
+    "databases": [],
+    "cloud_platforms": [],
+    "containers": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "kubernetes_helm_terraform": [
+      "Helm",
+      "Terraform"
+    ],
+    "ci_cd": [
+      "GitHub Actions"
+    ],
+    "testing_tools": [
+      "Mocha",
+      "Testify"
+    ],
+    "monitoring_observability": [],
+    "important_core_libraries": [
+      "github.com/aws/aws-sdk-go",
+      "github.com/castai/promwrite",
+      "github.com/cespare/xxhash/v2",
+      "github.com/davecgh/go-spew",
+      "github.com/emicklei/go-restful/v3",
+      "github.com/fsnotify/fsnotify",
+      "github.com/fxamacker/cbor/v2",
+      "github.com/go-logr/logr",
+      "github.com/go-openapi/jsonpointer",
+      "github.com/go-openapi/jsonreference",
+      "github.com/go-openapi/swag",
+      "github.com/gogo/protobuf",
+      "github.com/golang/protobuf",
+      "github.com/golang/snappy",
+      "github.com/google/gnostic-models",
+      "github.com/google/go-cmp",
+      "github.com/google/go-github/v61",
+      "github.com/google/go-querystring",
+      "github.com/google/gofuzz",
+      "github.com/google/uuid",
+      "github.com/gorilla/websocket",
+      "github.com/grafana/regexp",
+      "github.com/hashicorp/hcl",
+      "github.com/jmespath/go-jmespath",
+      "github.com/josharian/intern",
+      "github.com/json-iterator/go",
+      "github.com/kr/pretty",
+      "github.com/magiconair/properties",
+      "github.com/mailru/easyjson",
+      "github.com/maxbrunsfeld/counterfeiter/v6",
+      "github.com/mitchellh/mapstructure",
+      "github.com/moby/spdystream",
+      "github.com/modern-go/concurrent",
+      "github.com/modern-go/reflect2",
+      "github.com/mongodb-forks/digest",
+      "github.com/munnerz/goautoneg",
+      "github.com/mxk/go-flowrate",
+      "github.com/pelletier/go-toml/v2",
+      "github.com/pkg/errors",
+      "github.com/pmezard/go-difflib",
+      "github.com/prometheus/client-model",
+      "github.com/prometheus/common",
+      "github.com/prometheus/prometheus",
+      "github.com/shurcool/githubv4",
+      "github.com/shurcool/graphql",
+      "github.com/spf13/afero",
+      "github.com/spf13/cast",
+      "github.com/spf13/jwalterweatherman",
+      "github.com/spf13/pflag",
+      "github.com/stretchr/testify",
+      "github.com/subosito/gotenv",
+      "github.com/x448/float16",
+      "go.mongodb.org/atlas-sdk/v20240805004",
+      "golang.org/x/mod",
+      "golang.org/x/net",
+      "golang.org/x/oauth2",
+      "golang.org/x/sys",
+      "golang.org/x/term",
+      "golang.org/x/text",
+      "golang.org/x/time",
+      "golang.org/x/tools",
+      "google.golang.org/protobuf",
+      "gopkg.in/evanphx/json-patch.v4",
+      "gopkg.in/inf.v0",
+      "gopkg.in/ini.v1",
+      "gopkg.in/yaml.v2",
+      "gopkg.in/yaml.v3",
+      "k8s.io/api",
+      "k8s.io/apimachinery",
+      "k8s.io/client-go",
+      "k8s.io/klog/v2",
+      "k8s.io/kube-openapi",
+      "k8s.io/utils",
+      "sigs.k8s.io/json",
+      "sigs.k8s.io/structured-merge-diff/v4",
+      "sigs.k8s.io/yaml"
+    ]
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 621,
+    "important_files": [
+      ".github/workflows/build-artillery.yaml",
+      ".github/workflows/build-atlas.yaml",
+      ".github/workflows/build-aws-cli-runner.yaml",
+      ".github/workflows/build-bash-runner.yaml",
+      ".github/workflows/build-check-pr-branch-name.yaml",
+      ".github/workflows/build-check-pr-changes.yaml",
+      ".github/workflows/build-deploy-github-repos.yaml",
+      ".github/workflows/build-executor.yaml",
+      ".github/workflows/build-fetch-pr-titles.yaml",
+      ".github/workflows/build-flyway-mongo.yaml",
+      ".github/workflows/build-flyway.yaml",
+      ".github/workflows/build-gatling-simulation.yaml",
+      ".github/workflows/build-generate-pipeline.yaml",
+      ".github/workflows/build-github-governance.yaml",
+      ".github/workflows/build-github-pr-resource.yaml",
+      ".github/workflows/build-golang-unit-tests.yaml",
+      ".github/workflows/build-grafana-unit-tests.yaml",
+      ".github/workflows/build-helm-package.yaml",
+      ".github/workflows/build-linting.yaml",
+      ".github/workflows/build-manual-approval.yaml",
+      ".github/workflows/build-nodejs-tests.yaml",
+      ".github/workflows/build-notify-delivery-workflows.yaml",
+      ".github/workflows/build-packer.yaml",
+      ".github/workflows/build-predator.yaml",
+      ".github/workflows/build-prom-unit-tests.yaml",
+      ".github/workflows/build-python-runner.yaml",
+      ".github/workflows/build-snyk.yaml",
+      ".github/workflows/build-terraform-1-1-9.yaml",
+      ".github/workflows/build-terraform-1-11-4.yaml",
+      ".github/workflows/build-terraform-1-4-5.yaml",
+      ".github/workflows/build-terraform-1-5-3.yaml",
+      ".github/workflows/build-terraform.yaml",
+      ".github/workflows/build-tf-module-to-gcs.yaml",
+      ".github/workflows/build-tf-module-to-s3.yaml",
+      ".github/workflows/build-tf-plan-output-to-pr.yaml",
+      ".github/workflows/build-validate-prom-config.yaml",
+      ".github/workflows/build-validate-prom-targets.yaml",
+      ".github/workflows/build-ytt-and-fly.yaml",
+      ".github/workflows/locstat-preserve-stats-on-merge.yml",
+      ".github/workflows/locstat-verify-notes.yml",
+      ".github/workflows/pr-reviews.yaml",
+      ".github/workflows/pr-title-validation.yaml",
+      ".github/workflows/set-self.yaml",
+      ".github/workflows/setup-repository.yaml",
+      "README.md"
+    ],
+    "artifacts": {
+      "configuration": [
+        "flyway/test/config/docker-flyway.config",
+        "ytt-and-fly/templates/config/jobs.lib.yml",
+        "ytt-and-fly/templates/config/main.yml",
+        "ytt-and-fly/templates/config/resource_types.lib.yml",
+        "ytt-and-fly/templates/config/resources.lib.yml",
+        "ytt-and-fly/templates/config/steps.lib.yml"
+      ],
+      "docker": [
+        "artillery/Dockerfile",
+        "artillery/tests/docker-compose.yaml",
+        "atlas/Dockerfile",
+        "atlas/docker-compose.yml",
+        "aws-cli-runner/Dockerfile",
+        "aws-cli-runner/tests/docker-compose.yml",
+        "bash-runner/Dockerfile",
+        "changie-tool/test/docker-compose.yaml",
+        "check-pr-branch-name/Dockerfile",
+        "check-pr-branch-name/test/docker-compose.yml",
+        "check-pr-changes/Dockerfile",
+        "databricks/Dockerfile",
+        "databricks/test/docker-compose.yml",
+        "deploy-github-repos/Dockerfile",
+        "deploy-github-repos/test/docker-compose.yml",
+        "executor-kubectl/docker-compose.yml",
+        "executor/Dockerfile",
+        "executor/docker-compose.yml",
+        "fah-gradle-publish/tests/docker-compose.yaml",
+        "fetch-pr-titles/Dockerfile",
+        "flyway-mongo/Dockerfile",
+        "flyway-mongo/test/docker-compose.yml",
+        "flyway/Dockerfile",
+        "flyway/test/Dockerfile",
+        "flyway/test/docker-compose.yml",
+        "gatling-simulation/Dockerfile",
+        "gatling-simulation/tests/docker-compose.yaml",
+        "generate-pipeline/Dockerfile",
+        "generate-pipeline/test/docker-compose.yml",
+        "github-governance/Dockerfile",
+        "github-governance/tests/docker-compose.yaml",
+        "github-pr-resource/Dockerfile",
+        "golang-unit-tests/Dockerfile",
+        "golang-unit-tests/test/docker-compose.yml",
+        "grafana-unit-tests/Dockerfile",
+        "helm-package/Dockerfile",
+        "helm-package/tests/docker-compose.yaml",
+        "lambda-zip-s3/Dockerfile",
+        "lambda-zip-s3/tests/docker-compose.yaml",
+        "linting/Dockerfile",
+        "linting/tests/docker-compose.yaml",
+        "manual-approval/Dockerfile",
+        "manual-approval/tests/docker-compose.yaml",
+        "nodejs-tests/Dockerfile",
+        "nodejs-tests/tests/docker-compose.yaml",
+        "notify-delivery-workflows/Dockerfile",
+        "packer/Dockerfile",
+        "packer/tests/docker-compose.yml",
+        "predator/Dockerfile",
+        "prom-unit-tests/Dockerfile",
+        "prom-unit-tests/tests/docker-compose.yaml",
+        "python-runner/Dockerfile",
+        "python-runner/tests/docker-compose.yml",
+        "snyk/Dockerfile",
+        "terraform-1-1-9/Dockerfile",
+        "terraform-1-1-9/tests/docker-compose.yml",
+        "terraform-1-11-4/Dockerfile",
+        "terraform-1-11-4/tests/docker-compose.yml",
+        "terraform-1-4-5/Dockerfile",
+        "terraform-1-4-5/tests/docker-compose.yml",
+        "terraform-1-5-3/Dockerfile",
+        "terraform-1-5-3/tests/docker-compose.yml",
+        "terraform/Dockerfile",
+        "terraform/tests/docker-compose.yml",
+        "terransible-1-1-9/Dockerfile",
+        "terransible/Dockerfile",
+        "terratest/Dockerfile",
+        "terratest/tests/docker-compose.yml",
+        "tf-module-to-gcs/Dockerfile",
+        "tf-module-to-gcs/tests/docker-compose.yaml",
+        "tf-module-to-s3/Dockerfile",
+        "tf-module-to-s3/tests/docker-compose.yaml",
+        "tf-plan-output-to-pr/Dockerfile",
+        "tf-plan-output-to-pr/tests/docker-compose.yaml",
+        "validate-prom-config/Dockerfile",
+        "validate-prom-config/tests/docker-compose.yaml",
+        "validate-prom-targets/Dockerfile",
+        "validate-prom-targets/tests/docker-compose.yaml",
+        "ytt-and-fly/Dockerfile"
+      ],
+      "kubernetes_helm": [
+        "helm-package/tests/chart/Chart.yaml",
+        "linting/tests/chart-with-library/Chart.yaml",
+        "linting/tests/chart/Chart.yaml",
+        "linting/tests/chart/charts/subchart/.helmignore",
+        "linting/tests/chart/charts/subchart/Chart.yaml",
+        "linting/tests/chart/charts/subchart/templates/NOTES.txt",
+        "linting/tests/chart/charts/subchart/templates/_helpers.tpl",
+        "linting/tests/chart/charts/subchart/templates/deployment.yaml",
+        "linting/tests/chart/charts/subchart/templates/hpa.yaml",
+        "linting/tests/chart/charts/subchart/templates/ingress.yaml",
+        "linting/tests/chart/charts/subchart/templates/service.yaml",
+        "linting/tests/chart/charts/subchart/templates/serviceaccount.yaml",
+        "linting/tests/chart/charts/subchart/templates/tests/test-connection.yaml",
+        "linting/tests/chart/charts/subchart/values.yaml",
+        "linting/tests/library/Chart.yaml"
+      ],
+      "terraform": [
+        "deploy-github-repos/test/test.tf",
+        "lambda-zip-s3/tests/git-repo/src/main.tf",
+        "linting/tests/terraform/main.tf",
+        "linting/tests/terraform/outputs.tf",
+        "linting/tests/terraform/variables.tf",
+        "terraform-1-1-9/tests/atlas-cluster.tf",
+        "terraform-1-1-9/tests/aws-config.tf",
+        "terraform-1-1-9/tests/gke-config.tf",
+        "terraform-1-1-9/tests/main.tf",
+        "terraform-1-1-9/tests/modules/custom-role/main.tf",
+        "terraform-1-1-9/tests/modules/custom-role/variables.tf",
+        "terraform-1-1-9/tests/modules/s3-buckets/s3-buckets.tf",
+        "terraform-1-1-9/tests/modules/s3-buckets/variables.tf",
+        "terraform-1-1-9/tests/project.tf",
+        "terraform-1-11-4/tests/atlas-cluster.tf",
+        "terraform-1-11-4/tests/aws-config.tf",
+        "terraform-1-11-4/tests/gke-config.tf",
+        "terraform-1-11-4/tests/main.tf",
+        "terraform-1-11-4/tests/modules/custom-role/main.tf",
+        "terraform-1-11-4/tests/modules/custom-role/variables.tf",
+        "terraform-1-11-4/tests/modules/s3-buckets/s3-buckets.tf",
+        "terraform-1-11-4/tests/modules/s3-buckets/variables.tf",
+        "terraform-1-11-4/tests/project.tf",
+        "terraform-1-4-5/tests/atlas-cluster.tf",
+        "terraform-1-4-5/tests/aws-config.tf",
+        "terraform-1-4-5/tests/gke-config.tf",
+        "terraform-1-4-5/tests/main.tf",
+        "terraform-1-4-5/tests/modules/custom-role/main.tf",
+        "terraform-1-4-5/tests/modules/custom-role/variables.tf",
+        "terraform-1-4-5/tests/modules/s3-buckets/s3-buckets.tf",
+        "terraform-1-4-5/tests/modules/s3-buckets/variables.tf",
+        "terraform-1-4-5/tests/project.tf",
+        "terraform-1-5-3/tests/atlas-cluster.tf",
+        "terraform-1-5-3/tests/aws-config.tf",
+        "terraform-1-5-3/tests/gke-config.tf",
+        "terraform-1-5-3/tests/main.tf",
+        "terraform-1-5-3/tests/modules/custom-role/main.tf",
+        "terraform-1-5-3/tests/modules/custom-role/variables.tf",
+        "terraform-1-5-3/tests/modules/s3-buckets/s3-buckets.tf",
+        "terraform-1-5-3/tests/modules/s3-buckets/variables.tf",
+        "terraform-1-5-3/tests/project.tf",
+        "terraform/tests/atlas-cluster.tf",
+        "terraform/tests/aws-config.tf",
+        "terraform/tests/gke-config.tf",
+        "terraform/tests/main.tf",
+        "terraform/tests/modules/custom-role/main.tf",
+        "terraform/tests/modules/custom-role/variables.tf",
+        "terraform/tests/modules/s3-buckets/s3-buckets.tf",
+        "terraform/tests/modules/s3-buckets/variables.tf",
+        "terraform/tests/project.tf",
+        "terratest/tests/main.tf",
+        "tf-module-to-gcs/tests/git-repo/src/main.tf",
+        "tf-module-to-s3/tests/git-repo/src/main.tf"
+      ],
+      "ci_cd": [
+        ".github/workflows/build-artillery.yaml",
+        ".github/workflows/build-atlas.yaml",
+        ".github/workflows/build-aws-cli-runner.yaml",
+        ".github/workflows/build-bash-runner.yaml",
+        ".github/workflows/build-check-pr-branch-name.yaml",
+        ".github/workflows/build-check-pr-changes.yaml",
+        ".github/workflows/build-deploy-github-repos.yaml",
+        ".github/workflows/build-executor.yaml",
+        ".github/workflows/build-fetch-pr-titles.yaml",
+        ".github/workflows/build-flyway-mongo.yaml",
+        ".github/workflows/build-flyway.yaml",
+        ".github/workflows/build-gatling-simulation.yaml",
+        ".github/workflows/build-generate-pipeline.yaml",
+        ".github/workflows/build-github-governance.yaml",
+        ".github/workflows/build-github-pr-resource.yaml",
+        ".github/workflows/build-golang-unit-tests.yaml",
+        ".github/workflows/build-grafana-unit-tests.yaml",
+        ".github/workflows/build-helm-package.yaml",
+        ".github/workflows/build-linting.yaml",
+        ".github/workflows/build-manual-approval.yaml",
+        ".github/workflows/build-nodejs-tests.yaml",
+        ".github/workflows/build-notify-delivery-workflows.yaml",
+        ".github/workflows/build-packer.yaml",
+        ".github/workflows/build-predator.yaml",
+        ".github/workflows/build-prom-unit-tests.yaml",
+        ".github/workflows/build-python-runner.yaml",
+        ".github/workflows/build-snyk.yaml",
+        ".github/workflows/build-terraform-1-1-9.yaml",
+        ".github/workflows/build-terraform-1-11-4.yaml",
+        ".github/workflows/build-terraform-1-4-5.yaml",
+        ".github/workflows/build-terraform-1-5-3.yaml",
+        ".github/workflows/build-terraform.yaml",
+        ".github/workflows/build-tf-module-to-gcs.yaml",
+        ".github/workflows/build-tf-module-to-s3.yaml",
+        ".github/workflows/build-tf-plan-output-to-pr.yaml",
+        ".github/workflows/build-validate-prom-config.yaml",
+        ".github/workflows/build-validate-prom-targets.yaml",
+        ".github/workflows/build-ytt-and-fly.yaml",
+        ".github/workflows/locstat-preserve-stats-on-merge.yml",
+        ".github/workflows/locstat-verify-notes.yml",
+        ".github/workflows/pr-reviews.yaml",
+        ".github/workflows/pr-title-validation.yaml",
+        ".github/workflows/set-self.yaml",
+        ".github/workflows/setup-repository.yaml"
+      ],
+      "api_specs": [],
+      "documentation": [
+        "README.md",
+        "artillery/README.md",
+        "changie-tool/test/README.md",
+        "gatling-simulation/tests/README.md",
+        "github-governance/README.md",
+        "github-pr-resource/README.md",
+        "misc-files/README.md",
+        "prom-unit-tests/prom-unit-test-acceptance/README.md",
+        "terraform-1-1-9/tests/README.md",
+        "terraform-1-11-4/tests/README.md",
+        "terraform-1-4-5/tests/README.md",
+        "terraform-1-5-3/tests/README.md",
+        "terraform/tests/README.md"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "ytt-and-fly",
+          "file_count": 128
+        },
+        {
+          "name": ".github",
+          "file_count": 46
+        },
+        {
+          "name": "linting",
+          "file_count": 35
+        },
+        {
+          "name": "terraform-1-1-9",
+          "file_count": 22
+        },
+        {
+          "name": "terraform-1-4-5",
+          "file_count": 22
+        },
+        {
+          "name": "github-pr-resource",
+          "file_count": 22
+        },
+        {
+          "name": "terraform-1-5-3",
+          "file_count": 22
+        },
+        {
+          "name": "terraform",
+          "file_count": 21
+        },
+        {
+          "name": "terraform-1-11-4",
+          "file_count": 20
+        },
+        {
+          "name": "artillery",
+          "file_count": 14
+        },
+        {
+          "name": "flyway",
+          "file_count": 14
+        },
+        {
+          "name": "helm-package",
+          "file_count": 12
+        },
+        {
+          "name": "tf-plan-output-to-pr",
+          "file_count": 11
+        },
+        {
+          "name": "golang-unit-tests",
+          "file_count": 10
+        },
+        {
+          "name": "prom-unit-tests",
+          "file_count": 10
+        },
+        {
+          "name": "terratest",
+          "file_count": 9
+        },
+        {
+          "name": "nodejs-tests",
+          "file_count": 9
+        },
+        {
+          "name": "tf-module-to-gcs",
+          "file_count": 9
+        },
+        {
+          "name": "validate-prom-config",
+          "file_count": 8
+        },
+        {
+          "name": "gatling-simulation",
+          "file_count": 8
+        },
+        {
+          "name": "flyway-mongo",
+          "file_count": 8
+        },
+        {
+          "name": "databricks",
+          "file_count": 8
+        },
+        {
+          "name": "tf-module-to-s3",
+          "file_count": 7
+        },
+        {
+          "name": "deploy-github-repos",
+          "file_count": 7
+        },
+        {
+          "name": "snyk",
+          "file_count": 7
+        },
+        {
+          "name": "grafana-unit-tests",
+          "file_count": 7
+        },
+        {
+          "name": "validate-prom-targets",
+          "file_count": 7
+        },
+        {
+          "name": "python-runner",
+          "file_count": 7
+        },
+        {
+          "name": "packer",
+          "file_count": 7
+        },
+        {
+          "name": "lambda-zip-s3",
+          "file_count": 6
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".yaml",
+          "file_count": 245
+        },
+        {
+          "extension": ".sh",
+          "file_count": 60
+        },
+        {
+          "extension": ".yml",
+          "file_count": 60
+        },
+        {
+          "extension": ".tf",
+          "file_count": 53
+        },
+        {
+          "extension": ".go",
+          "file_count": 30
+        },
+        {
+          "extension": ".feature",
+          "file_count": 20
+        },
+        {
+          "extension": ".md",
+          "file_count": 15
+        },
+        {
+          "extension": ".json",
+          "file_count": 11
+        },
+        {
+          "extension": ".mod",
+          "file_count": 9
+        },
+        {
+          "extension": ".sum",
+          "file_count": 8
+        },
+        {
+          "extension": ".sql",
+          "file_count": 6
+        },
+        {
+          "extension": ".js",
+          "file_count": 4
+        },
+        {
+          "extension": ".tpl",
+          "file_count": 4
+        },
+        {
+          "extension": ".txt",
+          "file_count": 3
+        },
+        {
+          "extension": ".patch",
+          "file_count": 2
+        },
+        {
+          "extension": ".py",
+          "file_count": 2
+        },
+        {
+          "extension": ".hcl",
+          "file_count": 1
+        },
+        {
+          "extension": ".ignore",
+          "file_count": 1
+        },
+        {
+          "extension": ".config",
+          "file_count": 1
+        },
+        {
+          "extension": ".list",
+          "file_count": 1
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "ytt-and-fly",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "128 analyzed core files under ytt-and-fly/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "46 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "github-pr-resource",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "22 analyzed core files under github-pr-resource/"
+        ]
+      },
+      {
+        "name": "terraform-1-1-9",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-1-9/"
+        ]
+      },
+      {
+        "name": "terraform-1-4-5",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-4-5/"
+        ]
+      },
+      {
+        "name": "terraform-1-5-3",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-5-3/"
+        ]
+      },
+      {
+        "name": "artillery",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under artillery/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": "golang-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under golang-unit-tests/"
+        ]
+      },
+      {
+        "name": "prom-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under prom-unit-tests/"
+        ]
+      },
+      {
+        "name": "linting",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under linting/"
+        ]
+      },
+      {
+        "name": "terraform-1-11-4",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under terraform-1-11-4/"
+        ]
+      },
+      {
+        "name": "validate-prom-config",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under validate-prom-config/"
+        ]
+      },
+      {
+        "name": "snyk",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under snyk/"
+        ]
+      },
+      {
+        "name": "grafana-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under grafana-unit-tests/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "ytt-and-fly",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "128 analyzed core files under ytt-and-fly/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "46 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "github-pr-resource",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "22 analyzed core files under github-pr-resource/"
+        ]
+      },
+      {
+        "name": "terraform-1-1-9",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-1-9/"
+        ]
+      },
+      {
+        "name": "terraform-1-4-5",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-4-5/"
+        ]
+      },
+      {
+        "name": "terraform-1-5-3",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-5-3/"
+        ]
+      },
+      {
+        "name": "artillery",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under artillery/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": "golang-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under golang-unit-tests/"
+        ]
+      },
+      {
+        "name": "prom-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under prom-unit-tests/"
+        ]
+      },
+      {
+        "name": "linting",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under linting/"
+        ]
+      },
+      {
+        "name": "terraform-1-11-4",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under terraform-1-11-4/"
+        ]
+      },
+      {
+        "name": "validate-prom-config",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under validate-prom-config/"
+        ]
+      },
+      {
+        "name": "snyk",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under snyk/"
+        ]
+      },
+      {
+        "name": "grafana-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under grafana-unit-tests/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "atlas:main",
+        "source_file": "atlas/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "artillery/src:main",
+        "source_file": "artillery/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "prom-unit-tests/prom-unit-test-acceptance:main",
+        "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "validate-prom-targets/src:main",
+        "source_file": "validate-prom-targets/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:main",
+        "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "tf-plan-output-to-pr/src:main",
+        "source_file": "tf-plan-output-to-pr/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "snyk/app:main",
+        "source_file": "snyk/app/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/out:main",
+        "source_file": "github-pr-resource/cmd/out/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/in:main",
+        "source_file": "github-pr-resource/cmd/in/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/check:main",
+        "source_file": "github-pr-resource/cmd/check/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "validate-prom-config/src:main",
+        "source_file": "validate-prom-config/src/main.go"
+      }
+    ],
+    "relationships": [],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {
+          "github-pr-resource": [
+            "github-pr-resource/models.go",
+            "github-pr-resource/check.go",
+            "github-pr-resource/git.go",
+            "github-pr-resource/in.go",
+            "github-pr-resource/out.go",
+            "github-pr-resource/github.go"
+          ],
+          "atlas": [
+            "atlas/main.go"
+          ],
+          "artillery/src": [
+            "artillery/src/artillery.go",
+            "artillery/src/exec.go",
+            "artillery/src/promwriter.go",
+            "artillery/src/kubernetes.go",
+            "artillery/src/main.go"
+          ],
+          "prom-unit-tests/prom-unit-test-acceptance": [
+            "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          ],
+          "validate-prom-targets/src": [
+            "validate-prom-targets/src/main.go"
+          ],
+          "grafana-unit-tests/grafana-unit-tests-coverage": [
+            "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+          ],
+          "tf-plan-output-to-pr/src": [
+            "tf-plan-output-to-pr/src/main.go"
+          ],
+          "snyk/app": [
+            "snyk/app/structs.go",
+            "snyk/app/main.go"
+          ],
+          "github-pr-resource/tools": [
+            "github-pr-resource/tools/tools.go"
+          ],
+          "github-pr-resource/fakes": [
+            "github-pr-resource/fakes/fake_github.go",
+            "github-pr-resource/fakes/fake_git.go"
+          ],
+          "github-pr-resource/cmd/out": [
+            "github-pr-resource/cmd/out/main.go"
+          ],
+          "github-pr-resource/cmd/in": [
+            "github-pr-resource/cmd/in/main.go"
+          ],
+          "github-pr-resource/cmd/check": [
+            "github-pr-resource/cmd/check/main.go"
+          ],
+          "validate-prom-config/src": [
+            "validate-prom-config/src/main.go"
+          ]
+        },
+        "functions": [
+          {
+            "symbol": "github-pr-resource:Validate",
+            "name": "Validate",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/models.go"
+          },
+          {
+            "symbol": "github-pr-resource:Add",
+            "name": "Add",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/models.go"
+          },
+          {
+            "symbol": "github-pr-resource:NewVersion",
+            "name": "NewVersion",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/models.go"
+          },
+          {
+            "symbol": "github-pr-resource:UpdatedDate",
+            "name": "UpdatedDate",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/models.go"
+          },
+          {
+            "symbol": "github-pr-resource:Check",
+            "name": "Check",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:userTrusted",
+            "name": "userTrusted",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:ContainsSkipCI",
+            "name": "ContainsSkipCI",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:FilterIgnorePath",
+            "name": "FilterIgnorePath",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:FilterPath",
+            "name": "FilterPath",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:IsInsidePath",
+            "name": "IsInsidePath",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:Len",
+            "name": "Len",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:Less",
+            "name": "Less",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:Swap",
+            "name": "Swap",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/check.go"
+          },
+          {
+            "symbol": "github-pr-resource:NewGitClient",
+            "name": "NewGitClient",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:command",
+            "name": "command",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Init",
+            "name": "Init",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Pull",
+            "name": "Pull",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:RevParse",
+            "name": "RevParse",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Fetch",
+            "name": "Fetch",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Checkout",
+            "name": "Checkout",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Merge",
+            "name": "Merge",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Rebase",
+            "name": "Rebase",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:GitCryptUnlock",
+            "name": "GitCryptUnlock",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Endpoint",
+            "name": "Endpoint",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/git.go"
+          },
+          {
+            "symbol": "github-pr-resource:Get",
+            "name": "Get",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/in.go"
+          },
+          {
+            "symbol": "github-pr-resource:Put",
+            "name": "Put",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/out.go"
+          },
+          {
+            "symbol": "github-pr-resource:Validate",
+            "name": "Validate",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/out.go"
+          },
+          {
+            "symbol": "github-pr-resource:safeExpandEnv",
+            "name": "safeExpandEnv",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/out.go"
+          },
+          {
+            "symbol": "github-pr-resource:NewGithubClient",
+            "name": "NewGithubClient",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:ListPullRequests",
+            "name": "ListPullRequests",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:ListTeamMembers",
+            "name": "ListTeamMembers",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:ListModifiedFiles",
+            "name": "ListModifiedFiles",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:PostComment",
+            "name": "PostComment",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:ReplaceComment",
+            "name": "ReplaceComment",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:ellipsis",
+            "name": "ellipsis",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:GetChangedFiles",
+            "name": "GetChangedFiles",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:GetPullRequest",
+            "name": "GetPullRequest",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:UpdateCommitStatus",
+            "name": "UpdateCommitStatus",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:getPreviousCommentWithHeader",
+            "name": "getPreviousCommentWithHeader",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:DeletePreviousComments",
+            "name": "DeletePreviousComments",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:parseRepository",
+            "name": "parseRepository",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "github-pr-resource:cleanBotUserName",
+            "name": "cleanBotUserName",
+            "package": "github-pr-resource",
+            "source_file": "github-pr-resource/github.go"
+          },
+          {
+            "symbol": "atlas:main",
+            "name": "main",
+            "package": "atlas",
+            "source_file": "atlas/main.go"
+          },
+          {
+            "symbol": "atlas:getClient",
+            "name": "getClient",
+            "package": "atlas",
+            "source_file": "atlas/main.go"
+          },
+          {
+            "symbol": "atlas:StartCluster",
+            "name": "StartCluster",
+            "package": "atlas",
+            "source_file": "atlas/main.go"
+          },
+          {
+            "symbol": "artillery/src:NewArtilleryRun",
+            "name": "NewArtilleryRun",
+            "package": "artillery/src",
+            "source_file": "artillery/src/artillery.go"
+          },
+          {
+            "symbol": "artillery/src:kickOffArtillery",
+            "name": "kickOffArtillery",
+            "package": "artillery/src",
+            "source_file": "artillery/src/artillery.go"
+          },
+          {
+            "symbol": "artillery/src:uploadFileToS3",
+            "name": "uploadFileToS3",
+            "package": "artillery/src",
+            "source_file": "artillery/src/artillery.go"
+          },
+          {
+            "symbol": "artillery/src:runCommand",
+            "name": "runCommand",
+            "package": "artillery/src",
+            "source_file": "artillery/src/exec.go"
+          },
+          {
+            "symbol": "artillery/src:NewPrometheusWriter",
+            "name": "NewPrometheusWriter",
+            "package": "artillery/src",
+            "source_file": "artillery/src/promwriter.go"
+          },
+          {
+            "symbol": "artillery/src:WriteMetric",
+            "name": "WriteMetric",
+            "package": "artillery/src",
+            "source_file": "artillery/src/promwriter.go"
+          },
+          {
+            "symbol": "artillery/src:NewKubernetesClient",
+            "name": "NewKubernetesClient",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:GetToken",
+            "name": "GetToken",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:RoundTrip",
+            "name": "RoundTrip",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:VerifyConnection",
+            "name": "VerifyConnection",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:FindPod",
+            "name": "FindPod",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:StartPortForward",
+            "name": "StartPortForward",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:extractPortFromTarget",
+            "name": "extractPortFromTarget",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:SetupPodPortForwarding",
+            "name": "SetupPodPortForwarding",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:createEKSClient",
+            "name": "createEKSClient",
+            "package": "artillery/src",
+            "source_file": "artillery/src/kubernetes.go"
+          },
+          {
+            "symbol": "artillery/src:main",
+            "name": "main",
+            "package": "artillery/src",
+            "source_file": "artillery/src/main.go"
+          },
+          {
+            "symbol": "artillery/src:getTestFile",
+            "name": "getTestFile",
+            "package": "artillery/src",
+            "source_file": "artillery/src/main.go"
+          },
+          {
+            "symbol": "artillery/src:printLink",
+            "name": "printLink",
+            "package": "artillery/src",
+            "source_file": "artillery/src/main.go"
+          },
+          {
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:main",
+            "name": "main",
+            "package": "prom-unit-tests/prom-unit-test-acceptance",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:readTestsFile",
+            "name": "readTestsFile",
+            "package": "prom-unit-tests/prom-unit-test-acceptance",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:isPrism",
+            "name": "isPrism",
+            "package": "prom-unit-tests/prom-unit-test-acceptance",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:validateRuleFiles",
+            "name": "validateRuleFiles",
+            "package": "prom-unit-tests/prom-unit-test-acceptance",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:padRight",
+            "name": "padRight",
+            "package": "prom-unit-tests/prom-unit-test-acceptance",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:main",
+            "name": "main",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:checkTargets",
+            "name": "checkTargets",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:getTargets",
+            "name": "getTargets",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:validatePrometheusTargets",
+            "name": "validatePrometheusTargets",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:report",
+            "name": "report",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:getJSONFromURL",
+            "name": "getJSONFromURL",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-targets/src:padRight",
+            "name": "padRight",
+            "package": "validate-prom-targets/src",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:main",
+            "name": "main",
+            "package": "grafana-unit-tests/grafana-unit-tests-coverage",
+            "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+          },
+          {
+            "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:getFileData",
+            "name": "getFileData",
+            "package": "grafana-unit-tests/grafana-unit-tests-coverage",
+            "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+          },
+          {
+            "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:isDashboardInvalid",
+            "name": "isDashboardInvalid",
+            "package": "grafana-unit-tests/grafana-unit-tests-coverage",
+            "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+          },
+          {
+            "symbol": "tf-plan-output-to-pr/src:handleErr",
+            "name": "handleErr",
+            "package": "tf-plan-output-to-pr/src",
+            "source_file": "tf-plan-output-to-pr/src/main.go"
+          },
+          {
+            "symbol": "tf-plan-output-to-pr/src:loadDenyMap",
+            "name": "loadDenyMap",
+            "package": "tf-plan-output-to-pr/src",
+            "source_file": "tf-plan-output-to-pr/src/main.go"
+          },
+          {
+            "symbol": "tf-plan-output-to-pr/src:parsePlan",
+            "name": "parsePlan",
+            "package": "tf-plan-output-to-pr/src",
+            "source_file": "tf-plan-output-to-pr/src/main.go"
+          },
+          {
+            "symbol": "tf-plan-output-to-pr/src:main",
+            "name": "main",
+            "package": "tf-plan-output-to-pr/src",
+            "source_file": "tf-plan-output-to-pr/src/main.go"
+          },
+          {
+            "symbol": "snyk/app:main",
+            "name": "main",
+            "package": "snyk/app",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "symbol": "snyk/app:RetrieveTargetId",
+            "name": "RetrieveTargetId",
+            "package": "snyk/app",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "symbol": "snyk/app:GatherProjectIDs",
+            "name": "GatherProjectIDs",
+            "package": "snyk/app",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "symbol": "snyk/app:CreateIssueReport",
+            "name": "CreateIssueReport",
+            "package": "snyk/app",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "symbol": "snyk/app:CreateMarkdownTable",
+            "name": "CreateMarkdownTable",
+            "package": "snyk/app",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousComments",
+            "name": "DeletePreviousComments",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousCommentsCallCount",
+            "name": "DeletePreviousCommentsCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousCommentsCalls",
+            "name": "DeletePreviousCommentsCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousCommentsArgsForCall",
+            "name": "DeletePreviousCommentsArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousCommentsReturns",
+            "name": "DeletePreviousCommentsReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:DeletePreviousCommentsReturnsOnCall",
+            "name": "DeletePreviousCommentsReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFiles",
+            "name": "GetChangedFiles",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFilesCallCount",
+            "name": "GetChangedFilesCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFilesCalls",
+            "name": "GetChangedFilesCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFilesArgsForCall",
+            "name": "GetChangedFilesArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFilesReturns",
+            "name": "GetChangedFilesReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetChangedFilesReturnsOnCall",
+            "name": "GetChangedFilesReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequest",
+            "name": "GetPullRequest",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequestCallCount",
+            "name": "GetPullRequestCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequestCalls",
+            "name": "GetPullRequestCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequestArgsForCall",
+            "name": "GetPullRequestArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequestReturns",
+            "name": "GetPullRequestReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GetPullRequestReturnsOnCall",
+            "name": "GetPullRequestReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFiles",
+            "name": "ListModifiedFiles",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFilesCallCount",
+            "name": "ListModifiedFilesCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFilesCalls",
+            "name": "ListModifiedFilesCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFilesArgsForCall",
+            "name": "ListModifiedFilesArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFilesReturns",
+            "name": "ListModifiedFilesReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListModifiedFilesReturnsOnCall",
+            "name": "ListModifiedFilesReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequests",
+            "name": "ListPullRequests",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequestsCallCount",
+            "name": "ListPullRequestsCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequestsCalls",
+            "name": "ListPullRequestsCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequestsArgsForCall",
+            "name": "ListPullRequestsArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequestsReturns",
+            "name": "ListPullRequestsReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListPullRequestsReturnsOnCall",
+            "name": "ListPullRequestsReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ReplaceComment",
+            "name": "ReplaceComment",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembers",
+            "name": "ListTeamMembers",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembersCallCount",
+            "name": "ListTeamMembersCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembersCalls",
+            "name": "ListTeamMembersCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembersArgsForCall",
+            "name": "ListTeamMembersArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembersReturns",
+            "name": "ListTeamMembersReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:ListTeamMembersReturnsOnCall",
+            "name": "ListTeamMembersReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostComment",
+            "name": "PostComment",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostCommentCallCount",
+            "name": "PostCommentCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostCommentCalls",
+            "name": "PostCommentCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostCommentArgsForCall",
+            "name": "PostCommentArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostCommentReturns",
+            "name": "PostCommentReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PostCommentReturnsOnCall",
+            "name": "PostCommentReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatus",
+            "name": "UpdateCommitStatus",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatusCallCount",
+            "name": "UpdateCommitStatusCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatusCalls",
+            "name": "UpdateCommitStatusCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatusArgsForCall",
+            "name": "UpdateCommitStatusArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatusReturns",
+            "name": "UpdateCommitStatusReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:UpdateCommitStatusReturnsOnCall",
+            "name": "UpdateCommitStatusReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Invocations",
+            "name": "Invocations",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:recordInvocation",
+            "name": "recordInvocation",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_github.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Checkout",
+            "name": "Checkout",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:CheckoutCallCount",
+            "name": "CheckoutCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:CheckoutCalls",
+            "name": "CheckoutCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:CheckoutArgsForCall",
+            "name": "CheckoutArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:CheckoutReturns",
+            "name": "CheckoutReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:CheckoutReturnsOnCall",
+            "name": "CheckoutReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Fetch",
+            "name": "Fetch",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:FetchCallCount",
+            "name": "FetchCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:FetchCalls",
+            "name": "FetchCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:FetchArgsForCall",
+            "name": "FetchArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:FetchReturns",
+            "name": "FetchReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:FetchReturnsOnCall",
+            "name": "FetchReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlock",
+            "name": "GitCryptUnlock",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlockCallCount",
+            "name": "GitCryptUnlockCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlockCalls",
+            "name": "GitCryptUnlockCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlockArgsForCall",
+            "name": "GitCryptUnlockArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlockReturns",
+            "name": "GitCryptUnlockReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:GitCryptUnlockReturnsOnCall",
+            "name": "GitCryptUnlockReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Init",
+            "name": "Init",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:InitCallCount",
+            "name": "InitCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:InitCalls",
+            "name": "InitCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:InitArgsForCall",
+            "name": "InitArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:InitReturns",
+            "name": "InitReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:InitReturnsOnCall",
+            "name": "InitReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Merge",
+            "name": "Merge",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:MergeCallCount",
+            "name": "MergeCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:MergeCalls",
+            "name": "MergeCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:MergeArgsForCall",
+            "name": "MergeArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:MergeReturns",
+            "name": "MergeReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:MergeReturnsOnCall",
+            "name": "MergeReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Pull",
+            "name": "Pull",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PullCallCount",
+            "name": "PullCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PullCalls",
+            "name": "PullCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PullArgsForCall",
+            "name": "PullArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PullReturns",
+            "name": "PullReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:PullReturnsOnCall",
+            "name": "PullReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Rebase",
+            "name": "Rebase",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RebaseCallCount",
+            "name": "RebaseCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RebaseCalls",
+            "name": "RebaseCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RebaseArgsForCall",
+            "name": "RebaseArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RebaseReturns",
+            "name": "RebaseReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RebaseReturnsOnCall",
+            "name": "RebaseReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParse",
+            "name": "RevParse",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParseCallCount",
+            "name": "RevParseCallCount",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParseCalls",
+            "name": "RevParseCalls",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParseArgsForCall",
+            "name": "RevParseArgsForCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParseReturns",
+            "name": "RevParseReturns",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:RevParseReturnsOnCall",
+            "name": "RevParseReturnsOnCall",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:Invocations",
+            "name": "Invocations",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/fakes:recordInvocation",
+            "name": "recordInvocation",
+            "package": "github-pr-resource/fakes",
+            "source_file": "github-pr-resource/fakes/fake_git.go"
+          },
+          {
+            "symbol": "github-pr-resource/cmd/out:main",
+            "name": "main",
+            "package": "github-pr-resource/cmd/out",
+            "source_file": "github-pr-resource/cmd/out/main.go"
+          },
+          {
+            "symbol": "github-pr-resource/cmd/in:main",
+            "name": "main",
+            "package": "github-pr-resource/cmd/in",
+            "source_file": "github-pr-resource/cmd/in/main.go"
+          },
+          {
+            "symbol": "github-pr-resource/cmd/check:main",
+            "name": "main",
+            "package": "github-pr-resource/cmd/check",
+            "source_file": "github-pr-resource/cmd/check/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:splitByCommaOrSpace",
+            "name": "splitByCommaOrSpace",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:main",
+            "name": "main",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:checkRules",
+            "name": "checkRules",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:readRulesFiles",
+            "name": "readRulesFiles",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:makeRuleKey",
+            "name": "makeRuleKey",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:validatePrometheusRules",
+            "name": "validatePrometheusRules",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:checkDashboards",
+            "name": "checkDashboards",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:readDashboardFiles",
+            "name": "readDashboardFiles",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:validateGrafanaDashboards",
+            "name": "validateGrafanaDashboards",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:report",
+            "name": "report",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:getJSONFromURL",
+            "name": "getJSONFromURL",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          },
+          {
+            "symbol": "validate-prom-config/src:padRight",
+            "name": "padRight",
+            "package": "validate-prom-config/src",
+            "source_file": "validate-prom-config/src/main.go"
+          }
+        ],
+        "package_relationships": [],
+        "call_edges": [],
+        "entry_points": [
+          {
+            "type": "Go executable entry point",
+            "symbol": "atlas:main",
+            "source_file": "atlas/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "artillery/src:main",
+            "source_file": "artillery/src/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "prom-unit-tests/prom-unit-test-acceptance:main",
+            "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "validate-prom-targets/src:main",
+            "source_file": "validate-prom-targets/src/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:main",
+            "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "tf-plan-output-to-pr/src:main",
+            "source_file": "tf-plan-output-to-pr/src/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "snyk/app:main",
+            "source_file": "snyk/app/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "github-pr-resource/cmd/out:main",
+            "source_file": "github-pr-resource/cmd/out/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "github-pr-resource/cmd/in:main",
+            "source_file": "github-pr-resource/cmd/in/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "github-pr-resource/cmd/check:main",
+            "source_file": "github-pr-resource/cmd/check/main.go"
+          },
+          {
+            "type": "Go executable entry point",
+            "symbol": "validate-prom-config/src:main",
+            "source_file": "validate-prom-config/src/main.go"
+          }
+        ],
+        "module_path": ""
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular repository architecture",
+    "architecture_explanation": "The repository follows a modular repository architecture. Static analysis identified 15 major structural component areas, 11 executable/package entry points, and 0 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "ytt-and-fly",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "128 analyzed core files under ytt-and-fly/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "46 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "github-pr-resource",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "22 analyzed core files under github-pr-resource/"
+        ]
+      },
+      {
+        "name": "terraform-1-1-9",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-1-9/"
+        ]
+      },
+      {
+        "name": "terraform-1-4-5",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-4-5/"
+        ]
+      },
+      {
+        "name": "terraform-1-5-3",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-5-3/"
+        ]
+      },
+      {
+        "name": "artillery",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under artillery/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": "golang-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under golang-unit-tests/"
+        ]
+      },
+      {
+        "name": "prom-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under prom-unit-tests/"
+        ]
+      },
+      {
+        "name": "linting",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under linting/"
+        ]
+      },
+      {
+        "name": "terraform-1-11-4",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under terraform-1-11-4/"
+        ]
+      },
+      {
+        "name": "validate-prom-config",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under validate-prom-config/"
+        ]
+      },
+      {
+        "name": "snyk",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under snyk/"
+        ]
+      },
+      {
+        "name": "grafana-unit-tests",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under grafana-unit-tests/"
+        ]
+      }
+    ],
+    "entry_points": [
+      {
+        "type": "Go executable entry point",
+        "symbol": "atlas:main",
+        "source_file": "atlas/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "artillery/src:main",
+        "source_file": "artillery/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "prom-unit-tests/prom-unit-test-acceptance:main",
+        "source_file": "prom-unit-tests/prom-unit-test-acceptance/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "validate-prom-targets/src:main",
+        "source_file": "validate-prom-targets/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "grafana-unit-tests/grafana-unit-tests-coverage:main",
+        "source_file": "grafana-unit-tests/grafana-unit-tests-coverage/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "tf-plan-output-to-pr/src:main",
+        "source_file": "tf-plan-output-to-pr/src/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "snyk/app:main",
+        "source_file": "snyk/app/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/out:main",
+        "source_file": "github-pr-resource/cmd/out/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/in:main",
+        "source_file": "github-pr-resource/cmd/in/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "github-pr-resource/cmd/check:main",
+        "source_file": "github-pr-resource/cmd/check/main.go"
+      },
+      {
+        "type": "Go executable entry point",
+        "symbol": "validate-prom-config/src:main",
+        "source_file": "validate-prom-config/src/main.go"
+      }
+    ],
+    "major_components": [
+      {
+        "name": "ytt-and-fly",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "128 analyzed core files under ytt-and-fly/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "46 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "github-pr-resource",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "22 analyzed core files under github-pr-resource/"
+        ]
+      },
+      {
+        "name": "terraform-1-1-9",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-1-9/"
+        ]
+      },
+      {
+        "name": "terraform-1-4-5",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-4-5/"
+        ]
+      },
+      {
+        "name": "terraform-1-5-3",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under terraform-1-5-3/"
+        ]
+      },
+      {
+        "name": "artillery",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "10 analyzed core files under artillery/"
+        ]
+      },
+      {
+        "name": "terraform",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under terraform/"
+        ]
+      },
+      {
+        "name": "golang-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under golang-unit-tests/"
+        ]
+      },
+      {
+        "name": "prom-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under prom-unit-tests/"
+        ]
+      },
+      {
+        "name": "linting",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under linting/"
+        ]
+      },
+      {
+        "name": "terraform-1-11-4",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "8 analyzed core files under terraform-1-11-4/"
+        ]
+      },
+      {
+        "name": "validate-prom-config",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under validate-prom-config/"
+        ]
+      },
+      {
+        "name": "snyk",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under snyk/"
+        ]
+      },
+      {
+        "name": "grafana-unit-tests",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "7 analyzed core files under grafana-unit-tests/"
+        ]
+      }
+    ],
+    "component_relationships": [],
+    "configuration_model": "Repository contains explicit configuration artifacts: flyway/test/config/docker-flyway.config, ytt-and-fly/templates/config/jobs.lib.yml, ytt-and-fly/templates/config/main.yml, ytt-and-fly/templates/config/resource_types.lib.yml, ytt-and-fly/templates/config/resources.lib.yml, ytt-and-fly/templates/config/steps.lib.yml.",
+    "extension_points": [],
+    "deployment_model": "Docker, Kubernetes/Helm, Terraform-managed infrastructure",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 14",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 0"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      },
+      {
+        "step": 1,
+        "group": "Application Startup Flow",
+        "title": "Start the application",
+        "explanation": "Execution starts in atlas/main.go at main. The startup function then delegates into the application bootstrap code shown below.",
+        "code": [
+          "atlas/main.go:main",
+          "os.Getenv",
+          "context.Background",
+          "ProjectsApi.GetProjectByName",
+          "log.Printf",
+          "ClustersApi.GetCluster",
+          "getClient",
+          "StartCluster"
+        ],
+        "result": "Control moves into application initialization.",
+        "evidence": [
+          "atlas/main.go"
+        ]
+      },
+      {
+        "step": 2,
+        "group": "Application Startup Flow",
+        "title": "Load runtime configuration",
+        "explanation": "The application uses the detected configuration files during startup. Configuration values control later runtime initialization; values not proven from source are not guessed.",
+        "code": [
+          "flyway/test/config/docker-flyway.config",
+          "ytt-and-fly/templates/config/jobs.lib.yml",
+          "ytt-and-fly/templates/config/main.yml",
+          "ytt-and-fly/templates/config/resource_types.lib.yml",
+          "ytt-and-fly/templates/config/resources.lib.yml",
+          "ytt-and-fly/templates/config/steps.lib.yml"
+        ],
+        "result": "Validated runtime settings are available to the bootstrap code.",
+        "evidence": [
+          "flyway/test/config/docker-flyway.config",
+          "ytt-and-fly/templates/config/jobs.lib.yml",
+          "ytt-and-fly/templates/config/main.yml",
+          "ytt-and-fly/templates/config/resource_types.lib.yml",
+          "ytt-and-fly/templates/config/resources.lib.yml",
+          "ytt-and-fly/templates/config/steps.lib.yml"
+        ]
+      },
+      {
+        "step": 3,
+        "group": "Application Startup Flow",
+        "title": "Build application dependencies and start the server",
+        "explanation": "The main bootstrap creates the runtime dependencies in code order. The detected calls include logging/metrics setup, database/client connection, repository/use-case/handler construction, HTTP server creation and service start where present.",
+        "code": [
+          "snyk/app/main.go:main",
+          "time.Now",
+          "viper.AutomaticEnv",
+          "viper.GetString",
+          "endTime.Sub",
+          "fmt.Println",
+          "RetrieveTargetId",
+          "GatherProjectIDs",
+          "CreateIssueReport"
+        ],
+        "result": "The service is initialized and ready to receive runtime work.",
+        "evidence": [
+          "snyk/app/main.go"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "Execution begins at the detected repository entry point(s): atlas/main.go, artillery/src/main.go, prom-unit-tests/prom-unit-test-acceptance/main.go, validate-prom-targets/src/main.go, grafana-unit-tests/grafana-unit-tests-coverage/main.go, tf-plan-output-to-pr/src/main.go, snyk/app/main.go, github-pr-resource/cmd/out/main.go.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "Execution begins at the detected repository entry point(s): atlas/main.go, artillery/src/main.go, prom-unit-tests/prom-unit-test-acceptance/main.go, validate-prom-targets/src/main.go, grafana-unit-tests/grafana-unit-tests-coverage/main.go, tf-plan-output-to-pr/src/main.go, snyk/app/main.go, github-pr-resource/cmd/out/main.go.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": []
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {
+      "core": [
+        {
+          "name": "github.com/aws/aws-sdk-go",
+          "current_version": "v1.55.7",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.55.8",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/aws/aws-sdk-go"
+        },
+        {
+          "name": "github.com/castai/promwrite",
+          "current_version": "v0.6.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/castai/promwrite"
+        },
+        {
+          "name": "github.com/cespare/xxhash/v2",
+          "current_version": "v2.3.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v2.3.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/cespare/xxhash/v2"
+        },
+        {
+          "name": "github.com/davecgh/go-spew",
+          "current_version": "v1.1.1",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v1.1.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/davecgh/go-spew"
+        },
+        {
+          "name": "github.com/davecgh/go-spew",
+          "current_version": "v1.1.2-0.20180830191138-d8f796af33cc",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.1.1",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/davecgh/go-spew"
+        },
+        {
+          "name": "github.com/emicklei/go-restful/v3",
+          "current_version": "v3.11.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v3.13.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/emicklei/go-restful/v3"
+        },
+        {
+          "name": "github.com/fsnotify/fsnotify",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.10.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/fsnotify/fsnotify"
+        },
+        {
+          "name": "github.com/fxamacker/cbor/v2",
+          "current_version": "v2.7.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v2.9.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/fxamacker/cbor/v2"
+        },
+        {
+          "name": "github.com/go-logr/logr",
+          "current_version": "v1.4.2",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.4.4",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-logr/logr"
+        },
+        {
+          "name": "github.com/go-openapi/jsonpointer",
+          "current_version": "v0.21.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.0.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonpointer"
+        },
+        {
+          "name": "github.com/go-openapi/jsonreference",
+          "current_version": "v0.21.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/jsonreference"
+        },
+        {
+          "name": "github.com/go-openapi/swag",
+          "current_version": "v0.23.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.29.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/go-openapi/swag"
+        },
+        {
+          "name": "github.com/gogo/protobuf",
+          "current_version": "v1.3.2",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.3.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/gogo/protobuf"
+        },
+        {
+          "name": "github.com/golang/protobuf",
+          "current_version": "v1.5.4",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.5.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/protobuf"
+        },
+        {
+          "name": "github.com/golang/snappy",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/golang/snappy"
+        },
+        {
+          "name": "github.com/google/gnostic-models",
+          "current_version": "v0.6.8",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.7.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/gnostic-models"
+        },
+        {
+          "name": "github.com/google/go-cmp",
+          "current_version": "v0.7.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.7.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/go-cmp"
+        },
+        {
+          "name": "github.com/google/go-github/v61",
+          "current_version": "v61.0.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v61.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/go-github/v61"
+        },
+        {
+          "name": "github.com/google/go-querystring",
+          "current_version": "v1.1.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/google/go-querystring"
+        },
+        {
+          "name": "github.com/google/gofuzz",
+          "current_version": "v1.2.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.2.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/gofuzz"
+        },
+        {
+          "name": "github.com/google/uuid",
+          "current_version": "v1.6.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/google/uuid"
+        },
+        {
+          "name": "github.com/gorilla/websocket",
+          "current_version": "v1.5.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.5.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/gorilla/websocket"
+        },
+        {
+          "name": "github.com/grafana/regexp",
+          "current_version": "v0.0.0-20240518133315-a468a5bfb3bc",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20250905093917-f7b3be9d1853",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/grafana/regexp"
+        },
+        {
+          "name": "github.com/hashicorp/hcl",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/hashicorp/hcl"
+        },
+        {
+          "name": "github.com/jmespath/go-jmespath",
+          "current_version": "v0.4.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.4.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/jmespath/go-jmespath"
+        },
+        {
+          "name": "github.com/josharian/intern",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/josharian/intern"
+        },
+        {
+          "name": "github.com/json-iterator/go",
+          "current_version": "v1.1.12",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.1.12",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/json-iterator/go"
+        },
+        {
+          "name": "github.com/kr/pretty",
+          "current_version": "v0.3.1",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.3.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/kr/pretty"
+        },
+        {
+          "name": "github.com/magiconair/properties",
+          "current_version": "v1.8.7",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.18.12",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/magiconair/properties"
+        },
+        {
+          "name": "github.com/mailru/easyjson",
+          "current_version": "v0.7.7",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.9.2",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/mailru/easyjson"
+        },
+        {
+          "name": "github.com/maxbrunsfeld/counterfeiter/v6",
+          "current_version": "v6.8.1",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v6.13.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/maxbrunsfeld/counterfeiter/v6"
+        },
+        {
+          "name": "github.com/mitchellh/mapstructure",
+          "current_version": "v1.5.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.5.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mitchellh/mapstructure"
+        },
+        {
+          "name": "github.com/moby/spdystream",
+          "current_version": "v0.5.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.5.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/moby/spdystream"
+        },
+        {
+          "name": "github.com/modern-go/concurrent",
+          "current_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/concurrent"
+        },
+        {
+          "name": "github.com/modern-go/reflect2",
+          "current_version": "v1.0.2",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.0.2",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/modern-go/reflect2"
+        },
+        {
+          "name": "github.com/mongodb-forks/digest",
+          "current_version": "v1.1.0",
+          "scope": "core",
+          "source_file": "atlas/go.mod",
+          "latest_version": "v1.1.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mongodb-forks/digest"
+        },
+        {
+          "name": "github.com/munnerz/goautoneg",
+          "current_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20191010083416-a7dc8b61c822",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/munnerz/goautoneg"
+        },
+        {
+          "name": "github.com/mxk/go-flowrate",
+          "current_version": "v0.0.0-20140419014527-cca7078d478f",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20140419014527-cca7078d478f",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/mxk/go-flowrate"
+        },
+        {
+          "name": "github.com/pelletier/go-toml/v2",
+          "current_version": "v2.0.8",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v2.4.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/pelletier/go-toml/v2"
+        },
+        {
+          "name": "github.com/pkg/errors",
+          "current_version": "v0.9.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.9.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pkg/errors"
+        },
+        {
+          "name": "github.com/pmezard/go-difflib",
+          "current_version": "v1.0.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v1.0.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/pmezard/go-difflib"
+        },
+        {
+          "name": "github.com/prometheus/client_model",
+          "current_version": "v0.6.2",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.6.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/client_model"
+        },
+        {
+          "name": "github.com/prometheus/common",
+          "current_version": "v0.63.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.71.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/common"
+        },
+        {
+          "name": "github.com/prometheus/prometheus",
+          "current_version": "v0.304.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.314.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/prometheus/prometheus"
+        },
+        {
+          "name": "github.com/shurcooL/githubv4",
+          "current_version": "v0.0.0-20240727222349-48295856cce7",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.0.0-20260209031235-2402fdf4a9ed",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/shurcooL/githubv4"
+        },
+        {
+          "name": "github.com/shurcooL/graphql",
+          "current_version": "v0.0.0-20230722043721-ed46e5a46466",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.0.0-20240915155400-7ee5256398cf",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/shurcooL/graphql"
+        },
+        {
+          "name": "github.com/spf13/afero",
+          "current_version": "v1.9.5",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.15.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/afero"
+        },
+        {
+          "name": "github.com/spf13/cast",
+          "current_version": "v1.5.1",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.10.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/cast"
+        },
+        {
+          "name": "github.com/spf13/jwalterweatherman",
+          "current_version": "v1.1.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.1.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/spf13/jwalterweatherman"
+        },
+        {
+          "name": "github.com/spf13/pflag",
+          "current_version": "v1.0.5",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.0.10",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/spf13/pflag"
+        },
+        {
+          "name": "github.com/stretchr/testify",
+          "current_version": "v1.10.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v1.12.1",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/stretchr/testify"
+        },
+        {
+          "name": "github.com/subosito/gotenv",
+          "current_version": "v1.4.2",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/github.com/subosito/gotenv"
+        },
+        {
+          "name": "github.com/x448/float16",
+          "current_version": "v0.8.4",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.8.4",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/github.com/x448/float16"
+        },
+        {
+          "name": "go.mongodb.org/atlas-sdk/v20240805004",
+          "current_version": "v20240805004.7.0",
+          "scope": "core",
+          "source_file": "atlas/go.mod",
+          "latest_version": "v20240805004.7.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/go.mongodb.org/atlas-sdk/v20240805004"
+        },
+        {
+          "name": "golang.org/x/mod",
+          "current_version": "v0.14.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.41.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/mod"
+        },
+        {
+          "name": "golang.org/x/net",
+          "current_version": "v0.54.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.59.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/net"
+        },
+        {
+          "name": "golang.org/x/oauth2",
+          "current_version": "v0.28.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/oauth2"
+        },
+        {
+          "name": "golang.org/x/oauth2",
+          "current_version": "v0.29.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/oauth2"
+        },
+        {
+          "name": "golang.org/x/sys",
+          "current_version": "v0.44.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.48.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sys"
+        },
+        {
+          "name": "golang.org/x/sys",
+          "current_version": "v0.8.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v0.48.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/sys"
+        },
+        {
+          "name": "golang.org/x/term",
+          "current_version": "v0.43.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.46.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/term"
+        },
+        {
+          "name": "golang.org/x/text",
+          "current_version": "v0.14.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.42.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/text"
+        },
+        {
+          "name": "golang.org/x/text",
+          "current_version": "v0.37.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.42.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/text"
+        },
+        {
+          "name": "golang.org/x/text",
+          "current_version": "v0.9.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v0.42.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/text"
+        },
+        {
+          "name": "golang.org/x/time",
+          "current_version": "v0.11.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.16.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/time"
+        },
+        {
+          "name": "golang.org/x/tools",
+          "current_version": "v0.17.0",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v0.50.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/golang.org/x/tools"
+        },
+        {
+          "name": "google.golang.org/protobuf",
+          "current_version": "v1.36.6",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.36.12",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/google.golang.org/protobuf"
+        },
+        {
+          "name": "gopkg.in/evanphx/json-patch.v4",
+          "current_version": "v4.12.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v4.13.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/gopkg.in/evanphx/json-patch.v4"
+        },
+        {
+          "name": "gopkg.in/inf.v0",
+          "current_version": "v0.9.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.9.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/inf.v0"
+        },
+        {
+          "name": "gopkg.in/ini.v1",
+          "current_version": "v1.67.0",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v1.67.3",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/gopkg.in/ini.v1"
+        },
+        {
+          "name": "gopkg.in/yaml.v2",
+          "current_version": "v2.4.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v2.4.0",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v2"
+        },
+        {
+          "name": "gopkg.in/yaml.v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "github-pr-resource/go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v3"
+        },
+        {
+          "name": "gopkg.in/yaml.v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v3"
+        },
+        {
+          "name": "gopkg.in/yaml.v3",
+          "current_version": "v3.0.1",
+          "scope": "core",
+          "source_file": "snyk/app/go.mod",
+          "latest_version": "v3.0.1",
+          "compatibility_status": "CURRENT",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/gopkg.in/yaml.v3"
+        },
+        {
+          "name": "k8s.io/api",
+          "current_version": "v0.32.3",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/api"
+        },
+        {
+          "name": "k8s.io/apimachinery",
+          "current_version": "v0.32.3",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/apimachinery"
+        },
+        {
+          "name": "k8s.io/client-go",
+          "current_version": "v0.32.3",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.37.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/client-go"
+        },
+        {
+          "name": "k8s.io/klog/v2",
+          "current_version": "v2.130.1",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v2.140.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/k8s.io/klog/v2"
+        },
+        {
+          "name": "k8s.io/kube-openapi",
+          "current_version": "v0.0.0-20241105132330-32ad38e42d3f",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20260911184034-7970a1e230da",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/k8s.io/kube-openapi"
+        },
+        {
+          "name": "k8s.io/utils",
+          "current_version": "v0.0.0-20241104100929-3ea5e8cea738",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20260707023825-cf1189d6abe3",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/k8s.io/utils"
+        },
+        {
+          "name": "sigs.k8s.io/json",
+          "current_version": "v0.0.0-20241010143419-9aa6b5e7a4b3",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v0.0.0-20260909141634-11ed52e25bc5",
+          "compatibility_status": "UNKNOWN",
+          "compatibility_notes": "Latest version source: https://pkg.go.dev/sigs.k8s.io/json"
+        },
+        {
+          "name": "sigs.k8s.io/structured-merge-diff/v4",
+          "current_version": "v4.4.2",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v4.7.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/sigs.k8s.io/structured-merge-diff/v4"
+        },
+        {
+          "name": "sigs.k8s.io/yaml",
+          "current_version": "v1.4.0",
+          "scope": "core",
+          "source_file": "artillery/src/go.mod",
+          "latest_version": "v1.6.0",
+          "compatibility_status": "UPDATE_AVAILABLE",
+          "compatibility_notes": "A newer stable version is available. Review the authoritative package source and official release notes before upgrading. | Latest version source: https://pkg.go.dev/sigs.k8s.io/yaml"
+        }
+      ],
+      "test": [
+        {
+          "name": "boto3",
+          "current_version": "",
+          "scope": "test",
+          "source_file": "python-runner/tests/requirements.txt",
+          "latest_version": "",
+          "compatibility_status": "Not checked - non-core dependency",
+          "compatibility_notes": ""
+        },
+        {
+          "name": "mocha",
+          "current_version": "^8.3.2",
+          "scope": "test",
+          "source_file": "nodejs-tests/tests/git-repo/src/package.json",
+          "latest_version": "",
+          "compatibility_status": "Not checked - non-core dependency",
+          "compatibility_notes": ""
+        }
+      ]
+    }
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [
+      "Mocha",
+      "Testify"
+    ],
+    "test_categories": [
+      "Automated tests detected"
+    ],
+    "test_file_count": 172,
+    "test_files": [
+      "artillery/tests/.gitignore",
+      "artillery/tests/artillery-configs/asciiart-load-test.yaml",
+      "artillery/tests/docker-compose.yaml",
+      "artillery/tests/prometheus.yaml",
+      "aws-cli-runner/tests/docker-compose.yml",
+      "aws-cli-runner/tests/test.sh",
+      "changie-tool/test/.changie.yaml",
+      "changie-tool/test/README.md",
+      "changie-tool/test/docker-compose.yaml",
+      "check-pr-branch-name/test/docker-compose.yml",
+      "check-pr-branch-name/test/task-test.sh",
+      "databricks/test/docker-compose.yml",
+      "databricks/test/notebooks/ocellus_data_enrich.json",
+      "databricks/test/notebooks/populate_heartbeat_allowed_ips.json",
+      "databricks/test/notebooks/psre-core-svcs.py",
+      "deploy-github-repos/test/docker-compose.yml",
+      "deploy-github-repos/test/test.tf",
+      "deploy-github-repos/test/tf-plan/plan.json",
+      "fah-gradle-publish/tests/docker-compose.yaml",
+      "fah-gradle-publish/tests/number",
+      "flyway-mongo/test/docker-compose.yml",
+      "flyway-mongo/test/indexes/appdb/V0.1__baseline.js",
+      "flyway-mongo/test/indexes/auditdb/V0.1__baseline.js",
+      "flyway-mongo/test/indexes/auditdb/V0.2__add_partial_index.js",
+      "flyway/test/Dockerfile",
+      "flyway/test/Dockerfile.ignore",
+      "flyway/test/config/docker-flyway.config",
+      "flyway/test/docker-compose.yml",
+      "flyway/test/migrations/V0.0.1__Create_Roles.sql",
+      "flyway/test/migrations/V0.0.2__Create_Users.sql",
+      "flyway/test/migrations/V0.0.3__Create_Schemas.sql",
+      "flyway/test/migrations/V0.0.4__Create_Offered_Item_Table.sql",
+      "flyway/test/migrations/V0.0.5__Create_Workflow_Table.sql",
+      "flyway/test/migrations/V0.0.6__Alter_Offered_Item_Table.sql",
+      "gatling-simulation/tests/README.md",
+      "gatling-simulation/tests/docker-compose.yaml",
+      "generate-pipeline/test/docker-compose.yml",
+      "github-governance/tests/docker-compose.yaml",
+      "github-governance/tests/repository-list.json",
+      "github-pr-resource/check_test.go",
+      "github-pr-resource/github_test.go",
+      "github-pr-resource/in_test.go",
+      "github-pr-resource/out_test.go",
+      "golang-unit-tests/test/docker-compose.yml",
+      "helm-package/tests/chart/.helmignore",
+      "helm-package/tests/chart/Chart.yaml",
+      "helm-package/tests/chart/templates/_helpers.tpl",
+      "helm-package/tests/chart/templates/deployment.yaml",
+      "helm-package/tests/chart/values.yaml",
+      "helm-package/tests/docker-compose.yaml",
+      "helm-package/tests/get-env.sh",
+      "helm-package/tests/number",
+      "lambda-zip-s3/tests/docker-compose.yaml",
+      "lambda-zip-s3/tests/git-repo/src/main.tf",
+      "lambda-zip-s3/tests/number",
+      "linting/tests/.gitignore",
+      "linting/tests/chart-with-library/.gitignore",
+      "linting/tests/chart-with-library/Chart.yaml",
+      "linting/tests/chart-with-library/templates/configmap.yaml",
+      "linting/tests/chart-with-library/values.yaml",
+      "linting/tests/chart/.helmignore",
+      "linting/tests/chart/Chart.yaml",
+      "linting/tests/chart/charts/subchart/.helmignore",
+      "linting/tests/chart/charts/subchart/Chart.yaml",
+      "linting/tests/chart/charts/subchart/templates/NOTES.txt",
+      "linting/tests/chart/charts/subchart/templates/_helpers.tpl",
+      "linting/tests/chart/charts/subchart/templates/deployment.yaml",
+      "linting/tests/chart/charts/subchart/templates/hpa.yaml",
+      "linting/tests/chart/charts/subchart/templates/ingress.yaml",
+      "linting/tests/chart/charts/subchart/templates/service.yaml",
+      "linting/tests/chart/charts/subchart/templates/serviceaccount.yaml",
+      "linting/tests/chart/charts/subchart/templates/tests/test-connection.yaml",
+      "linting/tests/chart/charts/subchart/values.yaml",
+      "linting/tests/chart/templates/_helpers.tpl",
+      "linting/tests/chart/templates/deployment.yaml",
+      "linting/tests/chart/values.yaml",
+      "linting/tests/docker-compose.yaml",
+      "linting/tests/library/Chart.yaml",
+      "linting/tests/library/templates/_configmap.tpl",
+      "linting/tests/terraform/main.tf",
+      "linting/tests/terraform/outputs.tf",
+      "linting/tests/terraform/variables.tf",
+      "manual-approval/tests/docker-compose.yaml",
+      "nodejs-tests/tests/docker-compose.yaml",
+      "nodejs-tests/tests/git-repo/package-lock.json",
+      "nodejs-tests/tests/git-repo/src/package-lock.json",
+      "nodejs-tests/tests/git-repo/src/package.json",
+      "nodejs-tests/tests/git-repo/src/run-test.sh",
+      "nodejs-tests/tests/git-repo/src/test/test.js",
+      "packer/tests/docker-compose.yml",
+      "prom-unit-tests/tests/docker-compose.yaml",
+      "python-runner/tests/docker-compose.yml",
+      "python-runner/tests/requirements.txt",
+      "python-runner/tests/script.py",
+      "python-runner/tests/test.sh",
+      "terraform-1-1-9/tests/.gitignore",
+      "terraform-1-1-9/tests/README.md",
+      "terraform-1-1-9/tests/atlas-cluster.tf",
+      "terraform-1-1-9/tests/aws-config.tf",
+      "terraform-1-1-9/tests/docker-compose.yml",
+      "terraform-1-1-9/tests/gke-config.tf",
+      "terraform-1-1-9/tests/main.tf",
+      "terraform-1-1-9/tests/modules/custom-role/main.tf",
+      "terraform-1-1-9/tests/modules/custom-role/variables.tf",
+      "terraform-1-1-9/tests/modules/s3-buckets/s3-buckets.tf",
+      "terraform-1-1-9/tests/modules/s3-buckets/variables.tf",
+      "terraform-1-1-9/tests/project.tf",
+      "terraform-1-11-4/tests/.gitignore",
+      "terraform-1-11-4/tests/README.md",
+      "terraform-1-11-4/tests/atlas-cluster.tf",
+      "terraform-1-11-4/tests/aws-config.tf",
+      "terraform-1-11-4/tests/docker-compose.yml",
+      "terraform-1-11-4/tests/gke-config.tf",
+      "terraform-1-11-4/tests/main.tf",
+      "terraform-1-11-4/tests/modules/custom-role/main.tf",
+      "terraform-1-11-4/tests/modules/custom-role/variables.tf",
+      "terraform-1-11-4/tests/modules/s3-buckets/s3-buckets.tf",
+      "terraform-1-11-4/tests/modules/s3-buckets/variables.tf",
+      "terraform-1-11-4/tests/project.tf",
+      "terraform-1-4-5/tests/.gitignore",
+      "terraform-1-4-5/tests/README.md",
+      "terraform-1-4-5/tests/atlas-cluster.tf",
+      "terraform-1-4-5/tests/aws-config.tf",
+      "terraform-1-4-5/tests/docker-compose.yml",
+      "terraform-1-4-5/tests/gke-config.tf",
+      "terraform-1-4-5/tests/main.tf",
+      "terraform-1-4-5/tests/modules/custom-role/main.tf",
+      "terraform-1-4-5/tests/modules/custom-role/variables.tf",
+      "terraform-1-4-5/tests/modules/s3-buckets/s3-buckets.tf",
+      "terraform-1-4-5/tests/modules/s3-buckets/variables.tf",
+      "terraform-1-4-5/tests/project.tf",
+      "terraform-1-5-3/tests/.gitignore",
+      "terraform-1-5-3/tests/README.md",
+      "terraform-1-5-3/tests/atlas-cluster.tf",
+      "terraform-1-5-3/tests/aws-config.tf",
+      "terraform-1-5-3/tests/docker-compose.yml",
+      "terraform-1-5-3/tests/gke-config.tf",
+      "terraform-1-5-3/tests/main.tf",
+      "terraform-1-5-3/tests/modules/custom-role/main.tf",
+      "terraform-1-5-3/tests/modules/custom-role/variables.tf",
+      "terraform-1-5-3/tests/modules/s3-buckets/s3-buckets.tf",
+      "terraform-1-5-3/tests/modules/s3-buckets/variables.tf",
+      "terraform-1-5-3/tests/project.tf",
+      "terraform/tests/.gitignore",
+      "terraform/tests/README.md",
+      "terraform/tests/atlas-cluster.tf",
+      "terraform/tests/aws-config.tf",
+      "terraform/tests/docker-compose.yml",
+      "terraform/tests/gke-config.tf",
+      "terraform/tests/main.tf",
+      "terraform/tests/modules/custom-role/main.tf",
+      "terraform/tests/modules/custom-role/variables.tf",
+      "terraform/tests/modules/s3-buckets/s3-buckets.tf",
+      "terraform/tests/modules/s3-buckets/variables.tf",
+      "terraform/tests/project.tf",
+      "terratest/tests/.gitignore",
+      "terratest/tests/docker-compose.yml",
+      "terratest/tests/main.tf",
+      "terratest/tests/src/tests/tests_test.go",
+      "tf-module-to-gcs/tests/docker-compose.yaml",
+      "tf-module-to-gcs/tests/git-repo/src/main.tf",
+      "tf-module-to-gcs/tests/number",
+      "tf-module-to-s3/tests/docker-compose.yaml",
+      "tf-module-to-s3/tests/git-repo/src/main.tf",
+      "tf-module-to-s3/tests/number",
+      "tf-plan-output-to-pr/tests/dir-1/plan.json",
+      "tf-plan-output-to-pr/tests/dir-2/plan.json",
+      "tf-plan-output-to-pr/tests/dir-3/plan.json",
+      "tf-plan-output-to-pr/tests/dir-test/plan.json",
+      "tf-plan-output-to-pr/tests/docker-compose.yaml",
+      "validate-prom-config/tests/docker-compose.yaml",
+      "validate-prom-targets/tests/docker-compose.yaml"
+    ],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": []
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": [
+      {
+        "caller": "github",
+        "technology": "GitHub client library",
+        "target": "GitHub API",
+        "method": "SDK",
+        "source_file": "github-pr-resource/github.go",
+        "evidence": "GitHub client usage detected"
+      },
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "URL",
+        "method": "GET",
+        "source_file": "snyk/app/main.go",
+        "evidence": "http.NewRequest call"
+      },
+      {
+        "caller": "main",
+        "technology": "Go net/http",
+        "target": "URL",
+        "method": "POST",
+        "source_file": "snyk/app/main.go",
+        "evidence": "http.NewRequest call"
+      }
+    ]
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}

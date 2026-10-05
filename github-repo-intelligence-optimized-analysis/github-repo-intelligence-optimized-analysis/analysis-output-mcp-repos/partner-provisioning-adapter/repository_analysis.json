@@ -1,0 +1,1125 @@
+{
+  "01_repository_summary": {
+    "title": "Repository Summary",
+    "source": "https://github.com/NBCUDTC/partner-provisioning-adapter.git",
+    "source_type": "GitHub",
+    "repository_name": "partner-provisioning-adapter",
+    "repository_type": "Application / Service / Library Repository",
+    "what_repository_does": "To run PPA with its dependencies: [Optional: Add --build to rebuild the service and other images before running] To stop PPA and its dependencies: SonarQube is currently disabled while the project os being developed, if a scan is required, the code in the cdBuild.sh can be uncommented and run via a branch build in Jenkins. In order for our application to work with Java 21 we need to install the OpenJDK 21 on our machine and make it available After this we can configure in Intellij that our project uses java 21 by pointing to use /Library/Java/JavaVirtualMachines/jdk-21 folder as the source for the JDK. 1. Start the dynamodb-init Docker container. 2. Open the \"Database\" sidebar in IntelliJ and click the plus icon. 3. Select DynamoDB as the data source and fill in with the following details then connect: 5. The table(s) present in the Dockerised DynamoDB should now be visible in the Database sidebar. 6. There will be no items in the table unless you populate it somehow, either using a PPA endpoint, or manually interacting with the database.",
+    "repository_summary": "To run PPA with its dependencies: [Optional: Add --build to rebuild the service and other images before running] To stop PPA and its dependencies: SonarQube is currently disabled while the project os being developed, if a scan is required, the code in the cdBuild.sh can be uncommented and run via a branch build in Jenkins. In order for our application to work with Java 21 we need to install the OpenJDK 21 on our machine and make it available After this we can configure in Intellij that our project uses java 21 by pointing to use /Library/Java/JavaVirtualMachines/jdk-21 folder as the source for the JDK. 1. Start the dynamodb-init Docker container. 2. Open the \"Database\" sidebar in IntelliJ and click the plus icon. 3. Select DynamoDB as the data source and fill in with the following details then connect: 5. The table(s) present in the Dockerised DynamoDB should now be visible in the Database sidebar. 6. There will be no items in the table unless you populate it somehow, either using a PPA endpoint, or manually interacting with the database.",
+    "local_llm_status": "Skipped by command line"
+  },
+  "02_technology_stack": {
+    "title": "Technology Stack",
+    "languages": [
+      "Java",
+      "Shell"
+    ],
+    "frameworks": [],
+    "runtime": [],
+    "databases": [],
+    "cloud_platforms": [],
+    "containers": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "kubernetes_helm_terraform": [],
+    "ci_cd": [
+      "GitHub Actions"
+    ],
+    "testing_tools": [],
+    "monitoring_observability": [],
+    "important_core_libraries": []
+  },
+  "03_repository_scan_and_artifacts": {
+    "title": "Repository Scan and Engineering Artifacts",
+    "files_analyzed": 652,
+    "important_files": [
+      ".github/workflows/application-config-apply.yaml",
+      ".github/workflows/certificate-checker.yaml",
+      ".github/workflows/jumpbox.yaml",
+      ".github/workflows/kafka.yaml",
+      ".github/workflows/locstat-preserve-stats-on-merge.yml",
+      ".github/workflows/locstat-verify-notes.yml",
+      ".github/workflows/nft.yaml",
+      ".github/workflows/pr-reviews.yaml",
+      ".github/workflows/retry-failed-jobs.yaml",
+      ".github/workflows/service-deploy-int-nft.yaml",
+      ".github/workflows/service-deploy-stable-int-nbcu.yaml",
+      ".github/workflows/service-deploy-stable-int-skyglobal.yaml",
+      ".github/workflows/service-extended-test.yaml",
+      ".github/workflows/service-main.yaml",
+      ".github/workflows/service-p2p-Nbcu.yaml",
+      ".github/workflows/service-p2p-SkyGlobal.yaml",
+      ".github/workflows/service-p2p-Summer.yaml",
+      ".github/workflows/status-check.yaml",
+      ".github/workflows/stubs.yaml",
+      "README.md"
+    ],
+    "artifacts": {
+      "configuration": [
+        ".applications/service/application.yaml",
+        ".jira/config.yml",
+        "config/docker/hbo-private-keys/.gitignore",
+        "config/docker/hbo-private-keys/B3RUP5NS2D.pem",
+        "config/docker/hbo-private-keys/GN79EMSN1Z.pem",
+        "config/docker/hbo-private-keys/README.md",
+        "config/docker/hbo-private-keys/generate-test-keys.sh",
+        "config/docker/hbo-public-keys/H868bEXwVwDfiYYetGbQ5BEgC0TQY6tHzzzPX0zpWc5.jwk",
+        "config/docker/kafka/primary.notification.keystore.jks",
+        "config/docker/kafka/primary.notification.truststore.jks",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_4xx.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_5xx.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_customer-not-found.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_invalid-request.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_product-change-pending.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_undocumented.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_unique-request-id.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_success.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_success_already-processed.json",
+        "config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_success_default.json",
+        "config/mappings/boku/cancelEntitlement/slow-deps/boku_cancel-entitlement_success_slow_dep.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_4xx.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_5xx.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_5xx_timeout.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_concurrent-request.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_duplicate-service.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_internal-error.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_invalid-request.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_product-change-pending.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_product-contigency-unmet.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_rate-limit-reached.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_service-overlap.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_undocumented.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_unique-customer-id.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_failure_unique-request-id.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_success-expired.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_success.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_success_already-processed.json",
+        "config/mappings/boku/createEntitlement/boku_create-entitlement_success_default.json",
+        "config/mappings/boku/createEntitlement/slow-deps/boku_create-entitlement_success_slow.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_4xx.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_5xx.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_already-claimed.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_customer-not-found.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_invalid-request.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_product-change-pending.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_undocumented.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_failure_unique-request-id.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_success-generate.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_success-generate_generic.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_success-resend-generic.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_success-resend.json",
+        "config/mappings/boku/remintDeeplinkToken/boku_remint-deeplink-token_success_already-processed.json",
+        "config/mappings/boku/remintDeeplinkToken/slow-dep/boku_remint-deeplink-token_success_slow.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_4xx.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_5xx.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_already_cancelled.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_concurrent-request.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_customer_not_found.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_duplicate-service.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_incompatible_product_change.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_internal-error.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_invalid-request.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_linked-customer-ineligible.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_product-change-pending.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_product-contigency-unmet.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_product_not_provisioned.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_rate-limit-reached.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_service-overlap.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_unique-customer-id.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_failure_unique-request-id.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_success.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_success_already-processed.json",
+        "config/mappings/boku/updateEntitlement/boku_update-entitlement_success_default.json",
+        "config/mappings/boku/updateEntitlement/slow-dep/boku_update-entitlement_success_slow.json",
+        "config/mappings/hbo/complete/hbo_complete_success_gb.json",
+        "config/mappings/hbo/complete/hbo_complete_success_ie.json",
+        "config/mappings/hbo/complete/slow-deps/hbo_complete_success_gb_slow.json",
+        "config/mappings/hbo/event/hbo_event_cancel_success_default.json",
+        "config/mappings/hbo/event/hbo_event_provision_connection_failure.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_400_unimplemented_error_code.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_500_service_regression.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_500_unimplemented_error_code.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_505_unimplemented_http_status.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_bad_request.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_invalid_event.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_invalid_product.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_invalid_user.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_product_conflict.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_service_regression.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_socket_timeout.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_timeout.json",
+        "config/mappings/hbo/event/hbo_event_provision_failure_unauthorised_user.json",
+        "config/mappings/hbo/event/hbo_event_provision_success_default.json",
+        "config/mappings/hbo/event/slow-deps/hbo_event_cancel_success_slow.json",
+        "config/mappings/hbo/event/slow-deps/hbo_event_provision_success_slow.json",
+        "config/mappings/tracing/tracing.json",
+        "service/func/src/test/java/uk/sky/commerce/ppa/config/HboTestConfig.java",
+        "service/func/src/test/java/uk/sky/commerce/ppa/config/TestContextConfig.java",
+        "service/func/src/test/java/uk/sky/commerce/ppa/config/TestExecutionContext.java",
+        "service/func/src/test/java/uk/sky/commerce/ppa/config/WiremockClientConfig.java",
+        "service/func/src/test/resources/application.yml",
+        "service/src/main/java/uk/sky/commerce/ppa/config/EventListenerRequestDeserializer.java",
+        "service/src/main/java/uk/sky/commerce/ppa/config/FilterConfig.java",
+        "service/src/main/java/uk/sky/commerce/ppa/config/InitResourceEndpointConfig.java",
+        "service/src/main/java/uk/sky/commerce/ppa/config/ObfuscatedIdGeneratorConfiguration.java",
+        "service/src/main/java/uk/sky/commerce/ppa/config/ProvisionRequestDeserializer.java",
+        "service/src/main/java/uk/sky/commerce/ppa/database/config/PpaTableResolverConfig.java",
+        "service/src/main/java/uk/sky/commerce/ppa/kafka/producer/config/AuthConfigMaskPasswordSerializer.java",
+        "service/src/main/java/uk/sky/commerce/ppa/kafka/producer/config/CommerceKafkaProducerAuthConfiguration.java",
+        "service/src/main/java/uk/sky/commerce/ppa/kafka/producer/config/CommerceKafkaProducerConfiguration.java",
+        "service/src/main/java/uk/sky/commerce/ppa/kafka/producer/config/CommerceKafkaProducerConfigurations.java",
+        "service/src/main/java/uk/sky/commerce/ppa/kafka/producer/config/CommerceKafkaProducerHealthCheckConfiguration.java",
+        "service/src/main/java/uk/sky/commerce/ppa/validation/config/ValidationConfig.java",
+        "service/src/main/resources/application.yml",
+        "service/src/test/java/uk/sky/commerce/ppa/config/EventListenerRequestDeserializerTest.java",
+        "service/src/test/java/uk/sky/commerce/ppa/config/InitResourceEndpointConfigTest.java",
+        "service/src/test/java/uk/sky/commerce/ppa/config/ProvisionRequestDeserializerTest.java",
+        "service/src/test/java/uk/sky/commerce/ppa/config/TestContextConfig.java",
+        "service/src/test/java/uk/sky/commerce/ppa/database/config/AwsConfigTest.java"
+      ],
+      "docker": [
+        "docker-compose.yaml",
+        "service/Dockerfile",
+        "service/nft/Dockerfile"
+      ],
+      "kubernetes_helm": [],
+      "terraform": [],
+      "ci_cd": [
+        ".github/workflows/application-config-apply.yaml",
+        ".github/workflows/certificate-checker.yaml",
+        ".github/workflows/jumpbox.yaml",
+        ".github/workflows/kafka.yaml",
+        ".github/workflows/locstat-preserve-stats-on-merge.yml",
+        ".github/workflows/locstat-verify-notes.yml",
+        ".github/workflows/nft.yaml",
+        ".github/workflows/pr-reviews.yaml",
+        ".github/workflows/retry-failed-jobs.yaml",
+        ".github/workflows/service-deploy-int-nft.yaml",
+        ".github/workflows/service-deploy-stable-int-nbcu.yaml",
+        ".github/workflows/service-deploy-stable-int-skyglobal.yaml",
+        ".github/workflows/service-extended-test.yaml",
+        ".github/workflows/service-main.yaml",
+        ".github/workflows/service-p2p-Nbcu.yaml",
+        ".github/workflows/service-p2p-SkyGlobal.yaml",
+        ".github/workflows/service-p2p-Summer.yaml",
+        ".github/workflows/status-check.yaml",
+        ".github/workflows/stubs.yaml"
+      ],
+      "api_specs": [
+        "sas-openapi.json"
+      ],
+      "documentation": [
+        "README.md",
+        "certificate-checker/readme.MD",
+        "config/docker/hbo-private-keys/README.md",
+        "service/func/README.md",
+        "service/src/test/resources/test-keys/README.md"
+      ]
+    },
+    "repository_structure": {
+      "top_level_directories": [
+        {
+          "name": "service",
+          "file_count": 448
+        },
+        {
+          "name": "config",
+          "file_count": 95
+        },
+        {
+          "name": "ppa-bruno",
+          "file_count": 30
+        },
+        {
+          "name": ".github",
+          "file_count": 24
+        },
+        {
+          "name": "stubs",
+          "file_count": 9
+        },
+        {
+          "name": ".applications",
+          "file_count": 9
+        },
+        {
+          "name": "spec",
+          "file_count": 6
+        },
+        {
+          "name": "gradle",
+          "file_count": 3
+        },
+        {
+          "name": "certificate-checker",
+          "file_count": 3
+        },
+        {
+          "name": "commons",
+          "file_count": 3
+        },
+        {
+          "name": "jumpbox",
+          "file_count": 2
+        },
+        {
+          "name": "kafka",
+          "file_count": 2
+        },
+        {
+          "name": "dynamodb",
+          "file_count": 1
+        },
+        {
+          "name": ".jira",
+          "file_count": 1
+        }
+      ],
+      "common_extensions": [
+        {
+          "extension": ".java",
+          "file_count": 316
+        },
+        {
+          "extension": ".json",
+          "file_count": 109
+        },
+        {
+          "extension": ".yml",
+          "file_count": 46
+        },
+        {
+          "extension": ".gradle",
+          "file_count": 43
+        },
+        {
+          "extension": ".yaml",
+          "file_count": 29
+        },
+        {
+          "extension": ".bru",
+          "file_count": 29
+        },
+        {
+          "extension": ".sh",
+          "file_count": 24
+        },
+        {
+          "extension": ".feature",
+          "file_count": 18
+        },
+        {
+          "extension": ".md",
+          "file_count": 11
+        },
+        {
+          "extension": ".jks",
+          "file_count": 6
+        },
+        {
+          "extension": ".pem",
+          "file_count": 5
+        },
+        {
+          "extension": ".properties",
+          "file_count": 4
+        },
+        {
+          "extension": ".xml",
+          "file_count": 2
+        },
+        {
+          "extension": ".jwk",
+          "file_count": 2
+        },
+        {
+          "extension": ".bat",
+          "file_count": 1
+        },
+        {
+          "extension": ".toml",
+          "file_count": 1
+        }
+      ]
+    }
+  },
+  "04_main_components_and_code_structure": {
+    "title": "Main Components and Code Structure",
+    "major_components": [
+      {
+        "name": "service",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "266 analyzed core files under service/"
+        ]
+      },
+      {
+        "name": "config",
+        "responsibility": "Configuration",
+        "evidence": [
+          "95 analyzed core files under config/"
+        ]
+      },
+      {
+        "name": "ppa-bruno",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "30 analyzed core files under ppa-bruno/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "24 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "stubs",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under stubs/"
+        ]
+      },
+      {
+        "name": ".applications",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under .applications/"
+        ]
+      },
+      {
+        "name": "spec",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "6 analyzed core files under spec/"
+        ]
+      },
+      {
+        "name": "gradle",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under gradle/"
+        ]
+      },
+      {
+        "name": "certificate-checker",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under certificate-checker/"
+        ]
+      },
+      {
+        "name": "commons",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under commons/"
+        ]
+      },
+      {
+        "name": "jumpbox",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under jumpbox/"
+        ]
+      },
+      {
+        "name": "kafka",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under kafka/"
+        ]
+      },
+      {
+        "name": "dynamodb",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under dynamodb/"
+        ]
+      },
+      {
+        "name": ".jira",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .jira/"
+        ]
+      }
+    ],
+    "layers_modules": [
+      {
+        "name": "service",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "266 analyzed core files under service/"
+        ]
+      },
+      {
+        "name": "config",
+        "description": "Configuration",
+        "evidence": [
+          "95 analyzed core files under config/"
+        ]
+      },
+      {
+        "name": "ppa-bruno",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "30 analyzed core files under ppa-bruno/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "24 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "stubs",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under stubs/"
+        ]
+      },
+      {
+        "name": ".applications",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under .applications/"
+        ]
+      },
+      {
+        "name": "spec",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "6 analyzed core files under spec/"
+        ]
+      },
+      {
+        "name": "gradle",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under gradle/"
+        ]
+      },
+      {
+        "name": "certificate-checker",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under certificate-checker/"
+        ]
+      },
+      {
+        "name": "commons",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under commons/"
+        ]
+      },
+      {
+        "name": "jumpbox",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under jumpbox/"
+        ]
+      },
+      {
+        "name": "kafka",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under kafka/"
+        ]
+      },
+      {
+        "name": "dynamodb",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under dynamodb/"
+        ]
+      },
+      {
+        "name": ".jira",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .jira/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "relationships": [],
+    "symbols": {
+      "python": {
+        "modules": {},
+        "classes": [],
+        "functions": [],
+        "module_relationships": [],
+        "call_edges": [],
+        "entry_points": []
+      },
+      "go": {
+        "packages": {},
+        "functions": [],
+        "package_relationships": [],
+        "call_edges": [],
+        "entry_points": [],
+        "module_path": ""
+      },
+      "javascript_typescript": {
+        "modules": [],
+        "module_relationships": [],
+        "entry_points": []
+      }
+    }
+  },
+  "05_code_architecture": {
+    "title": "Detailed Code Architecture",
+    "architecture_style": "Modular repository architecture",
+    "architecture_explanation": "The repository follows a modular repository architecture. Static analysis identified 14 major structural component areas, 0 executable/package entry points, and 0 repository-local dependency relationships. The architecture below is generated from source layout, imports, symbols, package metadata and executable entry points; the local LLM is used only to explain these facts in repository-specific language.",
+    "layers_modules": [
+      {
+        "name": "service",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "266 analyzed core files under service/"
+        ]
+      },
+      {
+        "name": "config",
+        "description": "Configuration",
+        "evidence": [
+          "95 analyzed core files under config/"
+        ]
+      },
+      {
+        "name": "ppa-bruno",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "30 analyzed core files under ppa-bruno/"
+        ]
+      },
+      {
+        "name": ".github",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "24 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "stubs",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under stubs/"
+        ]
+      },
+      {
+        "name": ".applications",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under .applications/"
+        ]
+      },
+      {
+        "name": "spec",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "6 analyzed core files under spec/"
+        ]
+      },
+      {
+        "name": "gradle",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under gradle/"
+        ]
+      },
+      {
+        "name": "certificate-checker",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under certificate-checker/"
+        ]
+      },
+      {
+        "name": "commons",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under commons/"
+        ]
+      },
+      {
+        "name": "jumpbox",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under jumpbox/"
+        ]
+      },
+      {
+        "name": "kafka",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under kafka/"
+        ]
+      },
+      {
+        "name": "dynamodb",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under dynamodb/"
+        ]
+      },
+      {
+        "name": ".jira",
+        "description": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .jira/"
+        ]
+      }
+    ],
+    "entry_points": [],
+    "major_components": [
+      {
+        "name": "service",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "266 analyzed core files under service/"
+        ]
+      },
+      {
+        "name": "config",
+        "responsibility": "Configuration",
+        "evidence": [
+          "95 analyzed core files under config/"
+        ]
+      },
+      {
+        "name": "ppa-bruno",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "30 analyzed core files under ppa-bruno/"
+        ]
+      },
+      {
+        "name": ".github",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "24 analyzed core files under .github/"
+        ]
+      },
+      {
+        "name": "stubs",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under stubs/"
+        ]
+      },
+      {
+        "name": ".applications",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "9 analyzed core files under .applications/"
+        ]
+      },
+      {
+        "name": "spec",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "6 analyzed core files under spec/"
+        ]
+      },
+      {
+        "name": "gradle",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under gradle/"
+        ]
+      },
+      {
+        "name": "certificate-checker",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under certificate-checker/"
+        ]
+      },
+      {
+        "name": "commons",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "3 analyzed core files under commons/"
+        ]
+      },
+      {
+        "name": "jumpbox",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under jumpbox/"
+        ]
+      },
+      {
+        "name": "kafka",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "2 analyzed core files under kafka/"
+        ]
+      },
+      {
+        "name": "dynamodb",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under dynamodb/"
+        ]
+      },
+      {
+        "name": ".jira",
+        "responsibility": "Top-level source/component area; semantic responsibility refined by local LLM",
+        "evidence": [
+          "1 analyzed core files under .jira/"
+        ]
+      }
+    ],
+    "component_relationships": [],
+    "configuration_model": "Repository contains explicit configuration artifacts: .applications/service/application.yaml, .jira/config.yml, config/docker/hbo-private-keys/.gitignore, config/docker/hbo-private-keys/B3RUP5NS2D.pem, config/docker/hbo-private-keys/GN79EMSN1Z.pem, config/docker/hbo-private-keys/README.md, config/docker/hbo-private-keys/generate-test-keys.sh, config/docker/hbo-public-keys/H868bEXwVwDfiYYetGbQ5BEgC0TQY6tHzzzPX0zpWc5.jwk, config/docker/kafka/primary.notification.keystore.jks, config/docker/kafka/primary.notification.truststore.jks, config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_4xx.json, config/mappings/boku/cancelEntitlement/boku_cancel-entitlement_failure_5xx.json.",
+    "extension_points": [
+      "gradle/plugins/common.gradle",
+      "service/gradle-plugins/app-promotion-plugin.gradle",
+      "service/gradle-plugins/change-request-plugin.gradle",
+      "service/gradle-plugins/deployments.gradle",
+      "service/gradle-plugins/deployments/nbcu/change-request-plugin.gradle",
+      "service/gradle-plugins/deployments/nbcu/us-east-2/app-promotion-plugin.gradle",
+      "service/gradle-plugins/deployments/nbcu/us-east-2/deployments.gradle",
+      "service/gradle-plugins/deployments/nbcu/us-west-2/app-promotion-plugin.gradle",
+      "service/gradle-plugins/deployments/nbcu/us-west-2/deployments.gradle",
+      "service/gradle-plugins/deployments/skyglobal/change-request-plugin.gradle",
+      "service/gradle-plugins/deployments/skyglobal/eu-central-1/app-promotion-plugin.gradle",
+      "service/gradle-plugins/deployments/skyglobal/eu-central-1/deployments.gradle",
+      "service/gradle-plugins/deployments/skyglobal/eu-west-1/app-promotion-plugin.gradle",
+      "service/gradle-plugins/deployments/skyglobal/eu-west-1/deployments.gradle",
+      "service/gradle-plugins/deployments/summer/change-request-plugin.gradle",
+      "service/gradle-plugins/deployments/summer/eu-central-1/app-promotion-plugin.gradle",
+      "service/gradle-plugins/deployments/summer/eu-central-1/deployments.gradle",
+      "service/gradle-plugins/deployments/summer/us-east-2/deployments.gradle",
+      "service/gradle-plugins/release.gradle",
+      "service/gradle-plugins/sonarqube.gradle",
+      "service/nft/gradle-plugins/deployments.gradle",
+      "service/nft/gradle-plugins/deployments/nbcu/deployments.gradle",
+      "service/nft/gradle-plugins/deployments/nbcu/us-west-2/deployments.gradle",
+      "service/nft/gradle-plugins/deployments/skyglobal/deployments.gradle",
+      "service/nft/gradle-plugins/deployments/skyglobal/eu-central-1/deployments.gradle"
+    ],
+    "deployment_model": "Docker",
+    "architecture_evidence": [
+      "Python modules analyzed: 0",
+      "Go packages analyzed: 0",
+      "JS/TS modules analyzed: 0",
+      "Repository-local relationships detected: 0"
+    ]
+  },
+  "06_detailed_code_flow": {
+    "title": "Overall Code Flow",
+    "code_flow_status": "Deterministic static code-flow fallback (--skip-llm)",
+    "overall_code_flow": [
+      {
+        "step": 0,
+        "title": "Flow overview",
+        "explanation": "The repository runtime starts from its executable entry point, loads configuration and infrastructure dependencies, registers production routes, and starts the service. Each request then follows the statically resolved handler -> use case/service -> repository -> DAL/client path where such a chain is proven. Persistence operations are shown only when directly detected in source. The service closes through its graceful shutdown path when one is present.",
+        "code": [],
+        "result": "The detailed ordered flow starts below.",
+        "evidence": [
+          "Deterministic production runtime extraction"
+        ]
+      },
+      {
+        "step": 1,
+        "group": "Application Startup Flow",
+        "title": "Load runtime configuration",
+        "explanation": "The application uses the detected configuration files during startup. Configuration values control later runtime initialization; values not proven from source are not guessed.",
+        "code": [
+          ".applications/service/application.yaml",
+          ".jira/config.yml",
+          "config/docker/hbo-private-keys/.gitignore",
+          "config/docker/hbo-private-keys/B3RUP5NS2D.pem",
+          "config/docker/hbo-private-keys/GN79EMSN1Z.pem",
+          "config/docker/hbo-private-keys/README.md",
+          "config/docker/hbo-private-keys/generate-test-keys.sh",
+          "config/docker/hbo-public-keys/H868bEXwVwDfiYYetGbQ5BEgC0TQY6tHzzzPX0zpWc5.jwk",
+          "config/docker/kafka/primary.notification.keystore.jks",
+          "config/docker/kafka/primary.notification.truststore.jks"
+        ],
+        "result": "Validated runtime settings are available to the bootstrap code.",
+        "evidence": [
+          ".applications/service/application.yaml",
+          ".jira/config.yml",
+          "config/docker/hbo-private-keys/.gitignore",
+          "config/docker/hbo-private-keys/B3RUP5NS2D.pem",
+          "config/docker/hbo-private-keys/GN79EMSN1Z.pem",
+          "config/docker/hbo-private-keys/README.md",
+          "config/docker/hbo-private-keys/generate-test-keys.sh",
+          "config/docker/hbo-public-keys/H868bEXwVwDfiYYetGbQ5BEgC0TQY6tHzzzPX0zpWc5.jwk",
+          "config/docker/kafka/primary.notification.keystore.jks",
+          "config/docker/kafka/primary.notification.truststore.jks"
+        ]
+      }
+    ],
+    "short_code_flow_explanation": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "static_data_control_flow": [
+      "No single executable entry point was found; this repository is likely consumed as a library/framework or exposes multiple integration entry points.",
+      "Configuration artifacts influence component initialization and runtime behavior.",
+      "Core components process requests/commands/events through repository modules and return results to the caller or downstream integration."
+    ],
+    "detailed_static_code_flows": []
+  },
+  "07_dependencies_and_compatibility": {
+    "title": "Dependencies and Compatibility",
+    "dependencies_by_scope": {}
+  },
+  "08_tests_and_coverage": {
+    "title": "Tests and Coverage",
+    "frameworks": [],
+    "test_categories": [
+      "Automated tests detected",
+      "Integration tests"
+    ],
+    "test_file_count": 182,
+    "test_files": [
+      "service/func/src/test/java/uk/sky/commerce/ppa/ContextAutoConfiguration.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/config/HboTestConfig.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/config/TestContextConfig.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/config/TestExecutionContext.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/config/WiremockClientConfig.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/AccountJanitorSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/ActivationStatusSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/BokuResourceSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/CancelEntitlementSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/CommonSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/EventListenerSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/GenerateActivationUrlSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/GetJwksSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/HboResourceSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/InitResourceSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/InternalDBSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/KafkaSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/PrivateResourceSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/ProvisionEntitlementSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/ResendActivationUrlSteps.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/AccountJanitorResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/ActivationStatusResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/CancelEntitlementResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/EventListenerResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/GenerateActivationUrlResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/GetJwksResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/InitResourceResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/InternalDBResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/ProvisionEntitlementResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/ResendActivationUrlResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/TestResource.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/steps/resources/model/hbo/TestEventRequest.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/JsonParser.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/JsonUtils.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/TestResourceHeaders.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/client/PPAClient.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/kafka/KafkaClient.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/kafka/KafkaUtils.java",
+      "service/func/src/test/java/uk/sky/commerce/ppa/utils/kafka/NotificationMatchers.java",
+      "service/func/src/test/resources/application-functional.yml",
+      "service/func/src/test/resources/application-integrated.yml",
+      "service/func/src/test/resources/application-local-docker.yml",
+      "service/func/src/test/resources/application.yml",
+      "service/func/src/test/resources/cucumber.properties",
+      "service/func/src/test/resources/features/account_janitor.feature",
+      "service/func/src/test/resources/features/activation_status.feature",
+      "service/func/src/test/resources/features/cancel_entitlement.feature",
+      "service/func/src/test/resources/features/create_entitlement.feature",
+      "service/func/src/test/resources/features/event_listener.feature",
+      "service/func/src/test/resources/features/generate_activation_url.feature",
+      "service/func/src/test/resources/features/get_jwks.feature",
+      "service/func/src/test/resources/features/hbo/generate_activation_url.feature",
+      "service/func/src/test/resources/features/hbo/hbo_cancel_entitlement.feature",
+      "service/func/src/test/resources/features/hbo/hbo_create_entitlement.feature",
+      "service/func/src/test/resources/features/hbo/hbo_resend_activation_url.feature",
+      "service/func/src/test/resources/features/init_resource.feature",
+      "service/func/src/test/resources/features/misc/miscellaneous.feature",
+      "service/func/src/test/resources/features/misc/multi-credential.feature",
+      "service/func/src/test/resources/features/private/healthcheck.feature",
+      "service/func/src/test/resources/features/private/metrics.feature",
+      "service/func/src/test/resources/features/resend_activation_url.feature",
+      "service/func/src/test/resources/features/update_entitlement.feature",
+      "service/func/src/test/resources/hbo-test-private-keys/H868bEXwVwDfiYYetGbQ5BEgC0TQY6tHzzzPX0zpWc5.pem",
+      "service/func/src/test/resources/logback-spring.xml",
+      "service/src/test/java/uk/sky/commerce/ppa/CircuitBreakerTests.java",
+      "service/src/test/java/uk/sky/commerce/ppa/PpaApplicationTests.java",
+      "service/src/test/java/uk/sky/commerce/ppa/config/EventListenerRequestDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/config/InitResourceEndpointConfigTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/config/ProvisionRequestDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/config/TestContextConfig.java",
+      "service/src/test/java/uk/sky/commerce/ppa/controller/ExternalControllerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/controller/InternalControllerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/controller/PartnerIdValidatorDelegateTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/controller/ProvisionedPartnerInternalControllerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/controller/TestData.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/config/AwsConfigTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/config/MultiTableResolverTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/provider/MultiDynamoClientProviderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/repository/ProvisionedPartnerProductRepositoryTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/repository/TestProductBuilder.java",
+      "service/src/test/java/uk/sky/commerce/ppa/database/util/SortKeyBuilderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/domain/CancelProvisionRequestBuilder.java",
+      "service/src/test/java/uk/sky/commerce/ppa/domain/CreateProvisionRequestBuilder.java",
+      "service/src/test/java/uk/sky/commerce/ppa/domain/UpdateProvisionRequestBuilder.java",
+      "service/src/test/java/uk/sky/commerce/ppa/exception/CustomErrorAttributesTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/exception/DownstreamMarkerContractTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/exception/ExternalControllerExceptionHandlerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/exception/PPAExceptionHandlerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/filter/FilterExceptionHandlerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/filter/IncomingSignatureFilterTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/filter/OutgoingSignatureFilterTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientResilienceIntegrationTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientServiceActivationUrlTestBase.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientServiceGenerateActivationUrlTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientServiceResendActivationUrlTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/BokuClientTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/common/MtlsUtilsTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/ActivationUrlDetailsMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/BokuErrorCodeTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CancelEntitlementMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CancelEntitlementRequestTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CancelEntitlementResponseDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CreateEntitlementMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CreateEntitlementRequestTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/CreateEntitlementResponseDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/RemintDeeplinkTokenMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/RemintDeeplinkTokenRequestTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/RemintDeeplinkTokenResponseDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/UpdateEntitlementMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/UpdateEntitlementRequestTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/boku/model/UpdateEntitlementResponseDeserializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/HboClientServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/complete/client/HBOCompleteClientTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/complete/client/HBOCompleteResilienceIntegrationTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/complete/client/HBOCompleteResponseInterceptorTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/configuration/HBOClientPropertyTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/jwt/JwtHandlerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/HBOErrorDecoderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/HBOEventAccountProvisionBuilder.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/HBOEventClientTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/HBOEventResilienceIntegrationTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/SendEventRequestInterceptorTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/mapper/HboEventMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/model/ExceptionDetailsTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/http/client/strategy/PartnerClientFactoryTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/health/downstreams/BokuHealthCheckTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/health/downstreams/HboHealthCheckTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/health/dynamodb/DynamoDbHealthCheckClientTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/health/kafka/KafkaProducerHealthCheckIndicatorIntegrationTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/health/kafka/KafkaProducerHealthCheckIndicatorTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/infrastructure/security/UserSecurityTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/message/PartnerEntitlementProvisionedNotificationJsonTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/CommerceKafkaProducerFactoryProviderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/CommerceKafkaProducerHealthCheckTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/CommerceKafkaProducerMetricsRegistryTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/CommerceKafkaProducerProviderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/config/AuthConfigMaskPasswordSerializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/config/CommerceKafkaProducerClientConfigMaskPasswordSerializerTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/event/CommerceKafkaProducerEventServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/sender/CommerceKafkaSenderTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/sender/SenderFactoryTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/sender/callback/HealthCheckCallbackTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/producer/sender/callback/IncrementMetricsAndLogResultCallbackTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/service/AccountDeletedNotificationServiceAsyncTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/service/AccountDeletedNotificationServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/service/ActivationUrlKafkaServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/service/PartnerEntitlementProvisionedNotificationServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/service/PartnerEntitlementStateNotificationServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/util/KafkaTopicUtilsTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/kafka/validation/MessageValidatorTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/metrics/HBOResponseMetricsTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/security/hbo/HboSignatureUtilTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/security/hbo/NoBodySignatureServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/security/hbo/SignatureServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/AccountDeleteServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/ActivationUrlServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/CancelEntitlementServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/EntitlementPersistenceServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/JwksServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/PartnerEntitlementStateServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/PartnerInteractionHelperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/PartnerProductPersistenceServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/ProvisionEntitlementServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/ProvisionedPartnerInternalServiceTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/mapper/CancelRequestMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/mapper/PartnerStateEntitlementRequestMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/mapper/ProvisionRequestMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/service/mapper/SaveEntitlementRequestMapperTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/util/CommonValues.java",
+      "service/src/test/java/uk/sky/commerce/ppa/util/CustomerIdGeneratorTest.java",
+      "service/src/test/java/uk/sky/commerce/ppa/util/TestHBOClientPropertyBuilder.java",
+      "service/src/test/resources/application-kafka-health-test.yml",
+      "service/src/test/resources/application.properties",
+      "service/src/test/resources/client.keystore.jks",
+      "service/src/test/resources/client.truststore.jks",
+      "service/src/test/resources/server.keystore.jks",
+      "service/src/test/resources/server.truststore.jks",
+      "service/src/test/resources/test-keys/BD2ENRP4CE.jwk",
+      "service/src/test/resources/test-keys/BD2ENRP4CE.pem",
+      "service/src/test/resources/test-keys/HBO.pem",
+      "service/src/test/resources/test-keys/README.md"
+    ],
+    "coverage_status": "Actual coverage result not found",
+    "coverage_percentage": null,
+    "coverage_source": "Not available"
+  },
+  "09_internal_apis": {
+    "title": "Production Internal APIs",
+    "scope_note": "Test/mock/example routes are excluded.",
+    "apis": [
+      {
+        "method": "GET",
+        "endpoint": "/household/{householdId}",
+        "handler": "",
+        "component": "ProvisionedPartnerInternalController",
+        "source_file": "service/src/main/java/uk/sky/commerce/ppa/controller/ProvisionedPartnerInternalController.java"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/external-account/{externalAccountId}",
+        "handler": "",
+        "component": "ProvisionedPartnerInternalController",
+        "source_file": "service/src/main/java/uk/sky/commerce/ppa/controller/ProvisionedPartnerInternalController.java"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/integration-api/v2/event/{partnerId}",
+        "handler": "",
+        "component": "HBOEventClient",
+        "source_file": "service/src/main/java/uk/sky/commerce/ppa/http/client/hbo/sendevent/client/HBOEventClient.java"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/broker/complete/{partnerId}/{brandId}",
+        "handler": "",
+        "component": "HBOCompleteClient",
+        "source_file": "service/src/main/java/uk/sky/commerce/ppa/http/client/hbo/complete/client/HBOCompleteClient.java"
+      }
+    ]
+  },
+  "10_external_api_and_integration_calls": {
+    "title": "Production External API and Integration Calls",
+    "scope_note": "Test/mock/example calls are excluded.",
+    "calls": []
+  },
+  "11_main_use_cases": {
+    "title": "Main Use Cases",
+    "use_cases": []
+  },
+  "12_analysis_limitations": {
+    "title": "Analysis Limitations",
+    "limitations": [
+      "Local LLM skipped; deterministic architecture and detailed static code flow are still reported."
+    ]
+  }
+}
